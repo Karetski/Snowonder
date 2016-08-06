@@ -1,3 +1,7 @@
 language: objective-c
+
+osx_image: xcode7.3
+
 xcode_project: Snowonder.xcodeproj
 xcode_scheme: Snowonder
+
