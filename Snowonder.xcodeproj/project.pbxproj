@@ -144,6 +144,7 @@
 				94B5111091977616B01F0C92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 1;
 		};
 		E8A109A81D21326C0089EF1F /* Products */ = {
 			isa = PBXGroup;
@@ -181,11 +182,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8A109B21D21326C0089EF1F /* Build configuration list for PBXNativeTarget "Snowonder" */;
 			buildPhases = (
-				D7F24374D145302AD7F67049 /* [CP] Check Pods Manifest.lock */,
 				E8A109A41D21326C0089EF1F /* Sources */,
 				E8A109A51D21326C0089EF1F /* Resources */,
 				8702DFD511042AF64EF5E939 /* Frameworks */,
-				749C4AA73B570569BECFFE41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,39 +237,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		749C4AA73B570569BECFFE41 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snowonder/Pods-Snowonder-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D7F24374D145302AD7F67049 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8A109A41D21326C0089EF1F /* Sources */ = {
