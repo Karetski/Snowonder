@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A278D631D56790600A9154C /* SnowonderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A278D621D56790600A9154C /* SnowonderTests.swift */; };
 		8A2E0A6C1D561DE500F283C9 /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A6B1D561DE500F283C9 /* XcodeHelper.m */; };
 		8A2E0A7E1D561E8F00F283C9 /* IDESourceCodeDocument+name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A711D561E8F00F283C9 /* IDESourceCodeDocument+name.swift */; };
 		8A2E0A7F1D561E8F00F283C9 /* IDESourceCodeDocument+sourceCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A721D561E8F00F283C9 /* IDESourceCodeDocument+sourceCodeType.swift */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A278D601D56790600A9154C /* SnowonderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnowonderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A278D621D56790600A9154C /* SnowonderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowonderTests.swift; sourceTree = "<group>"; };
+		8A278D641D56790600A9154C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A2E0A691D561DE500F283C9 /* XcodeComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeComponents.h; sourceTree = "<group>"; };
 		8A2E0A6A1D561DE500F283C9 /* XcodeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeHelper.h; sourceTree = "<group>"; };
 		8A2E0A6B1D561DE500F283C9 /* XcodeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeHelper.m; sourceTree = "<group>"; };
@@ -51,9 +55,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A278D5D1D56790600A9154C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A278D611D56790600A9154C /* SnowonderTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A278D621D56790600A9154C /* SnowonderTests.swift */,
+				8A278D641D56790600A9154C /* Info.plist */,
+			);
+			path = SnowonderTests;
+			sourceTree = "<group>";
+		};
 		8A2E0A6D1D561E8F00F283C9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A109A91D21326C0089EF1F /* Snowonder */,
+				8A278D611D56790600A9154C /* SnowonderTests */,
 				E8A109A81D21326C0089EF1F /* Products */,
 				94B5111091977616B01F0C92 /* Frameworks */,
 			);
@@ -150,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A109A71D21326C0089EF1F /* Snowonder.xcplugin */,
+				8A278D601D56790600A9154C /* SnowonderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +200,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8A278D5F1D56790600A9154C /* SnowonderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A278D671D56790600A9154C /* Build configuration list for PBXNativeTarget "SnowonderTests" */;
+			buildPhases = (
+				8A278D5C1D56790600A9154C /* Sources */,
+				8A278D5D1D56790600A9154C /* Frameworks */,
+				8A278D5E1D56790600A9154C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnowonderTests;
+			productName = SnowonderTests;
+			productReference = 8A278D601D56790600A9154C /* SnowonderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E8A109A61D21326C0089EF1F /* Snowonder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8A109B21D21326C0089EF1F /* Build configuration list for PBXNativeTarget "Snowonder" */;
@@ -205,6 +244,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Aliaksei Karetski";
 				TargetAttributes = {
+					8A278D5F1D56790600A9154C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					E8A109A61D21326C0089EF1F = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -223,11 +265,19 @@
 			projectRoot = "";
 			targets = (
 				E8A109A61D21326C0089EF1F /* Snowonder */,
+				8A278D5F1D56790600A9154C /* SnowonderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8A278D5E1D56790600A9154C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8A109A51D21326C0089EF1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +289,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8A278D5C1D56790600A9154C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A278D631D56790600A9154C /* SnowonderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8A109A41D21326C0089EF1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +319,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		8A278D651D56790600A9154C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SnowonderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.SnowonderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A278D661D56790600A9154C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SnowonderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.SnowonderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E8A109B01D21326C0089EF1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -380,6 +461,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8A278D671D56790600A9154C /* Build configuration list for PBXNativeTarget "SnowonderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A278D651D56790600A9154C /* Debug */,
+				8A278D661D56790600A9154C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E8A109A31D21326C0089EF1F /* Build configuration list for PBXProject "Snowonder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

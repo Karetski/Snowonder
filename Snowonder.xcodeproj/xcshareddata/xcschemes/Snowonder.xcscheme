@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7463C003B2597E1B416EBD06AEB75B54"
-               BuildableName = "Pods_Snowonder.framework"
-               BlueprintName = "Pods-Snowonder"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8A109A61D21326C0089EF1F"
                BuildableName = "Snowonder.xcplugin"
                BlueprintName = "Snowonder"
@@ -42,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8966AFCA173EB7BF004150C0"
+               BlueprintIdentifier = "8A278D5F1D56790600A9154C"
                BuildableName = "SnowonderTests.xctest"
                BlueprintName = "SnowonderTests"
                ReferencedContainer = "container:Snowonder.xcodeproj">
@@ -56,6 +42,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8A278D5F1D56790600A9154C"
+               BuildableName = "SnowonderTests.xctest"
+               BlueprintName = "SnowonderTests"
+               ReferencedContainer = "container:Snowonder.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
