@@ -18,14 +18,11 @@
 		8A2E0A851D561E8F00F283C9 /* ObjectiveCImportSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A7B1D561E8F00F283C9 /* ObjectiveCImportSorter.swift */; };
 		8A2E0A861D561E8F00F283C9 /* SortingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A7C1D561E8F00F283C9 /* SortingManager.swift */; };
 		8A2E0A881D561EC300F283C9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A871D561EC300F283C9 /* Constant.swift */; };
-		BED6905F910EE67CA3FB0DF1 /* Pods_Snowonder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F142169D373859229F7F70 /* Pods_Snowonder.framework */; };
 		E8A109AC1D21326C0089EF1F /* Snowonder.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = E8A109AB1D21326C0089EF1F /* Snowonder.xcscheme */; };
 		E8A109AE1D21326C0089EF1F /* Snowonder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A109AD1D21326C0089EF1F /* Snowonder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18F142169D373859229F7F70 /* Pods_Snowonder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snowonder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FB58A5C2284DD9C05DDA0DF /* Pods-Snowonder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snowonder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snowonder/Pods-Snowonder.release.xcconfig"; sourceTree = "<group>"; };
 		8A2E0A691D561DE500F283C9 /* XcodeComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeComponents.h; sourceTree = "<group>"; };
 		8A2E0A6A1D561DE500F283C9 /* XcodeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeHelper.h; sourceTree = "<group>"; };
 		8A2E0A6B1D561DE500F283C9 /* XcodeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeHelper.m; sourceTree = "<group>"; };
@@ -39,8 +36,6 @@
 		8A2E0A7B1D561E8F00F283C9 /* ObjectiveCImportSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCImportSorter.swift; sourceTree = "<group>"; };
 		8A2E0A7C1D561E8F00F283C9 /* SortingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortingManager.swift; sourceTree = "<group>"; };
 		8A2E0A871D561EC300F283C9 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		B42320827F2CC8FC3CEC548A /* Pods-Snowonder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snowonder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snowonder/Pods-Snowonder.debug.xcconfig"; sourceTree = "<group>"; };
-		E807899B1D24114400854B66 /* DTXcodeUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTXcodeUtils.framework; path = Pods/../build/Debug/DTXcodeUtils/DTXcodeUtils.framework; sourceTree = "<group>"; };
 		E807899D1D24123B00854B66 /* Snowonder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snowonder-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8A109A71D21326C0089EF1F /* Snowonder.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Snowonder.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A109AB1D21326C0089EF1F /* Snowonder.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Snowonder.xcscheme; path = Snowonder.xcodeproj/xcshareddata/xcschemes/Snowonder.xcscheme; sourceTree = SOURCE_ROOT; };
@@ -53,22 +48,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BED6905F910EE67CA3FB0DF1 /* Pods_Snowonder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6413425596FFA403F4C7D8CD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B42320827F2CC8FC3CEC548A /* Pods-Snowonder.debug.xcconfig */,
-				2FB58A5C2284DD9C05DDA0DF /* Pods-Snowonder.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		8A2E0A6D1D561E8F00F283C9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +124,6 @@
 		94B5111091977616B01F0C92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E807899B1D24114400854B66 /* DTXcodeUtils.framework */,
-				18F142169D373859229F7F70 /* Pods_Snowonder.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,7 +141,6 @@
 			children = (
 				E8A109A91D21326C0089EF1F /* Snowonder */,
 				E8A109A81D21326C0089EF1F /* Products */,
-				6413425596FFA403F4C7D8CD /* Pods */,
 				94B5111091977616B01F0C92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -397,7 +379,6 @@
 		};
 		E8A109B31D21326C0089EF1F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B42320827F2CC8FC3CEC548A /* Pods-Snowonder.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
@@ -415,7 +396,6 @@
 		};
 		E8A109B41D21326C0089EF1F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FB58A5C2284DD9C05DDA0DF /* Pods-Snowonder.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
