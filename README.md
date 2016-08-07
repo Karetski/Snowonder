@@ -10,9 +10,9 @@ Snowonder is a import sorter plugin for Xcode 7.3. It sorts import declarations 
 Clone this repository and open Snowonder.xcodeproj.
 
 ```bash
-$ git clone https://github.com/Karetski/Snowonder.git
-$ cd Snowonder
-$ open Snowonder.xcodeproj
+git clone https://github.com/Karetski/Snowonder.git
+cd Snowonder
+open Snowonder.xcodeproj
 ```
 
 Then build this project and reboot Xcode.
