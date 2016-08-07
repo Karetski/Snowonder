@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8A278D631D56790600A9154C /* SnowonderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A278D621D56790600A9154C /* SnowonderTests.swift */; };
 		8A2E0A6C1D561DE500F283C9 /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A6B1D561DE500F283C9 /* XcodeHelper.m */; };
-		8A2E0A7E1D561E8F00F283C9 /* IDESourceCodeDocument+name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A711D561E8F00F283C9 /* IDESourceCodeDocument+name.swift */; };
-		8A2E0A7F1D561E8F00F283C9 /* IDESourceCodeDocument+sourceCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A721D561E8F00F283C9 /* IDESourceCodeDocument+sourceCodeType.swift */; };
 		8A2E0A801D561E8F00F283C9 /* NSTextView+removeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A731D561E8F00F283C9 /* NSTextView+removeString.swift */; };
 		8A2E0A811D561E8F00F283C9 /* String+matchesPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A741D561E8F00F283C9 /* String+matchesPattern.swift */; };
 		8A2E0A821D561E8F00F283C9 /* XcodeDocumentUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E0A761D561E8F00F283C9 /* XcodeDocumentUtils.swift */; };
@@ -301,12 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A2E0A7E1D561E8F00F283C9 /* IDESourceCodeDocument+name.swift in Sources */,
 				8A2E0A841D561E8F00F283C9 /* ImportSorter.swift in Sources */,
 				8A2E0A811D561E8F00F283C9 /* String+matchesPattern.swift in Sources */,
 				E8A109AE1D21326C0089EF1F /* Snowonder.swift in Sources */,
 				8A2E0A6C1D561DE500F283C9 /* XcodeHelper.m in Sources */,
-				8A2E0A7F1D561E8F00F283C9 /* IDESourceCodeDocument+sourceCodeType.swift in Sources */,
 				8A2E0A831D561E8F00F283C9 /* Settings.swift in Sources */,
 				8A2E0A861D561E8F00F283C9 /* SortingManager.swift in Sources */,
 				8A2E0A821D561E8F00F283C9 /* XcodeDocumentUtils.swift in Sources */,
@@ -468,6 +464,7 @@
 				8A278D661D56790600A9154C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8A109A31D21326C0089EF1F /* Build configuration list for PBXProject "Snowonder" */ = {
 			isa = XCConfigurationList;
