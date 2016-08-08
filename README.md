@@ -1,4 +1,4 @@
-![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/GithubHeader.png)
+![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/GithubHeaderBig.png)
 Snowonder is a import sorter plugin for Xcode 7.3. It sorts import declarations in a way that you want. For now it only supports Objective-C, but Swift and other languages will be added soon. This plugin is created with latest Swift release and fully open source. 
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
