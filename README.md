@@ -5,6 +5,12 @@ Snowonder is a import sorter plugin for Xcode 7.3. It sorts import declarations 
 
 ## Install
 
+### Using [Alcatraz](https://github.com/alcatraz/Alcatraz) package manager
+
+The best way of installing is by [Alcatraz](https://github.com/alcatraz/Alcatraz) package manager. Install Alcatraz followed by the instruction, restart your Xcode and press `⇧⌘9` or select `Package Manager` from the `Window` menu. You can find `Snowonder` in the list and click the icon on left to install.
+
+![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/AlcatrazScreen.png)
+
 ### Build Project using Xcode
 
 Clone this repository and open Snowonder.xcodeproj.
