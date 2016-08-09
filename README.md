@@ -11,6 +11,14 @@ The best way of installing is by [Alcatraz](https://github.com/alcatraz/Alcatraz
 
 ![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/AlcatrazScreen.png)
 
+### Using install script
+
+Snowonder can be installed by running the following command in the terminal:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Karetski/Snowonder/master/Scripts/install.sh | sh
+```
+
 ### Build Project using Xcode
 
 Clone this repository and open Snowonder.xcodeproj.
