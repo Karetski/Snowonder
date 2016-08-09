@@ -9,7 +9,6 @@
 import Cocoa
 
 struct Constant {
-    static let isLogNeeded = true
     
     struct MenuItem {
         struct Main {

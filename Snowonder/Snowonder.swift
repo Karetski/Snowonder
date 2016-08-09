@@ -30,7 +30,7 @@ class Snowonder: NSObject {
         if (NSApp != nil && NSApp.mainMenu == nil) {
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.applicationDidFinishLaunching), name: NSApplicationDidFinishLaunchingNotification, object: nil)
         } else {
-            postInitialSetup(Constant.isLogNeeded)
+            postInitialSetup()
         }
     }
     
@@ -38,23 +38,17 @@ class Snowonder: NSObject {
 
     func applicationDidFinishLaunching() {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: NSApplicationDidFinishLaunchingNotification, object: nil)
-        postInitialSetup(Constant.isLogNeeded)
+        postInitialSetup()
     }
 
     // MARK: - Setup
 
-    private func postInitialSetup(isLogNeeded: Bool) {
+    private func postInitialSetup() {
         self.configureMenu()
-        
-        if isLogNeeded {
-            self.logSetup(withSuccess: true)
-        }
     }
     
     private func configureMenu() {
         guard let mainMenu = NSApp.mainMenu, let editMenu = mainMenu.itemWithTitle("Edit"), let editSubmenu = editMenu.submenu else {
-            self.logSetup(withSuccess: false)
-            
             return
         }
         
@@ -78,15 +72,6 @@ class Snowonder: NSObject {
         snowonderItem.submenu = snowonderSubmenu
     }
     
-    private func logSetup(withSuccess successful: Bool) {
-        guard let name = bundle.objectForInfoDictionaryKey("CFBundleName"), let version = bundle.objectForInfoDictionaryKey("CFBundleShortVersionString") else {
-            return
-        }
-        let status = successful ? "loaded successfully" : "failed to load"
-        
-        print("Plugin \(name) \(version) \(status)")
-    }
-    
     // MARK: - Menu item actions
     
     func sortFileImportItemAction() {
@@ -94,7 +79,10 @@ class Snowonder: NSObject {
     }
     
     func settingsItemAction() {
-        NSAlert().runModal()
+        let alert = NSAlert()
+        alert.messageText = "Settings will be added soon"
+        
+        alert.runModal()
     }
 }
 
