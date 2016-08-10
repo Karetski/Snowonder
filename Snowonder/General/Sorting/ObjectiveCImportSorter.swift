@@ -64,6 +64,8 @@ class ObjectiveCImportSorter: NSObject, ImportSorter {
             }
         }
         
+        var lastLineImportFound = false
+        
         for categoryRawValue in 0...ImportCategory.count - 1 {
             guard let importCategory = ImportCategory(rawValue: categoryRawValue), let declarationsByCategory = categorizedDeclarations[importCategory] else {
                 continue
@@ -76,8 +78,25 @@ class ObjectiveCImportSorter: NSObject, ImportSorter {
             }
             
             for importDeclaration in sortedDeclarationsByCategory {
-                sortedDeclarations.append(importDeclaration)
+                if let _ = importDeclaration.rangeOfString("\n") {
+                    sortedDeclarations.append(importDeclaration)
+                } else {
+                    lastLineImportFound = true
+                    sortedDeclarations.append("\(importDeclaration)\n")
+                }
             }
+        }
+        
+        let settingWithoutCategoryLabels = true // Temporary, until settings will be added
+        if (settingWithoutCategoryLabels) {
+            sortedDeclarations.removeFirst()
+        }
+        
+        if let lastImport = sortedDeclarations.last where lastLineImportFound {
+            sortedDeclarations.removeLast()
+            
+            let lastImportWithoutNewLine = lastImport.stringByReplacingOccurrencesOfString("\n", withString: "")
+            sortedDeclarations.append(lastImportWithoutNewLine)
         }
         
         return sortedDeclarations.count != 0 ? sortedDeclarations : importDeclarations

@@ -31,10 +31,22 @@ extension ImportSorter {
         
         var importDeclarationsArray = [String]()
         
+        var numberOfLines = -1
+        var lastImportLine = 0
+        
         sourceString.enumerateLines { (line, stop) in
+            numberOfLines += 1
             if line.hasPrefix(self.importDeclarationPrefix) {
                 importDeclarationsArray.append("\(line)\n")
+                lastImportLine = numberOfLines
             }
+        }
+        
+        if lastImportLine == numberOfLines, let lastImport = importDeclarationsArray.last {
+            importDeclarationsArray.removeLast()
+            
+            let lastImportWithoutNewLine = lastImport.stringByReplacingOccurrencesOfString("\n", withString: "")
+            importDeclarationsArray.append(lastImportWithoutNewLine)
         }
         
         return importDeclarationsArray
