@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.1.0
+VERSION=0.1.1
 # https://github.com/Karetski/Snowonder/releases/download/0.1.0/Snowonder-0.1.0.zip
 DOWNLOAD_URI=https://github.com/Karetski/Snowonder/releases/download/${VERSION}/Snowonder-${VERSION}.zip
 PLUGINS_DIR="${HOME}/Library/Application Support/Developer/Shared/Xcode/Plug-ins"
