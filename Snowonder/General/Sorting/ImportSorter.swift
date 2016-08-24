@@ -31,8 +31,8 @@ extension ImportSorter {
         
         var importDeclarationsArray = [String]()
         
-        var numberOfLines = -1
-        var lastImportLine = 0
+        var numberOfLines = 0
+        var lastImportLine = -1
         
         sourceString.enumerateLines { (line, stop) in
             numberOfLines += 1

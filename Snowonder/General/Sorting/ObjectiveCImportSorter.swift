@@ -78,16 +78,17 @@ class ObjectiveCImportSorter: NSObject, ImportSorter {
             }
             
             for importDeclaration in sortedDeclarationsByCategory {
+                
                 if let _ = importDeclaration.rangeOfString("\n") {
                     sortedDeclarations.append(importDeclaration)
                 } else {
-                    lastLineImportFound = true
                     sortedDeclarations.append("\(importDeclaration)\n")
+                    lastLineImportFound = true
                 }
             }
         }
         
-        let settingWithoutCategoryLabels = true // Temporary, until settings will be added
+        let settingWithoutCategoryLabels = true // TODO: Remove when settings will be added
         if (settingWithoutCategoryLabels) {
             sortedDeclarations.removeFirst()
         }
