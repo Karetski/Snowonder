@@ -1,6 +1,6 @@
 //
 //  SourceEditorExtension.swift
-//  SourceEditorExtension
+//  XcodeExtension
 //
 //  Created by Aliaksei Karetski on 15.06.17.
 //  Copyright © 2017 Karetski. All rights reserved.
