@@ -27,3 +27,6 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+# IDEA
+.idea
