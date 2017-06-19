@@ -3,5 +3,5 @@ language: objective-c
 osx_image: xcode8.3
 
 xcode_project: Snowonder.xcodeproj
-xcode_scheme: Snowonder
+xcode_scheme: Snowonder Extension
 
