@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Snowonder
 //
-//  Created by Aliaksei Karetski on 15.06.17.
+//  Created by Aliaksei Karetski on 19.06.17.
 //  Copyright © 2017 Karetski. All rights reserved.
 //
 
