@@ -12,7 +12,9 @@ import XcodeKit
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
-        // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
+        if let lines = invocation.buffer.lines as? [String] {
+            let importCategories = ImportCategoriesBuilder.buildCategories(using: lines)
+        }
         
         completionHandler(nil)
     }

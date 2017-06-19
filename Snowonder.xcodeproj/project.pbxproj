@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8414B391EF7F6FC00005A19 /* ImportCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8414B381EF7F6FC00005A19 /* ImportCategory.swift */; };
+		E8414B3B1EF7F89E00005A19 /* ImportCategoriesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8414B3A1EF7F89E00005A19 /* ImportCategoriesBuilder.swift */; };
+		E8414B3D1EF801D700005A19 /* String+PatternMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E8414B381EF7F6FC00005A19 /* ImportCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCategory.swift; sourceTree = "<group>"; };
+		E8414B3A1EF7F89E00005A19 /* ImportCategoriesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCategoriesBuilder.swift; sourceTree = "<group>"; };
+		E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PatternMatching.swift"; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,15 @@
 		E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		E8B3C6D41EF7CFD300CD7679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8B3C6DE1EF7E0A300CD7679 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E8B3C6E01EF7E0A300CD7679 /* IDESourceCodeDocument+name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDESourceCodeDocument+name.swift"; sourceTree = "<group>"; };
+		E8B3C6E11EF7E0A300CD7679 /* IDESourceCodeDocument+sourceCodeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDESourceCodeDocument+sourceCodeType.swift"; sourceTree = "<group>"; };
+		E8B3C6E21EF7E0A300CD7679 /* NSTextView+removeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextView+removeString.swift"; sourceTree = "<group>"; };
+		E8B3C6E31EF7E0A300CD7679 /* String+matchesPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+matchesPattern.swift"; sourceTree = "<group>"; };
+		E8B3C6E51EF7E0A300CD7679 /* XcodeDocumentUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeDocumentUtils.swift; sourceTree = "<group>"; };
+		E8B3C6E91EF7E0A300CD7679 /* ImportSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportSorter.swift; sourceTree = "<group>"; };
+		E8B3C6EA1EF7E0A300CD7679 /* ObjectiveCImportSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCImportSorter.swift; sourceTree = "<group>"; };
+		E8B3C6EB1EF7E0A300CD7679 /* SortingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +93,7 @@
 		E8B3C6AA1EF7CFB500CD7679 = {
 			isa = PBXGroup;
 			children = (
+				E8B3C6DC1EF7E0A300CD7679 /* General */,
 				E8B3C6B51EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6CD1EF7CFD300CD7679 /* Snowonder Extension */,
 				E8B3C6CA1EF7CFD300CD7679 /* Frameworks */,
@@ -119,6 +135,9 @@
 			children = (
 				E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */,
 				E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */,
+				E8414B381EF7F6FC00005A19 /* ImportCategory.swift */,
+				E8414B3A1EF7F89E00005A19 /* ImportCategoriesBuilder.swift */,
+				E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */,
 				E8B3C6D41EF7CFD300CD7679 /* Info.plist */,
 				E8B3C6CE1EF7CFD300CD7679 /* Supporting Files */,
 			);
@@ -131,6 +150,54 @@
 				E8B3C6CF1EF7CFD300CD7679 /* Snowonder_Extension.entitlements */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8B3C6DC1EF7E0A300CD7679 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				E8B3C6DD1EF7E0A300CD7679 /* Common */,
+				E8B3C6E81EF7E0A300CD7679 /* Sorting */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		E8B3C6DD1EF7E0A300CD7679 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E8B3C6DE1EF7E0A300CD7679 /* Constant.swift */,
+				E8B3C6DF1EF7E0A300CD7679 /* Extensions */,
+				E8B3C6E41EF7E0A300CD7679 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E8B3C6DF1EF7E0A300CD7679 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8B3C6E01EF7E0A300CD7679 /* IDESourceCodeDocument+name.swift */,
+				E8B3C6E11EF7E0A300CD7679 /* IDESourceCodeDocument+sourceCodeType.swift */,
+				E8B3C6E21EF7E0A300CD7679 /* NSTextView+removeString.swift */,
+				E8B3C6E31EF7E0A300CD7679 /* String+matchesPattern.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E8B3C6E41EF7E0A300CD7679 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E8B3C6E51EF7E0A300CD7679 /* XcodeDocumentUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E8B3C6E81EF7E0A300CD7679 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				E8B3C6E91EF7E0A300CD7679 /* ImportSorter.swift */,
+				E8B3C6EA1EF7E0A300CD7679 /* ObjectiveCImportSorter.swift */,
+				E8B3C6EB1EF7E0A300CD7679 /* SortingManager.swift */,
+			);
+			path = Sorting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,10 +251,12 @@
 				TargetAttributes = {
 					E8B3C6B21EF7CFB500CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CDZGT67CB7;
 						ProvisioningStyle = Automatic;
 					};
 					E8B3C6C81EF7CFD300CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CDZGT67CB7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -244,7 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8414B3B1EF7F89E00005A19 /* ImportCategoriesBuilder.swift in Sources */,
+				E8414B3D1EF801D700005A19 /* String+PatternMatching.swift in Sources */,
 				E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */,
+				E8414B391EF7F6FC00005A19 /* ImportCategory.swift in Sources */,
 				E8B3C6D31EF7CFD300CD7679 /* SourceEditorCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,11 +440,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.Snowonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -382,11 +457,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.Snowonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -395,12 +473,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Snowonder Extension/Snowonder_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Karetski.Snowonder.Snowonder-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -410,12 +491,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Snowonder Extension/Snowonder_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Karetski.Snowonder.Snowonder-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -440,6 +524,7 @@
 				E8B3C6C41EF7CFB500CD7679 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8B3C6D81EF7CFD300CD7679 /* Build configuration list for PBXNativeTarget "Snowonder Extension" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +533,7 @@
 				E8B3C6DA1EF7CFD300CD7679 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
