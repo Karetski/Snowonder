@@ -11,13 +11,13 @@ import Foundation
 typealias ImportCategories = [ImportCategory]
 
 struct ImportCategory : Hashable {
-    /// Title of import category
+    /// Title of import category.
     var title: String
     
-    /// Pattern used to match import declaration to category
+    /// Pattern used to match import declaration to category.
     var declarationPattern: String
     
-    /// ComparisonResult used to sort import declarations in scope of category
+    /// ComparisonResult used to sort import declarations in scope of category.
     var sortingComparisonResult: ComparisonResult
     
     var hashValue: Int {

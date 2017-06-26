@@ -17,6 +17,10 @@ class ImportDetector {
                                                  ImportCategory(title: "Headers", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)]
     }
     
+    /// Constructs import categories based on `lines` parameter.
+    ///
+    /// - Parameter lines: Lines used to construct import categories.
+    /// - Returns: Constructed import declarations based on `lines` parameter.
     func categories(from lines: [String]) -> ImportCategories {
         for line in lines {
             for importCategories in Constant.availableImportCategories {
@@ -31,6 +35,12 @@ class ImportDetector {
         return []
     }
     
+    /// Detects import declarations based on `lines` parameter using import `categories`.
+    ///
+    /// - Parameters:
+    ///   - lines: Lines used to detect import declarations.
+    ///   - categories: Import categories used to detect import declarations.
+    /// - Returns: Detected import declarations.
     func declarations(from lines: [String], using categories: ImportCategories) -> ImportDeclarations {
         return lines.filter { (line) -> Bool in
             var matches = false
@@ -43,16 +53,22 @@ class ImportDetector {
         }
     }
     
-    func categorizedDeclarations(from lines: [String], using importCategories: ImportCategories) -> CategorizedImportDeclarations {
+    /// Detects import declarations based on `lines` parameter using import `categories` and groupes it by import category.
+    ///
+    /// - Parameters:
+    ///   - lines: Lines used to detect import declarations.
+    ///   - importCategories: Import categories used to detect import declarations.
+    /// - Returns: Detected and grouped import declarations.
+    func categorizedDeclarations(from lines: [String], using categories: ImportCategories) -> CategorizedImportDeclarations {
         var categorizedDeclarations = CategorizedImportDeclarations()
         
         for line in lines {
-            for importCategory in importCategories {
-                if line.matches(pattern: importCategory.declarationPattern) {
-                    if let _ = categorizedDeclarations[importCategory] {
-                        categorizedDeclarations[importCategory]!.append(line)
+            for category in categories {
+                if line.matches(pattern: category.declarationPattern) {
+                    if let _ = categorizedDeclarations[category] {
+                        categorizedDeclarations[category]!.append(line)
                     } else {
-                        categorizedDeclarations[importCategory] = [line]
+                        categorizedDeclarations[category] = [line]
                     }
                 }
             }

@@ -16,11 +16,20 @@ typealias ImportDeclarations = [String]
 typealias CategorizedImportDeclarations = [ImportCategory : ImportDeclarations]
 
 class ImportBlock {
+    /// Import categories that are acceptable for import block.
     var categories: ImportCategories
     
+    /// Import declarations that import block includes.
     var declarations: ImportDeclarations
+    /// Import declarations that import block includes grouped by a category.
     var categorizedDeclarations: CategorizedImportDeclarations
     
+    /// Creates new import block based on `lines` parameter.
+    ///
+    /// - Parameters:
+    ///   - lines: Lines used to detect import declarations.
+    ///   - detector: Detector used to construct import block.
+    /// - Throws: Error
     init(lines: [String], detector: ImportDetector = ImportDetector()) throws {
         let categories = detector.categories(from: lines)
         let declarations = detector.declarations(from: lines, using: categories)
