@@ -13,7 +13,11 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         if let lines = invocation.buffer.lines as? [String] {
-            let importCategories = ImportCategoriesBuilder.buildCategories(using: lines)
+            if let importBlock = try? ImportBlock(lines: lines) {
+                print(importBlock)
+            } else {
+                print("Failure")
+            }
         }
         
         completionHandler(nil)
