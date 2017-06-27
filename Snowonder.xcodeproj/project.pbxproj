@@ -11,6 +11,7 @@
 		E8414B3B1EF7F89E00005A19 /* ImportDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8414B3A1EF7F89E00005A19 /* ImportDetector.swift */; };
 		E8414B3D1EF801D700005A19 /* String+PatternMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */; };
 		E899DC371F0147BF00D6EFFF /* ImportBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899DC361F0147BF00D6EFFF /* ImportBlock.swift */; };
+		E899DC3B1F0245C700D6EFFF /* ImportFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899DC3A1F0245C700D6EFFF /* ImportFormatter.swift */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		E8414B3A1EF7F89E00005A19 /* ImportDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportDetector.swift; sourceTree = "<group>"; };
 		E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PatternMatching.swift"; sourceTree = "<group>"; };
 		E899DC361F0147BF00D6EFFF /* ImportBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlock.swift; sourceTree = "<group>"; };
+		E899DC3A1F0245C700D6EFFF /* ImportFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportFormatter.swift; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				E8414B381EF7F6FC00005A19 /* ImportCategory.swift */,
 				E899DC361F0147BF00D6EFFF /* ImportBlock.swift */,
 				E8414B3A1EF7F89E00005A19 /* ImportDetector.swift */,
+				E899DC3A1F0245C700D6EFFF /* ImportFormatter.swift */,
 				E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */,
 				E8B3C6D41EF7CFD300CD7679 /* Info.plist */,
 				E8B3C6CE1EF7CFD300CD7679 /* Supporting Files */,
@@ -323,6 +326,7 @@
 				E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */,
 				E8414B391EF7F6FC00005A19 /* ImportCategory.swift in Sources */,
 				E8B3C6D31EF7CFD300CD7679 /* SourceEditorCommand.swift in Sources */,
+				E899DC3B1F0245C700D6EFFF /* ImportFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
