@@ -16,13 +16,17 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         
         if let lines = invocation.buffer.lines as? [String] {
             do {
-                let detector = ImportDetector()
+                let detector = ImportBlockDetector()
                 let importBlock = try detector.importBlock(from: lines)
                 
-                let formatter = ImportFormatter()
+                let formatter = ImportBlockFormatter(options: [.separate, .sort])
                 let formattedImportLines = formatter.lines(from: importBlock)
                 
                 print(formattedImportLines)
+                
+                let bufferEditor = SourceTextBufferEditor(buffer: invocation.buffer)
+                bufferEditor.replace(importBlock.declarations, to: formattedImportLines, from: .top)
+                
             } catch let catchedError {
                 error = catchedError
             }

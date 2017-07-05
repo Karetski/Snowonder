@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum ImportDetectorError: Error {
-    case declarationsNotFound
+enum ImportBlockDetectorError: Error {
+    case notFound
 }
 
-class ImportDetector {
-    private struct Constant { // TODO: Init these values from JSON.
+class ImportBlockDetector {
+    private struct Constant { // TODO: Init these values from JSON on detector init.
         static let availableImportCategories: [ImportCategories] = [swiftSet, objcSet]
         
         static let swiftSet: ImportCategories = [ImportCategory(title: "Swift", declarationPattern: "^import .*", sortingComparisonResult: .orderedAscending)]
@@ -32,7 +32,7 @@ class ImportDetector {
         let categorizedDeclarations = self.categorizedDeclarations(from: lines, using: categories)
         
         guard !categories.isEmpty && !declarations.isEmpty && !categorizedDeclarations.isEmpty else {
-            throw ImportDetectorError.declarationsNotFound
+            throw ImportBlockDetectorError.notFound
         }
         
         return .init(categories: categories, declarations: declarations, categorizedDeclarations: categorizedDeclarations)

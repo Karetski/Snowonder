@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias ImportCategories = [ImportCategory]
+typealias ImportCategories = Set<ImportCategory>
 
 struct ImportCategory : Hashable {
     /// Title of import category.
