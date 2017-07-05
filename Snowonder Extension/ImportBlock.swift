@@ -12,6 +12,7 @@ typealias ImportDeclarations = [String]
 typealias CategorizedImportDeclarations = [ImportCategory : ImportDeclarations]
 
 struct ImportBlock {
+    
     /// Import categories that are acceptable for import block.
     var categories: ImportCategories
     

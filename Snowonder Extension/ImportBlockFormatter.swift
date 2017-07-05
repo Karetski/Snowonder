@@ -9,6 +9,7 @@
 import Foundation
 
 class ImportBlockFormatter {
+    
     enum Option {
         case sort
         case separate
@@ -16,41 +17,41 @@ class ImportBlockFormatter {
     
     typealias Options = Set<Option>
     
+    /// Formatting options, used to define what optimizations should be done.
     var options: Options
     
+    /// Creates new instance with formatting `options`.
+    ///
+    /// - Parameter options: Formatting options.
     init(options: Options) {
         self.options = options
     }
     
     func lines(from importBlock: ImportBlock) -> [String] {
-        let sorted = self.sorted(categorized: importBlock.categorizedDeclarations)
-        let flat = self.flat(categorized: sorted, using: importBlock.categories)
-        
-        return flat
+        return importBlock.categorizedDeclarations
+            .sorted(with: options)
+            .flat(with: options, using: importBlock.categories)
     }
+}
+
+private extension Dictionary where Key == ImportCategory, Value == ImportDeclarations {
     
-    private func sorted(categorized: CategorizedImportDeclarations) -> CategorizedImportDeclarations {
+    func sorted(with options: ImportBlockFormatter.Options) -> CategorizedImportDeclarations {
         guard options.contains(.sort) else {
-            return categorized
+            return self
         }
         
-        // TODO: Find any way to transform this with map usage
-        var sortedCategorized = CategorizedImportDeclarations()
-        for (category, declarations) in categorized {
-            sortedCategorized[category] = declarations.sorted(by: { $0.localizedCaseInsensitiveCompare($1) == category.sortingComparisonResult })
+        return mapValues { (category, declarations) -> ImportDeclarations in
+            return declarations.sorted { $0.localizedCaseInsensitiveCompare($1) == category.sortingComparisonResult }
         }
-        
-        return sortedCategorized
     }
     
-    private func flat(categorized: CategorizedImportDeclarations, using categories: ImportCategories) -> ImportDeclarations {
+    func flat(with options: ImportBlockFormatter.Options, using categories: ImportCategories) -> ImportDeclarations {
         var flatDeclarations = ImportDeclarations()
-        for category in categories {
-            if let categoryDeclarations = categorized[category] {
+        
+        categories.forEach { (category) in
+            if let categoryDeclarations = self[category], !categoryDeclarations.isEmpty {
                 flatDeclarations.append(contentsOf: categoryDeclarations)
-                if options.contains(.separate) {
-                    flatDeclarations.append("\n")
-                }
             }
         }
         

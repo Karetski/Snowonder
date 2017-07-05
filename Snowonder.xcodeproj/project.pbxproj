@@ -21,6 +21,7 @@
 		E8B3C6D31EF7CFD300CD7679 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */; };
 		E8B3C6D71EF7CFD300CD7679 /* Snowonder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8E6981F1F0CCCF500D50213 /* SourceTextBufferEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6981E1F0CCCF500D50213 /* SourceTextBufferEditor.swift */; };
+		E8E698211F0D0F4400D50213 /* Dictionary+MapValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698201F0D0F4400D50213 /* Dictionary+MapValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,16 +66,8 @@
 		E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		E8B3C6D41EF7CFD300CD7679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8B3C6DE1EF7E0A300CD7679 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		E8B3C6E01EF7E0A300CD7679 /* IDESourceCodeDocument+name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDESourceCodeDocument+name.swift"; sourceTree = "<group>"; };
-		E8B3C6E11EF7E0A300CD7679 /* IDESourceCodeDocument+sourceCodeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IDESourceCodeDocument+sourceCodeType.swift"; sourceTree = "<group>"; };
-		E8B3C6E21EF7E0A300CD7679 /* NSTextView+removeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextView+removeString.swift"; sourceTree = "<group>"; };
-		E8B3C6E31EF7E0A300CD7679 /* String+matchesPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+matchesPattern.swift"; sourceTree = "<group>"; };
-		E8B3C6E51EF7E0A300CD7679 /* XcodeDocumentUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeDocumentUtils.swift; sourceTree = "<group>"; };
-		E8B3C6E91EF7E0A300CD7679 /* ImportSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportSorter.swift; sourceTree = "<group>"; };
-		E8B3C6EA1EF7E0A300CD7679 /* ObjectiveCImportSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCImportSorter.swift; sourceTree = "<group>"; };
-		E8B3C6EB1EF7E0A300CD7679 /* SortingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortingManager.swift; sourceTree = "<group>"; };
 		E8E6981E1F0CCCF500D50213 /* SourceTextBufferEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceTextBufferEditor.swift; sourceTree = "<group>"; };
+		E8E698201F0D0F4400D50213 /* Dictionary+MapValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+MapValues.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +92,6 @@
 		E8B3C6AA1EF7CFB500CD7679 = {
 			isa = PBXGroup;
 			children = (
-				E8B3C6DC1EF7E0A300CD7679 /* General */,
 				E8B3C6B51EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6CD1EF7CFD300CD7679 /* Snowonder Extension */,
 				E8B3C6B41EF7CFB500CD7679 /* Products */,
@@ -147,6 +139,7 @@
 				E899DC3A1F0245C700D6EFFF /* ImportBlockFormatter.swift */,
 				E8E6981E1F0CCCF500D50213 /* SourceTextBufferEditor.swift */,
 				E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */,
+				E8E698201F0D0F4400D50213 /* Dictionary+MapValues.swift */,
 				E8B3C6D41EF7CFD300CD7679 /* Info.plist */,
 				E8B3C6CE1EF7CFD300CD7679 /* Supporting Files */,
 				E8B3C6CA1EF7CFD300CD7679 /* Frameworks */,
@@ -160,54 +153,6 @@
 				E8B3C6CF1EF7CFD300CD7679 /* Snowonder_Extension.entitlements */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E8B3C6DC1EF7E0A300CD7679 /* General */ = {
-			isa = PBXGroup;
-			children = (
-				E8B3C6DD1EF7E0A300CD7679 /* Common */,
-				E8B3C6E81EF7E0A300CD7679 /* Sorting */,
-			);
-			path = General;
-			sourceTree = "<group>";
-		};
-		E8B3C6DD1EF7E0A300CD7679 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				E8B3C6DE1EF7E0A300CD7679 /* Constant.swift */,
-				E8B3C6DF1EF7E0A300CD7679 /* Extensions */,
-				E8B3C6E41EF7E0A300CD7679 /* Utils */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		E8B3C6DF1EF7E0A300CD7679 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E8B3C6E01EF7E0A300CD7679 /* IDESourceCodeDocument+name.swift */,
-				E8B3C6E11EF7E0A300CD7679 /* IDESourceCodeDocument+sourceCodeType.swift */,
-				E8B3C6E21EF7E0A300CD7679 /* NSTextView+removeString.swift */,
-				E8B3C6E31EF7E0A300CD7679 /* String+matchesPattern.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E8B3C6E41EF7E0A300CD7679 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				E8B3C6E51EF7E0A300CD7679 /* XcodeDocumentUtils.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		E8B3C6E81EF7E0A300CD7679 /* Sorting */ = {
-			isa = PBXGroup;
-			children = (
-				E8B3C6E91EF7E0A300CD7679 /* ImportSorter.swift */,
-				E8B3C6EA1EF7E0A300CD7679 /* ObjectiveCImportSorter.swift */,
-				E8B3C6EB1EF7E0A300CD7679 /* SortingManager.swift */,
-			);
-			path = Sorting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +274,7 @@
 				E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */,
 				E8414B391EF7F6FC00005A19 /* ImportCategory.swift in Sources */,
 				E8B3C6D31EF7CFD300CD7679 /* SourceEditorCommand.swift in Sources */,
+				E8E698211F0D0F4400D50213 /* Dictionary+MapValues.swift in Sources */,
 				E8E6981F1F0CCCF500D50213 /* SourceTextBufferEditor.swift in Sources */,
 				E899DC3B1F0245C700D6EFFF /* ImportBlockFormatter.swift in Sources */,
 			);

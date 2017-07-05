@@ -10,6 +10,7 @@ import Foundation
 import XcodeKit
 
 class SourceTextBufferEditor {
+    
     enum ReplacementPosition {
         case top
         case bottom

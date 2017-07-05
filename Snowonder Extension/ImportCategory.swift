@@ -11,6 +11,7 @@ import Foundation
 typealias ImportCategories = Set<ImportCategory>
 
 struct ImportCategory : Hashable {
+    
     /// Title of import category.
     var title: String
     

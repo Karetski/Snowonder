@@ -13,12 +13,13 @@ enum ImportBlockDetectorError: Error {
 }
 
 class ImportBlockDetector {
+    
     private struct Constant { // TODO: Init these values from JSON on detector init.
         static let availableImportCategories: [ImportCategories] = [swiftSet, objcSet]
         
         static let swiftSet: ImportCategories = [ImportCategory(title: "Swift", declarationPattern: "^import .*", sortingComparisonResult: .orderedAscending)]
         static let objcSet: ImportCategories = [ImportCategory(title: "Frameworks", declarationPattern: "^#import <.*>", sortingComparisonResult: .orderedAscending),
-                                                 ImportCategory(title: "Headers", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)]
+                                                ImportCategory(title: "Headers", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)]
     }
     
     /// Creates new import block based on `lines` parameter.

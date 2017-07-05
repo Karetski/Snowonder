@@ -9,6 +9,7 @@
 import Foundation
 
 extension String {
+    
     func matches(pattern: String) -> Bool {
         guard let regularExpression = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive) else {
             return false
