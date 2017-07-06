@@ -12,6 +12,8 @@ public typealias ImportCategories = [ImportCategory]
 
 public struct ImportCategory : Hashable {
     
+    // MARK: - Common properties
+    
     /// Title of import category.
     public var title: String
     
@@ -21,10 +23,14 @@ public struct ImportCategory : Hashable {
     /// ComparisonResult used to sort import declarations in scope of category.
     public var sortingComparisonResult: ComparisonResult
     
+    // MARK: - Hashable
+    
     public var hashValue: Int {
         return title.hashValue ^ declarationPattern.hashValue ^ sortingComparisonResult.hashValue
     }
 }
+
+// MARK: - Equitable
 
 public func ==(lhs: ImportCategory, rhs: ImportCategory) -> Bool {
     return lhs.title == rhs.title && lhs.declarationPattern == rhs.declarationPattern && lhs.sortingComparisonResult == rhs.sortingComparisonResult

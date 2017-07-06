@@ -10,6 +10,8 @@ import Foundation
 
 open class ImportBlockFormatter {
     
+    // MARK: - Common properties
+    
     public enum Option {
         case sortDeclarations
         case separateCategories
@@ -21,6 +23,8 @@ open class ImportBlockFormatter {
     /// Formatting options, used to define what optimizations should be done.
     open var options: Options
     
+    // MARK: - Initializers
+    
     /// Creates new instance with formatting `options`.
     ///
     /// - Parameter options: Formatting options.
@@ -28,6 +32,12 @@ open class ImportBlockFormatter {
         self.options = options
     }
     
+    // MARK: - Formatter
+    
+    /// Constructs import declarations lines from `importBlock` parameter using `options` property.
+    ///
+    /// - Parameter importBlock: Source import declarations block.
+    /// - Returns: Constructed lines.
     open func lines(from importBlock: ImportBlock) -> [String] {
         return importBlock.categorizedDeclarations
             .sortedDeclarations(with: options)
@@ -49,7 +59,6 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
     
     func flatDeclarations(with options:ImportBlockFormatter.Options, using categories: ImportCategories) -> ImportDeclarations {
         var flatDeclarations = ImportDeclarations()
-        
         categories.enumerated().forEach { (index, category) in
             if let categoryDeclarations = self[category], !categoryDeclarations.isEmpty {
                 flatDeclarations.append(contentsOf: categoryDeclarations)

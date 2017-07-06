@@ -13,6 +13,8 @@ public typealias CategorizedImportDeclarations = [ImportCategory : ImportDeclara
 
 public struct ImportBlock {
     
+    // MARK: - Common properties
+    
     /// Import categories that are acceptable for import block.
     public var categories: ImportCategories
     
@@ -21,6 +23,14 @@ public struct ImportBlock {
     /// Import declarations that import block includes grouped by a category.
     public var categorizedDeclarations: CategorizedImportDeclarations
     
+    // MARK: - Initializers
+    
+    /// Initializes import declarations block based on parameters.
+    ///
+    /// - Parameters:
+    ///   - categories: Import categories that are acceptable for import block.
+    ///   - declarations: Import declarations that import block includes.
+    ///   - categorizedDeclarations: Import declarations that import block includes grouped by a category.
     public init(categories: ImportCategories, declarations: ImportDeclarations, categorizedDeclarations: CategorizedImportDeclarations) {
         self.categories = categories
         self.declarations = declarations

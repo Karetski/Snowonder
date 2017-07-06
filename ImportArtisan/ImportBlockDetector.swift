@@ -14,6 +14,8 @@ public enum ImportBlockDetectorError: Error {
 
 open class ImportBlockDetector {
     
+    // MARK: - Constant values
+    
     private struct Constant { // TODO: Init these values from JSON on detector init.
         static let availableImportCategories: [ImportCategories] = [swiftSet, objcSet]
         
@@ -22,7 +24,11 @@ open class ImportBlockDetector {
                                                 ImportCategory(title: "Headers", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)]
     }
     
+    // MARK: - Initializers
+    
     public init() { }
+    
+    // MARK: - Detection functions
     
     /// Creates new import block based on `lines` parameter.
     ///
