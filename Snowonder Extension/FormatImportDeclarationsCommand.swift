@@ -10,7 +10,7 @@ import Foundation
 import ImportArtisan
 import XcodeKit
 
-class SourceEditorCommand: NSObject, XCSourceEditorCommand {
+class FormatImportDeclarationsCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         var error: Error? = nil

@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E84038601F0E6266003DF6C3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E840385F1F0E6266003DF6C3 /* Info.plist */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
 		E8B3C6BE1EF7CFB500CD7679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BC1EF7CFB500CD7679 /* Main.storyboard */; };
 		E8B3C6CC1EF7CFD300CD7679 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B3C6CB1EF7CFD300CD7679 /* Cocoa.framework */; };
 		E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */; };
-		E8B3C6D31EF7CFD300CD7679 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */; };
+		E8B3C6D31EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D21EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift */; };
 		E8B3C6D71EF7CFD300CD7679 /* Snowonder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */; };
 		E8E698541F0E5C4500D50213 /* ImportBlockDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */; };
@@ -22,8 +21,6 @@
 		E8E698561F0E5C4500D50213 /* ImportCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984F1F0E5C4500D50213 /* ImportCategory.swift */; };
 		E8E6985A1F0E5DA900D50213 /* SourceTextBufferEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698591F0E5DA900D50213 /* SourceTextBufferEditor.swift */; };
 		E8E6985B1F0E5DC700D50213 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
-		E8E698601F0E5E8000D50213 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
-		E8E698611F0E5E8000D50213 /* ImportArtisan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8E6986A1F0E5F2B00D50213 /* Dictionary+MapValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698661F0E5F2B00D50213 /* Dictionary+MapValues.swift */; };
 		E8E6986B1F0E5F2B00D50213 /* String+PatternMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698671F0E5F2B00D50213 /* String+PatternMatching.swift */; };
 /* End PBXBuildFile section */
@@ -35,13 +32,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = E8B3C6C81EF7CFD300CD7679;
 			remoteInfo = "Snowonder Extension";
-		};
-		E8E698621F0E5E8000D50213 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E8E698391F0E5B2D00D50213;
-			remoteInfo = ImportArtisan;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,17 +45,6 @@
 				E8B3C6D71EF7CFD300CD7679 /* Snowonder Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8E698641F0E5E8000D50213 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E8E698611F0E5E8000D50213 /* ImportArtisan.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -82,7 +61,7 @@
 		E8B3C6CB1EF7CFD300CD7679 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E8B3C6CF1EF7CFD300CD7679 /* Snowonder_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snowonder_Extension.entitlements; sourceTree = "<group>"; };
 		E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
-		E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		E8B3C6D21EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatImportDeclarationsCommand.swift; sourceTree = "<group>"; };
 		E8B3C6D41EF7CFD300CD7679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImportArtisan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlock.swift; sourceTree = "<group>"; };
@@ -99,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E698601F0E5E8000D50213 /* ImportArtisan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */,
-				E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */,
+				E8B3C6D21EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift */,
 				E8E698591F0E5DA900D50213 /* SourceTextBufferEditor.swift */,
 				E8B3C6D41EF7CFD300CD7679 /* Info.plist */,
 				E8B3C6CE1EF7CFD300CD7679 /* Supporting Files */,
@@ -227,13 +205,11 @@
 				E8B3C6B01EF7CFB500CD7679 /* Frameworks */,
 				E8B3C6B11EF7CFB500CD7679 /* Resources */,
 				E8B3C6DB1EF7CFD300CD7679 /* Embed App Extensions */,
-				E8E698641F0E5E8000D50213 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E8B3C6D61EF7CFD300CD7679 /* PBXTargetDependency */,
-				E8E698631F0E5E8000D50213 /* PBXTargetDependency */,
 			);
 			name = Snowonder;
 			productName = Snowonder;
@@ -344,7 +320,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84038601F0E6266003DF6C3 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */,
-				E8B3C6D31EF7CFD300CD7679 /* SourceEditorCommand.swift in Sources */,
+				E8B3C6D31EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift in Sources */,
 				E8E6985A1F0E5DA900D50213 /* SourceTextBufferEditor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,11 +365,6 @@
 			isa = PBXTargetDependency;
 			target = E8B3C6C81EF7CFD300CD7679 /* Snowonder Extension */;
 			targetProxy = E8B3C6D51EF7CFD300CD7679 /* PBXContainerItemProxy */;
-		};
-		E8E698631F0E5E8000D50213 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
-			targetProxy = E8E698621F0E5E8000D50213 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -506,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -523,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -575,6 +547,7 @@
 		E8E698441F0E5B2D00D50213 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -602,6 +575,7 @@
 		E8E698451F0E5B2D00D50213 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
