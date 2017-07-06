@@ -8,24 +8,24 @@
 
 import Foundation
 
-typealias ImportCategories = Set<ImportCategory>
+public typealias ImportCategories = [ImportCategory]
 
-struct ImportCategory : Hashable {
+public struct ImportCategory : Hashable {
     
     /// Title of import category.
-    var title: String
+    public var title: String
     
     /// Pattern used to match import declaration to category.
-    var declarationPattern: String
+    public var declarationPattern: String
     
     /// ComparisonResult used to sort import declarations in scope of category.
-    var sortingComparisonResult: ComparisonResult
+    public var sortingComparisonResult: ComparisonResult
     
-    var hashValue: Int {
+    public var hashValue: Int {
         return title.hashValue ^ declarationPattern.hashValue ^ sortingComparisonResult.hashValue
     }
 }
 
-func ==(lhs: ImportCategory, rhs: ImportCategory) -> Bool {
+public func ==(lhs: ImportCategory, rhs: ImportCategory) -> Bool {
     return lhs.title == rhs.title && lhs.declarationPattern == rhs.declarationPattern && lhs.sortingComparisonResult == rhs.sortingComparisonResult
 }

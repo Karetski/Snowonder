@@ -12,7 +12,9 @@ extension Dictionary {
     
     func mapValues<T>(_ transform: (Key, Value) -> T) -> [Key : T] {
         var transformed: [Key : T] = [:]
-        forEach { transformed[$0] = transform($0, $1) }
+        for (key, value) in self {
+            transformed[key] = transform(key, value)
+        }
         return transformed
     }
 }

@@ -1,5 +1,5 @@
 //
-//  SourceTextBufferEditor.swift
+//  SourceTextBufferModifier.swift
 //  Snowonder
 //
 //  Created by Aliaksei Karetski on 05.07.17.
@@ -11,38 +11,34 @@ import XcodeKit
 
 class SourceTextBufferEditor {
     
-    enum ReplacementPosition {
-        case top
-        case bottom
-    }
-    
     private(set) var buffer: XCSourceTextBuffer
     
     init(buffer: XCSourceTextBuffer) {
         self.buffer = buffer
     }
     
-    func replace(_ oldLines: [String], to newLines: [String], from replacementPosition: ReplacementPosition) {
-        guard let firstOldElement = oldLines.first, let lastOldElement = oldLines.last else {
-            return
-        }
-        
+    enum ReplacementOption {
+        case top
+        case bottom
+        // TODO: Add `direct` case to replace line by line
+    }
+    
+    func replace(lines: [String], with newLines: [String], using option: ReplacementOption) {
         let replacementStartIndex: Int
         
-        switch replacementPosition {
+        switch option {
         case .top:
-            replacementStartIndex = buffer.lines.index(of: firstOldElement)
+            replacementStartIndex = buffer.lines.index(of: lines.first ?? "")
         case .bottom:
-            replacementStartIndex = buffer.lines.index(of: lastOldElement)
+            replacementStartIndex = buffer.lines.index(of: lines.last ?? "")
         }
         
         guard replacementStartIndex != NSNotFound else {
             return
         }
         
-        let indexSet = IndexSet(integersIn:replacementStartIndex..<replacementStartIndex+newLines.count)
-        
-        buffer.lines.removeObjects(in: oldLines)
-        buffer.lines.insert(newLines, at: indexSet)
+        let newLinesIndexSet = IndexSet(integersIn:replacementStartIndex ..< replacementStartIndex + newLines.count)
+        buffer.lines.removeObjects(in: lines)
+        buffer.lines.insert(newLines, at: newLinesIndexSet)
     }
 }

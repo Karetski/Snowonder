@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum ImportBlockDetectorError: Error {
+public enum ImportBlockDetectorError: Error {
     case notFound
 }
 
-class ImportBlockDetector {
+open class ImportBlockDetector {
     
     private struct Constant { // TODO: Init these values from JSON on detector init.
         static let availableImportCategories: [ImportCategories] = [swiftSet, objcSet]
@@ -22,12 +22,14 @@ class ImportBlockDetector {
                                                 ImportCategory(title: "Headers", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)]
     }
     
+    public init() { }
+    
     /// Creates new import block based on `lines` parameter.
     ///
     /// - Parameters:
     ///   - lines: Lines used to detect import declarations.
     /// - Throws: Error if import declarations can't be found.
-    func importBlock(from lines: [String]) throws -> ImportBlock {
+    open func importBlock(from lines: [String]) throws -> ImportBlock {
         let categories = self.categories(from: lines)
         let declarations = self.declarations(from: lines, using: categories)
         let categorizedDeclarations = self.categorizedDeclarations(from: lines, using: categories)
@@ -43,7 +45,7 @@ class ImportBlockDetector {
     ///
     /// - Parameter lines: Lines used to construct import categories.
     /// - Returns: Constructed import declarations based on `lines` parameter.
-    func categories(from lines: [String]) -> ImportCategories {
+    open func categories(from lines: [String]) -> ImportCategories {
         for line in lines {
             for importCategories in Constant.availableImportCategories {
                 for importCategory in importCategories {
@@ -63,7 +65,7 @@ class ImportBlockDetector {
     ///   - lines: Lines used to detect import declarations.
     ///   - categories: Import categories used to detect import declarations.
     /// - Returns: Detected import declarations.
-    func declarations(from lines: [String], using categories: ImportCategories) -> ImportDeclarations {
+    open func declarations(from lines: [String], using categories: ImportCategories) -> ImportDeclarations {
         return lines.filter { (line) -> Bool in
             var matches = false
             
@@ -84,7 +86,7 @@ class ImportBlockDetector {
     ///   - lines: Lines used to detect import declarations.
     ///   - importCategories: Import categories used to detect import declarations.
     /// - Returns: Detected and grouped import declarations.
-    func categorizedDeclarations(from lines: [String], using categories: ImportCategories) -> CategorizedImportDeclarations {
+    open func categorizedDeclarations(from lines: [String], using categories: ImportCategories) -> CategorizedImportDeclarations {
         var categorizedDeclarations = CategorizedImportDeclarations()
         
         for line in lines {

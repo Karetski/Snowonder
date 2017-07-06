@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ImportArtisan
 import XcodeKit
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
@@ -19,14 +20,11 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                 let detector = ImportBlockDetector()
                 let importBlock = try detector.importBlock(from: lines)
                 
-                let formatter = ImportBlockFormatter(options: [.separate, .sort])
+                let formatter = ImportBlockFormatter(options: [.separateCategories, .sortDeclarations])
                 let formattedImportLines = formatter.lines(from: importBlock)
                 
-                print(formattedImportLines)
-                
                 let bufferEditor = SourceTextBufferEditor(buffer: invocation.buffer)
-                bufferEditor.replace(importBlock.declarations, to: formattedImportLines, from: .top)
-                
+                bufferEditor.replace(lines: importBlock.declarations, with: formattedImportLines, using: .top)
             } catch let catchedError {
                 error = catchedError
             }

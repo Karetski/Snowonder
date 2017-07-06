@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E8414B391EF7F6FC00005A19 /* ImportCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8414B381EF7F6FC00005A19 /* ImportCategory.swift */; };
-		E8414B3B1EF7F89E00005A19 /* ImportBlockDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8414B3A1EF7F89E00005A19 /* ImportBlockDetector.swift */; };
-		E8414B3D1EF801D700005A19 /* String+PatternMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */; };
-		E899DC371F0147BF00D6EFFF /* ImportBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899DC361F0147BF00D6EFFF /* ImportBlock.swift */; };
-		E899DC3B1F0245C700D6EFFF /* ImportBlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899DC3A1F0245C700D6EFFF /* ImportBlockFormatter.swift */; };
+		E84038601F0E6266003DF6C3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E840385F1F0E6266003DF6C3 /* Info.plist */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -20,8 +16,16 @@
 		E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */; };
 		E8B3C6D31EF7CFD300CD7679 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */; };
 		E8B3C6D71EF7CFD300CD7679 /* Snowonder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E8E6981F1F0CCCF500D50213 /* SourceTextBufferEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6981E1F0CCCF500D50213 /* SourceTextBufferEditor.swift */; };
-		E8E698211F0D0F4400D50213 /* Dictionary+MapValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698201F0D0F4400D50213 /* Dictionary+MapValues.swift */; };
+		E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */; };
+		E8E698541F0E5C4500D50213 /* ImportBlockDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */; };
+		E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984E1F0E5C4500D50213 /* ImportBlockFormatter.swift */; };
+		E8E698561F0E5C4500D50213 /* ImportCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984F1F0E5C4500D50213 /* ImportCategory.swift */; };
+		E8E6985A1F0E5DA900D50213 /* SourceTextBufferEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698591F0E5DA900D50213 /* SourceTextBufferEditor.swift */; };
+		E8E6985B1F0E5DC700D50213 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
+		E8E698601F0E5E8000D50213 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
+		E8E698611F0E5E8000D50213 /* ImportArtisan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E8E6986A1F0E5F2B00D50213 /* Dictionary+MapValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698661F0E5F2B00D50213 /* Dictionary+MapValues.swift */; };
+		E8E6986B1F0E5F2B00D50213 /* String+PatternMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698671F0E5F2B00D50213 /* String+PatternMatching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E8B3C6C81EF7CFD300CD7679;
 			remoteInfo = "Snowonder Extension";
+		};
+		E8E698621F0E5E8000D50213 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8E698391F0E5B2D00D50213;
+			remoteInfo = ImportArtisan;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,14 +57,21 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8E698641F0E5E8000D50213 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E8E698611F0E5E8000D50213 /* ImportArtisan.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E8414B381EF7F6FC00005A19 /* ImportCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCategory.swift; sourceTree = "<group>"; };
-		E8414B3A1EF7F89E00005A19 /* ImportBlockDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockDetector.swift; sourceTree = "<group>"; };
-		E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PatternMatching.swift"; sourceTree = "<group>"; };
-		E899DC361F0147BF00D6EFFF /* ImportBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlock.swift; sourceTree = "<group>"; };
-		E899DC3A1F0245C700D6EFFF /* ImportBlockFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockFormatter.swift; sourceTree = "<group>"; };
+		E840385F1F0E6266003DF6C3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,8 +84,14 @@
 		E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		E8B3C6D41EF7CFD300CD7679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8E6981E1F0CCCF500D50213 /* SourceTextBufferEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceTextBufferEditor.swift; sourceTree = "<group>"; };
-		E8E698201F0D0F4400D50213 /* Dictionary+MapValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+MapValues.swift"; sourceTree = "<group>"; };
+		E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImportArtisan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlock.swift; sourceTree = "<group>"; };
+		E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockDetector.swift; sourceTree = "<group>"; };
+		E8E6984E1F0E5C4500D50213 /* ImportBlockFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockFormatter.swift; sourceTree = "<group>"; };
+		E8E6984F1F0E5C4500D50213 /* ImportCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCategory.swift; sourceTree = "<group>"; };
+		E8E698591F0E5DA900D50213 /* SourceTextBufferEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceTextBufferEditor.swift; sourceTree = "<group>"; };
+		E8E698661F0E5F2B00D50213 /* Dictionary+MapValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+MapValues.swift"; sourceTree = "<group>"; };
+		E8E698671F0E5F2B00D50213 /* String+PatternMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PatternMatching.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E698601F0E5E8000D50213 /* ImportArtisan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +107,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E6985B1F0E5DC700D50213 /* ImportArtisan.framework in Frameworks */,
 				E8B3C6CC1EF7CFD300CD7679 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E698361F0E5B2D00D50213 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +127,7 @@
 			children = (
 				E8B3C6B51EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6CD1EF7CFD300CD7679 /* Snowonder Extension */,
+				E8E6983B1F0E5B2D00D50213 /* ImportArtisan */,
 				E8B3C6B41EF7CFB500CD7679 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +137,7 @@
 			children = (
 				E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */,
 				E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */,
+				E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,13 +168,7 @@
 			children = (
 				E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */,
 				E8B3C6D21EF7CFD300CD7679 /* SourceEditorCommand.swift */,
-				E8414B381EF7F6FC00005A19 /* ImportCategory.swift */,
-				E899DC361F0147BF00D6EFFF /* ImportBlock.swift */,
-				E8414B3A1EF7F89E00005A19 /* ImportBlockDetector.swift */,
-				E899DC3A1F0245C700D6EFFF /* ImportBlockFormatter.swift */,
-				E8E6981E1F0CCCF500D50213 /* SourceTextBufferEditor.swift */,
-				E8414B3C1EF801D700005A19 /* String+PatternMatching.swift */,
-				E8E698201F0D0F4400D50213 /* Dictionary+MapValues.swift */,
+				E8E698591F0E5DA900D50213 /* SourceTextBufferEditor.swift */,
 				E8B3C6D41EF7CFD300CD7679 /* Info.plist */,
 				E8B3C6CE1EF7CFD300CD7679 /* Supporting Files */,
 				E8B3C6CA1EF7CFD300CD7679 /* Frameworks */,
@@ -155,7 +184,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E8E6983B1F0E5B2D00D50213 /* ImportArtisan */ = {
+			isa = PBXGroup;
+			children = (
+				E8E6984F1F0E5C4500D50213 /* ImportCategory.swift */,
+				E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */,
+				E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */,
+				E8E6984E1F0E5C4500D50213 /* ImportBlockFormatter.swift */,
+				E8E698651F0E5F2B00D50213 /* Extensions */,
+				E840385F1F0E6266003DF6C3 /* Info.plist */,
+			);
+			path = ImportArtisan;
+			sourceTree = "<group>";
+		};
+		E8E698651F0E5F2B00D50213 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8E698661F0E5F2B00D50213 /* Dictionary+MapValues.swift */,
+				E8E698671F0E5F2B00D50213 /* String+PatternMatching.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E8E698371F0E5B2D00D50213 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E8B3C6B21EF7CFB500CD7679 /* Snowonder */ = {
@@ -166,11 +227,13 @@
 				E8B3C6B01EF7CFB500CD7679 /* Frameworks */,
 				E8B3C6B11EF7CFB500CD7679 /* Resources */,
 				E8B3C6DB1EF7CFD300CD7679 /* Embed App Extensions */,
+				E8E698641F0E5E8000D50213 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E8B3C6D61EF7CFD300CD7679 /* PBXTargetDependency */,
+				E8E698631F0E5E8000D50213 /* PBXTargetDependency */,
 			);
 			name = Snowonder;
 			productName = Snowonder;
@@ -194,6 +257,24 @@
 			productReference = E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
+		E8E698391F0E5B2D00D50213 /* ImportArtisan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8E698431F0E5B2D00D50213 /* Build configuration list for PBXNativeTarget "ImportArtisan" */;
+			buildPhases = (
+				E8E698351F0E5B2D00D50213 /* Sources */,
+				E8E698361F0E5B2D00D50213 /* Frameworks */,
+				E8E698371F0E5B2D00D50213 /* Headers */,
+				E8E698381F0E5B2D00D50213 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImportArtisan;
+			productName = ImportArtisan;
+			productReference = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,6 +295,12 @@
 						DevelopmentTeam = CDZGT67CB7;
 						ProvisioningStyle = Automatic;
 					};
+					E8E698391F0E5B2D00D50213 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CDZGT67CB7;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E8B3C6AE1EF7CFB500CD7679 /* Build configuration list for PBXProject "Snowonder" */;
@@ -231,6 +318,7 @@
 			targets = (
 				E8B3C6B21EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6C81EF7CFD300CD7679 /* Snowonder Extension */,
+				E8E698391F0E5B2D00D50213 /* ImportArtisan */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +340,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8E698381F0E5B2D00D50213 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E84038601F0E6266003DF6C3 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -268,15 +364,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8414B3B1EF7F89E00005A19 /* ImportBlockDetector.swift in Sources */,
-				E8414B3D1EF801D700005A19 /* String+PatternMatching.swift in Sources */,
-				E899DC371F0147BF00D6EFFF /* ImportBlock.swift in Sources */,
 				E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */,
-				E8414B391EF7F6FC00005A19 /* ImportCategory.swift in Sources */,
 				E8B3C6D31EF7CFD300CD7679 /* SourceEditorCommand.swift in Sources */,
-				E8E698211F0D0F4400D50213 /* Dictionary+MapValues.swift in Sources */,
-				E8E6981F1F0CCCF500D50213 /* SourceTextBufferEditor.swift in Sources */,
-				E899DC3B1F0245C700D6EFFF /* ImportBlockFormatter.swift in Sources */,
+				E8E6985A1F0E5DA900D50213 /* SourceTextBufferEditor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E698351F0E5B2D00D50213 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E6986B1F0E5F2B00D50213 /* String+PatternMatching.swift in Sources */,
+				E8E698541F0E5C4500D50213 /* ImportBlockDetector.swift in Sources */,
+				E8E6986A1F0E5F2B00D50213 /* Dictionary+MapValues.swift in Sources */,
+				E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */,
+				E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */,
+				E8E698561F0E5C4500D50213 /* ImportCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +390,11 @@
 			isa = PBXTargetDependency;
 			target = E8B3C6C81EF7CFD300CD7679 /* Snowonder Extension */;
 			targetProxy = E8B3C6D51EF7CFD300CD7679 /* PBXContainerItemProxy */;
+		};
+		E8E698631F0E5E8000D50213 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
+			targetProxy = E8E698621F0E5E8000D50213 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -464,6 +572,59 @@
 			};
 			name = Release;
 		};
+		E8E698441F0E5B2D00D50213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ImportArtisan/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E8E698451F0E5B2D00D50213 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ImportArtisan/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -490,6 +651,15 @@
 			buildConfigurations = (
 				E8B3C6D91EF7CFD300CD7679 /* Debug */,
 				E8B3C6DA1EF7CFD300CD7679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8E698431F0E5B2D00D50213 /* Build configuration list for PBXNativeTarget "ImportArtisan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8E698441F0E5B2D00D50213 /* Debug */,
+				E8E698451F0E5B2D00D50213 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

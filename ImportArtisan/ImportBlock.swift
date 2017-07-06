@@ -8,20 +8,20 @@
 
 import Foundation
 
-typealias ImportDeclarations = [String]
-typealias CategorizedImportDeclarations = [ImportCategory : ImportDeclarations]
+public typealias ImportDeclarations = [String]
+public typealias CategorizedImportDeclarations = [ImportCategory : ImportDeclarations]
 
-struct ImportBlock {
+public struct ImportBlock {
     
     /// Import categories that are acceptable for import block.
-    var categories: ImportCategories
+    public var categories: ImportCategories
     
     /// Import declarations that import block includes.
-    var declarations: ImportDeclarations
+    public var declarations: ImportDeclarations
     /// Import declarations that import block includes grouped by a category.
-    var categorizedDeclarations: CategorizedImportDeclarations
+    public var categorizedDeclarations: CategorizedImportDeclarations
     
-    init(categories: ImportCategories, declarations: ImportDeclarations, categorizedDeclarations: CategorizedImportDeclarations) {
+    public init(categories: ImportCategories, declarations: ImportDeclarations, categorizedDeclarations: CategorizedImportDeclarations) {
         self.categories = categories
         self.declarations = declarations
         self.categorizedDeclarations = categorizedDeclarations

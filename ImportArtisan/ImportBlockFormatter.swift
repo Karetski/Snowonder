@@ -8,36 +8,37 @@
 
 import Foundation
 
-class ImportBlockFormatter {
+open class ImportBlockFormatter {
     
-    enum Option {
-        case sort
-        case separate
+    public enum Option {
+        case sortDeclarations
+        case separateCategories
+        case removeDuplicates // TODO: Not implemented yet
     }
     
-    typealias Options = Set<Option>
+    public typealias Options = Set<Option>
     
     /// Formatting options, used to define what optimizations should be done.
-    var options: Options
+    open var options: Options
     
     /// Creates new instance with formatting `options`.
     ///
     /// - Parameter options: Formatting options.
-    init(options: Options) {
+    public init(options: Options) {
         self.options = options
     }
     
-    func lines(from importBlock: ImportBlock) -> [String] {
+    open func lines(from importBlock: ImportBlock) -> [String] {
         return importBlock.categorizedDeclarations
-            .sorted(with: options)
-            .flat(with: options, using: importBlock.categories)
+            .sortedDeclarations(with: options)
+            .flatDeclarations(with: options, using: importBlock.categories)
     }
 }
 
 private extension Dictionary where Key == ImportCategory, Value == ImportDeclarations {
     
-    func sorted(with options: ImportBlockFormatter.Options) -> CategorizedImportDeclarations {
-        guard options.contains(.sort) else {
+    func sortedDeclarations(with options: ImportBlockFormatter.Options) -> CategorizedImportDeclarations {
+        guard options.contains(.sortDeclarations) else {
             return self
         }
         
@@ -46,12 +47,15 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
         }
     }
     
-    func flat(with options: ImportBlockFormatter.Options, using categories: ImportCategories) -> ImportDeclarations {
+    func flatDeclarations(with options:ImportBlockFormatter.Options, using categories: ImportCategories) -> ImportDeclarations {
         var flatDeclarations = ImportDeclarations()
         
-        categories.forEach { (category) in
+        categories.enumerated().forEach { (index, category) in
             if let categoryDeclarations = self[category], !categoryDeclarations.isEmpty {
                 flatDeclarations.append(contentsOf: categoryDeclarations)
+                if options.contains(.separateCategories) && index < categories.count - 1 {
+                    flatDeclarations.append("\n")
+                }
             }
         }
         
