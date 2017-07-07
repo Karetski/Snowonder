@@ -1,7 +1,12 @@
 language: objective-c
-
 osx_image: xcode8.3
 
-xcode_project: Snowonder.xcodeproj
-xcode_scheme: Snowonder Extension
+script: xcodebuild -scheme Snowonder install DSTROOT=~ CODE_SIGN_IDENTITY=""
 
+# xcode_project: Snowonder.xcodeproj
+# xcode_scheme: Snowonder Extension
+#
+# language: generic
+# os: osx
+# osx_image: xcode8
+# script: xcodebuild -scheme SwiftLintForXcode install DSTROOT=~ CODE_SIGN_IDENTITY=""
