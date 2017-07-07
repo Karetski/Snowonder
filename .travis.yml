@@ -3,14 +3,5 @@ osx_image: xcode8.3
 
 script:
   - xcodebuild -project Snowonder.xcodeproj -scheme Snowonder CODE_SIGNING_ALLOWED=NO
-  # - xcodebuild -project Snowonder.xcodeproj -scheme Snowonder Extension CODE_SIGNING_ALLOWED=NO
+  - xcodebuild -project Snowonder.xcodeproj -scheme Snowonder Extension CODE_SIGNING_ALLOWED=NO
   - xcodebuild -project Snowonder.xcodeproj -scheme ImportArtisan CODE_SIGNING_ALLOWED=NO
-  # xcodebuild -scheme Snowonder install DSTROOT=~ CODE_SIGN_IDENTITY=""
-
-# xcode_project: Snowonder.xcodeproj
-# xcode_scheme: Snowonder Extension
-#
-# language: generic
-# os: osx
-# osx_image: xcode8
-# script: xcodebuild -scheme SwiftLintForXcode install DSTROOT=~ CODE_SIGN_IDENTITY=""
