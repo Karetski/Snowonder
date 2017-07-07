@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E84038641F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E84038631F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt */; };
+		E84038661F0F8821003DF6C3 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038651F0F8821003DF6C3 /* Script.swift */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		E840385F1F0E6266003DF6C3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84038631F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = open_system_preferences_extensions.scpt; sourceTree = "<group>"; };
+		E84038651F0F8821003DF6C3 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E84038611F0F74BA003DF6C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E84038621F0F787F003DF6C3 /* Scripts */,
+				E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E84038621F0F787F003DF6C3 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E84038631F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		E8B3C6AA1EF7CFB500CD7679 = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +146,10 @@
 			children = (
 				E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */,
 				E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */,
-				E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */,
+				E84038651F0F8821003DF6C3 /* Script.swift */,
 				E8B3C6BC1EF7CFB500CD7679 /* Main.storyboard */,
 				E8B3C6BF1EF7CFB500CD7679 /* Info.plist */,
+				E84038611F0F74BA003DF6C3 /* Resources */,
 			);
 			path = Snowonder;
 			sourceTree = "<group>";
@@ -305,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */,
+				E84038641F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt in Resources */,
 				E8B3C6BE1EF7CFB500CD7679 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */,
+				E84038661F0F8821003DF6C3 /* Script.swift in Sources */,
 				E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
