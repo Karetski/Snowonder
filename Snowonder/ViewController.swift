@@ -31,4 +31,7 @@ class ViewController: NSViewController {
     @IBAction func enableExtensionButtonAction(_ sender: NSButton) {
         Script(info: Constant.ScriptInfo.openSystemPreferencesExtensions).execute()
     }
+    
+    @IBAction func setupKeybindingsButtonAction(_ sender: NSButton) {
+    }
 }

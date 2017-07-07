@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -664,11 +665,13 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="🔮Snowonder" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="300" height="500"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="300" height="500"/>
+                        <value key="maxSize" type="size" width="300" height="500"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -676,20 +679,31 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="340"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Snowonder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <visualEffectView blendingMode="behindWindow" material="mediumLight" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="QPE-VY-5tO">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+                            </visualEffectView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wwW-1x-Qv7">
+                                <rect key="frame" x="67" y="232" width="167" height="36"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Snowonder" id="XYw-c8-pcA">
+                                    <font key="font" metaFont="systemSemibold" size="30"/>
+                                    <color key="textColor" red="0.050530133928571426" green="0.050530133928571426" blue="0.050530133928571426" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9EO-JX-vd5">
-                                <rect key="frame" x="168" y="13" width="144" height="32"/>
+                                <rect key="frame" x="54" y="44" width="192" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="Bkl-IR-RK5"/>
+                                    <constraint firstAttribute="width" constant="180" id="Bkl-IR-RK5"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Enable Extension" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u3w-VF-QSS">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -699,16 +713,37 @@
                                     <action selector="enableExtensionButtonAction:" target="XfG-lQ-9wD" id="gMW-MK-LL7"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WD7-11-vWp">
+                                <rect key="frame" x="54" y="13" width="192" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="so9-rI-Bl0"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Setup Keybindings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IDd-KM-wfL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="setupKeybindingsButtonAction:" target="XfG-lQ-9wD" id="t6C-Xw-bAs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="9EO-JX-vd5" secondAttribute="bottom" constant="20" id="U3h-qR-H7X"/>
-                            <constraint firstItem="9EO-JX-vd5" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="vwC-jU-0Y5"/>
+                            <constraint firstAttribute="trailing" secondItem="QPE-VY-5tO" secondAttribute="trailing" id="5z3-Cu-cEq"/>
+                            <constraint firstItem="QPE-VY-5tO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="8J1-56-8rU"/>
+                            <constraint firstItem="WD7-11-vWp" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Le2-UH-fJB"/>
+                            <constraint firstItem="QPE-VY-5tO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="OXx-RA-Spb"/>
+                            <constraint firstItem="wwW-1x-Qv7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="WvX-X3-5ZI"/>
+                            <constraint firstAttribute="bottom" secondItem="WD7-11-vWp" secondAttribute="bottom" constant="20" id="asl-kz-Ljr"/>
+                            <constraint firstAttribute="bottom" secondItem="QPE-VY-5tO" secondAttribute="bottom" id="atW-CF-KQk"/>
+                            <constraint firstItem="wwW-1x-Qv7" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="j7N-Zk-Dm9"/>
+                            <constraint firstItem="WD7-11-vWp" firstAttribute="top" secondItem="9EO-JX-vd5" secondAttribute="bottom" constant="10" id="lEB-Kh-qHT"/>
+                            <constraint firstItem="9EO-JX-vd5" firstAttribute="centerX" secondItem="WD7-11-vWp" secondAttribute="centerX" id="tsK-LH-r4C"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="962"/>
         </scene>
     </scenes>
 </document>

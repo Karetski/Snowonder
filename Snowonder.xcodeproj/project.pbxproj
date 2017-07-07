@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		E84038641F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E84038631F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt */; };
 		E84038661F0F8821003DF6C3 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038651F0F8821003DF6C3 /* Script.swift */; };
+		E84038701F0FC4EC003DF6C3 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
+		E84038771F0FC701003DF6C3 /* ImportCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038761F0FC701003DF6C3 /* ImportCategoryTests.swift */; };
+		E840387A1F0FD18F003DF6C3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E84038781F0FD18E003DF6C3 /* .gitignore */; };
+		E840387B1F0FD18F003DF6C3 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = E84038791F0FD18E003DF6C3 /* .travis.yml */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -28,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E84038711F0FC4EC003DF6C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8E698391F0E5B2D00D50213;
+			remoteInfo = ImportArtisan;
+		};
 		E8B3C6D51EF7CFD300CD7679 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
@@ -55,6 +66,11 @@
 		E840385F1F0E6266003DF6C3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E84038631F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = open_system_preferences_extensions.scpt; sourceTree = "<group>"; };
 		E84038651F0F8821003DF6C3 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
+		E840386B1F0FC4EC003DF6C3 /* ImportArtisanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImportArtisanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E840386F1F0FC4EC003DF6C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84038761F0FC701003DF6C3 /* ImportCategoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCategoryTests.swift; sourceTree = "<group>"; };
+		E84038781F0FD18E003DF6C3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E84038791F0FD18E003DF6C3 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +94,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E84038681F0FC4EC003DF6C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E84038701F0FC4EC003DF6C3 /* ImportArtisan.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8B3C6B01EF7CFB500CD7679 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,12 +145,24 @@
 			path = Scripts;
 			sourceTree = "<group>";
 		};
+		E840386C1F0FC4EC003DF6C3 /* ImportArtisanTests */ = {
+			isa = PBXGroup;
+			children = (
+				E84038761F0FC701003DF6C3 /* ImportCategoryTests.swift */,
+				E840386F1F0FC4EC003DF6C3 /* Info.plist */,
+			);
+			path = ImportArtisanTests;
+			sourceTree = "<group>";
+		};
 		E8B3C6AA1EF7CFB500CD7679 = {
 			isa = PBXGroup;
 			children = (
+				E84038781F0FD18E003DF6C3 /* .gitignore */,
+				E84038791F0FD18E003DF6C3 /* .travis.yml */,
 				E8B3C6B51EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6CD1EF7CFD300CD7679 /* Snowonder Extension */,
 				E8E6983B1F0E5B2D00D50213 /* ImportArtisan */,
+				E840386C1F0FC4EC003DF6C3 /* ImportArtisanTests */,
 				E8B3C6B41EF7CFB500CD7679 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +173,7 @@
 				E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */,
 				E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */,
 				E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */,
+				E840386B1F0FC4EC003DF6C3 /* ImportArtisanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +256,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E840386A1F0FC4EC003DF6C3 /* ImportArtisanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E84038731F0FC4EC003DF6C3 /* Build configuration list for PBXNativeTarget "ImportArtisanTests" */;
+			buildPhases = (
+				E84038671F0FC4EC003DF6C3 /* Sources */,
+				E84038681F0FC4EC003DF6C3 /* Frameworks */,
+				E84038691F0FC4EC003DF6C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E84038721F0FC4EC003DF6C3 /* PBXTargetDependency */,
+			);
+			name = ImportArtisanTests;
+			productName = ImportArtisanTests;
+			productReference = E840386B1F0FC4EC003DF6C3 /* ImportArtisanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E8B3C6B21EF7CFB500CD7679 /* Snowonder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8B3C6C21EF7CFB500CD7679 /* Build configuration list for PBXNativeTarget "Snowonder" */;
@@ -283,6 +338,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Karetski;
 				TargetAttributes = {
+					E840386A1F0FC4EC003DF6C3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CDZGT67CB7;
+						ProvisioningStyle = Automatic;
+					};
 					E8B3C6B21EF7CFB500CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = CDZGT67CB7;
@@ -317,15 +377,25 @@
 				E8B3C6B21EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6C81EF7CFD300CD7679 /* Snowonder Extension */,
 				E8E698391F0E5B2D00D50213 /* ImportArtisan */,
+				E840386A1F0FC4EC003DF6C3 /* ImportArtisanTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E84038691F0FC4EC003DF6C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8B3C6B11EF7CFB500CD7679 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E840387B1F0FD18F003DF6C3 /* .travis.yml in Resources */,
+				E840387A1F0FD18F003DF6C3 /* .gitignore in Resources */,
 				E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */,
 				E84038641F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt in Resources */,
 				E8B3C6BE1EF7CFB500CD7679 /* Main.storyboard in Resources */,
@@ -349,6 +419,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E84038671F0FC4EC003DF6C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E84038771F0FC701003DF6C3 /* ImportCategoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8B3C6AF1EF7CFB500CD7679 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,6 +463,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E84038721F0FC4EC003DF6C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
+			targetProxy = E84038711F0FC4EC003DF6C3 /* PBXContainerItemProxy */;
+		};
 		E8B3C6D61EF7CFD300CD7679 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E8B3C6C81EF7CFD300CD7679 /* Snowonder Extension */;
@@ -404,6 +487,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E84038741F0FC4EC003DF6C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
+				INFOPLIST_FILE = ImportArtisanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E84038751F0FC4EC003DF6C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
+				INFOPLIST_FILE = ImportArtisanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		E8B3C6C01EF7CFB500CD7679 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -626,6 +735,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E84038731F0FC4EC003DF6C3 /* Build configuration list for PBXNativeTarget "ImportArtisanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E84038741F0FC4EC003DF6C3 /* Debug */,
+				E84038751F0FC4EC003DF6C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E8B3C6AE1EF7CFB500CD7679 /* Build configuration list for PBXProject "Snowonder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
