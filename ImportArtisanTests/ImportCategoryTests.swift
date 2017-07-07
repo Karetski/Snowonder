@@ -36,6 +36,21 @@ class ImportCategoryTests: XCTestCase {
     }
 
     func testHashable() {
+        let importCategory00 = ImportCategory(title: "First", declarationPattern: "^import .*", sortingComparisonResult: .orderedAscending)
+        let importCategory01 = ImportCategory(title: "First", declarationPattern: "^import .*", sortingComparisonResult: .orderedAscending)
+        let importCategory1 = ImportCategory(title: "Second", declarationPattern: "^import .*", sortingComparisonResult: .orderedAscending)
+        let importCategory2 = ImportCategory(title: "Third", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)
+        let importCategory3 = ImportCategory(title: "Fourth", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedDescending)
         
+        XCTAssertTrue(importCategory00.hashValue == importCategory01.hashValue)
+        XCTAssertFalse(importCategory00.hashValue == importCategory1.hashValue)
+        XCTAssertFalse(importCategory1.hashValue == importCategory2.hashValue)
+        XCTAssertFalse(importCategory2.hashValue == importCategory3.hashValue)
+        
+        let constructingHash = "First".hashValue ^ "^import .*".hashValue ^ ComparisonResult.orderedAscending.hashValue
+        let constructedHash = -8442284183870363690
+        
+        XCTAssertTrue(importCategory00.hashValue == constructingHash)
+        XCTAssertTrue(importCategory00.hashValue == constructedHash)
     }
 }
