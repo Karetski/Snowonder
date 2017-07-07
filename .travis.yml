@@ -3,5 +3,5 @@ osx_image: xcode8.3
 
 script:
   - xcodebuild -project Snowonder.xcodeproj -scheme Snowonder CODE_SIGNING_ALLOWED=NO
-  - xcodebuild -project Snowonder.xcodeproj -scheme Snowonder Extension CODE_SIGNING_ALLOWED=NO
+  - xcodebuild -project Snowonder.xcodeproj -scheme Snowonder\ Extension CODE_SIGNING_ALLOWED=NO
   - xcodebuild -project Snowonder.xcodeproj -scheme ImportArtisan CODE_SIGNING_ALLOWED=NO
