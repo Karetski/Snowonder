@@ -3,9 +3,9 @@ osx_image: xcode8.3
 
 before_install:
 - brew update
-- brew install xctool
+- brew outdated xctool || brew upgrade xctool
 
 script:
-  - xctool -project Snowonder.xcodeproj -scheme Snowonder
-  - xctool -project Snowonder.xcodeproj -scheme Snowonder\ Extension
-  - xctool test -project Snowonder.xcodeproj -scheme ImportArtisanTests
+- xctool -project Snowonder.xcodeproj -scheme Snowonder
+- xctool -project Snowonder.xcodeproj -scheme Snowonder\ Extension
+- xctool test -project Snowonder.xcodeproj -scheme ImportArtisanTests
