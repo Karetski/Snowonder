@@ -1,10 +1,6 @@
 language: objective-c
 osx_image: xcode8.3
 
-before_install:
-- brew update
-- brew outdated xctool || brew upgrade xctool
-
 script:
 - xcodebuild -project Snowonder.xcodeproj -scheme Snowonder CODE_SIGNING_ALLOWED=NO
 - xcodebuild -project Snowonder.xcodeproj -scheme Snowonder\ Extension CODE_SIGNING_ALLOWED=NO
