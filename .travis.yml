@@ -6,6 +6,6 @@ before_install:
 - brew outdated xctool || brew upgrade xctool
 
 script:
-- xctool -project Snowonder.xcodeproj -scheme Snowonder
-- xctool -project Snowonder.xcodeproj -scheme Snowonder\ Extension
-- xctool test -project Snowonder.xcodeproj -scheme ImportArtisanTests
+- xcodebuild -project Snowonder.xcodeproj -scheme Snowonder
+- xcodebuild -project Snowonder.xcodeproj -scheme Snowonder\ Extension
+- xcodebuild test -project Snowonder.xcodeproj -scheme ImportArtisanTests
