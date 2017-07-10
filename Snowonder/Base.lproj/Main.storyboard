@@ -692,11 +692,19 @@
                             <visualEffectView blendingMode="behindWindow" material="mediumLight" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="QPE-VY-5tO">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                             </visualEffectView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YKU-17-6TL">
+                                <rect key="frame" x="20" y="220" width="260" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="6Yz-LQ-Oog"/>
+                                    <constraint firstAttribute="height" constant="260" id="Syx-b4-wxZ"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Logo512" id="70h-kq-OvL"/>
+                            </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wwW-1x-Qv7">
-                                <rect key="frame" x="67" y="232" width="167" height="36"/>
+                                <rect key="frame" x="69" y="164" width="164" height="36"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Snowonder" id="XYw-c8-pcA">
-                                    <font key="font" metaFont="systemSemibold" size="30"/>
-                                    <color key="textColor" red="0.050530133928571426" green="0.050530133928571426" blue="0.050530133928571426" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <font key="font" metaFont="systemMedium" size="30"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -730,12 +738,14 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="QPE-VY-5tO" secondAttribute="trailing" id="5z3-Cu-cEq"/>
                             <constraint firstItem="QPE-VY-5tO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="8J1-56-8rU"/>
+                            <constraint firstItem="wwW-1x-Qv7" firstAttribute="top" secondItem="YKU-17-6TL" secondAttribute="bottom" constant="20" id="FVE-Q3-w6m"/>
+                            <constraint firstItem="YKU-17-6TL" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Key-z4-PSK"/>
                             <constraint firstItem="WD7-11-vWp" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Le2-UH-fJB"/>
                             <constraint firstItem="QPE-VY-5tO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="OXx-RA-Spb"/>
-                            <constraint firstItem="wwW-1x-Qv7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="WvX-X3-5ZI"/>
+                            <constraint firstItem="wwW-1x-Qv7" firstAttribute="centerX" secondItem="YKU-17-6TL" secondAttribute="centerX" id="Xcg-vm-g9A"/>
                             <constraint firstAttribute="bottom" secondItem="WD7-11-vWp" secondAttribute="bottom" constant="20" id="asl-kz-Ljr"/>
                             <constraint firstAttribute="bottom" secondItem="QPE-VY-5tO" secondAttribute="bottom" id="atW-CF-KQk"/>
-                            <constraint firstItem="wwW-1x-Qv7" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="j7N-Zk-Dm9"/>
+                            <constraint firstItem="YKU-17-6TL" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="kbN-ZG-PgK"/>
                             <constraint firstItem="WD7-11-vWp" firstAttribute="top" secondItem="9EO-JX-vd5" secondAttribute="bottom" constant="10" id="lEB-Kh-qHT"/>
                             <constraint firstItem="9EO-JX-vd5" firstAttribute="centerX" secondItem="WD7-11-vWp" secondAttribute="centerX" id="tsK-LH-r4C"/>
                         </constraints>
@@ -746,4 +756,7 @@
             <point key="canvasLocation" x="75" y="962"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo512" width="512" height="512"/>
+    </resources>
 </document>

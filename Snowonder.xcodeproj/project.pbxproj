@@ -13,6 +13,8 @@
 		E84038771F0FC701003DF6C3 /* ImportCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038761F0FC701003DF6C3 /* ImportCategoryTests.swift */; };
 		E840387A1F0FD18F003DF6C3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E84038781F0FD18E003DF6C3 /* .gitignore */; };
 		E840387B1F0FD18F003DF6C3 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = E84038791F0FD18E003DF6C3 /* .travis.yml */; };
+		E84038881F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038871F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift */; };
+		E840388A1F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038891F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		E84038761F0FC701003DF6C3 /* ImportCategoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportCategoryTests.swift; sourceTree = "<group>"; };
 		E84038781F0FD18E003DF6C3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E84038791F0FD18E003DF6C3 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		E84038871F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockDetectorTests.swift; sourceTree = "<group>"; };
+		E84038891F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockFormatterTests.swift; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				E84038761F0FC701003DF6C3 /* ImportCategoryTests.swift */,
+				E84038871F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift */,
+				E84038891F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift */,
 				E840386F1F0FC4EC003DF6C3 /* Info.plist */,
 			);
 			path = ImportArtisanTests;
@@ -423,6 +429,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84038881F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift in Sources */,
+				E840388A1F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift in Sources */,
 				E84038771F0FC701003DF6C3 /* ImportCategoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
