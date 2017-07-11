@@ -624,6 +624,7 @@
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.Snowonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -642,6 +643,7 @@
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.Snowonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -750,6 +752,7 @@
 				E84038751F0FC4EC003DF6C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8B3C6AE1EF7CFB500CD7679 /* Build configuration list for PBXProject "Snowonder" */ = {
 			isa = XCConfigurationList;
