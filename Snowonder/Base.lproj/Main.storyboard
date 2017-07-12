@@ -708,9 +708,9 @@
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-33-lyy" userLabel="GitHub Button">
-                                <rect key="frame" x="230" y="90" width="24" height="24"/>
+                                <rect key="frame" x="238" y="20" width="16" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="JAW-cY-XgN"/>
+                                    <constraint firstAttribute="width" constant="16" id="JAW-cY-XgN"/>
                                     <constraint firstAttribute="height" constant="24" id="RNk-hf-Rxo"/>
                                 </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="GitHub Logo 24" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PZ9-Jc-f8P">
@@ -722,9 +722,10 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9EO-JX-vd5">
-                                <rect key="frame" x="44" y="13" width="192" height="32"/>
+                                <rect key="frame" x="46" y="13" width="188" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="Bkl-IR-RK5"/>
+                                    <constraint firstAttribute="width" constant="176" id="Bkl-IR-RK5"/>
+                                    <constraint firstAttribute="height" constant="24" id="fEv-S7-i2P"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Enable Extension" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u3w-VF-QSS">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -742,12 +743,12 @@
                             <constraint firstItem="YKU-17-6TL" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Key-z4-PSK"/>
                             <constraint firstItem="9EO-JX-vd5" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Nzv-bp-xHH"/>
                             <constraint firstItem="QPE-VY-5tO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="OXx-RA-Spb"/>
+                            <constraint firstItem="1Eo-33-lyy" firstAttribute="leading" secondItem="9EO-JX-vd5" secondAttribute="trailing" constant="10" id="PaG-Uf-gW1"/>
                             <constraint firstAttribute="bottom" secondItem="9EO-JX-vd5" secondAttribute="bottom" constant="20" id="U9X-Dg-D6t"/>
                             <constraint firstItem="wwW-1x-Qv7" firstAttribute="centerX" secondItem="YKU-17-6TL" secondAttribute="centerX" id="Xcg-vm-g9A"/>
+                            <constraint firstItem="9EO-JX-vd5" firstAttribute="centerY" secondItem="1Eo-33-lyy" secondAttribute="centerY" id="atR-2Q-SoZ"/>
                             <constraint firstAttribute="bottom" secondItem="QPE-VY-5tO" secondAttribute="bottom" id="atW-CF-KQk"/>
-                            <constraint firstItem="1Eo-33-lyy" firstAttribute="baseline" secondItem="wwW-1x-Qv7" secondAttribute="baseline" constant="-2" id="gJj-Xd-Cjh"/>
                             <constraint firstItem="YKU-17-6TL" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="kbN-ZG-PgK"/>
-                            <constraint firstItem="1Eo-33-lyy" firstAttribute="leading" secondItem="wwW-1x-Qv7" secondAttribute="trailing" constant="10" id="sx2-lR-OMj"/>
                         </constraints>
                     </view>
                 </viewController>
