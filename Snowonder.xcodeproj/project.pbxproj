@@ -15,6 +15,9 @@
 		E840387B1F0FD18F003DF6C3 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = E84038791F0FD18E003DF6C3 /* .travis.yml */; };
 		E84038881F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038871F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift */; };
 		E840388A1F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038891F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift */; };
+		E86335731F1611C5000A7053 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
+		E86335741F1611C5000A7053 /* ImportArtisan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E86335781F1611CD000A7053 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -28,13 +31,19 @@
 		E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984E1F0E5C4500D50213 /* ImportBlockFormatter.swift */; };
 		E8E698561F0E5C4500D50213 /* ImportCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984F1F0E5C4500D50213 /* ImportCategory.swift */; };
 		E8E6985A1F0E5DA900D50213 /* SourceTextBufferEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698591F0E5DA900D50213 /* SourceTextBufferEditor.swift */; };
-		E8E6985B1F0E5DC700D50213 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
 		E8E6986A1F0E5F2B00D50213 /* Dictionary+MapValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698661F0E5F2B00D50213 /* Dictionary+MapValues.swift */; };
 		E8E6986B1F0E5F2B00D50213 /* String+PatternMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E698671F0E5F2B00D50213 /* String+PatternMatching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		E84038711F0FC4EC003DF6C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8E698391F0E5B2D00D50213;
+			remoteInfo = ImportArtisan;
+		};
+		E86335751F1611C5000A7053 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
 			proxyType = 1;
@@ -51,6 +60,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		E86335771F1611C5000A7053 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E86335741F1611C5000A7053 /* ImportArtisan.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8B3C6DB1EF7CFD300CD7679 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86335731F1611C5000A7053 /* ImportArtisan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E6985B1F0E5DC700D50213 /* ImportArtisan.framework in Frameworks */,
+				E86335781F1611CD000A7053 /* ImportArtisan.framework in Frameworks */,
 				E8B3C6CC1EF7CFD300CD7679 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,11 +309,13 @@
 				E8B3C6B01EF7CFB500CD7679 /* Frameworks */,
 				E8B3C6B11EF7CFB500CD7679 /* Resources */,
 				E8B3C6DB1EF7CFD300CD7679 /* Embed App Extensions */,
+				E86335771F1611C5000A7053 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E8B3C6D61EF7CFD300CD7679 /* PBXTargetDependency */,
+				E86335761F1611C5000A7053 /* PBXTargetDependency */,
 			);
 			name = Snowonder;
 			productName = Snowonder;
@@ -476,6 +499,11 @@
 			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
 			targetProxy = E84038711F0FC4EC003DF6C3 /* PBXContainerItemProxy */;
 		};
+		E86335761F1611C5000A7053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
+			targetProxy = E86335751F1611C5000A7053 /* PBXContainerItemProxy */;
+		};
 		E8B3C6D61EF7CFD300CD7679 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E8B3C6C81EF7CFD300CD7679 /* Snowonder Extension */;
@@ -624,7 +652,7 @@
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.Snowonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -643,7 +671,7 @@
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.Snowonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -660,7 +688,7 @@
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Karetski.Snowonder.Snowonder-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -678,7 +706,7 @@
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Karetski.Snowonder.Snowonder-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -704,7 +732,7 @@
 				INFOPLIST_FILE = ImportArtisan/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -732,7 +760,7 @@
 				INFOPLIST_FILE = ImportArtisan/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
