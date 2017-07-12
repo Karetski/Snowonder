@@ -19,10 +19,11 @@ open class ImportBlockDetector {
     private struct Constant { // TODO: Init these values from JSON on detector init.
         static let availableImportCategories: [ImportCategories] = [swiftSet, objcSet]
         
-        static let swiftSet: ImportCategories = [ImportCategory(title: "Basic", declarationPattern: "^import .*", sortingComparisonResult: .orderedAscending),
+        static let swiftSet: ImportCategories = [ImportCategory(title: "Framework", declarationPattern: "^import .*", sortingComparisonResult: .orderedAscending),
                                                  ImportCategory(title: "Testable", declarationPattern: "^@testable import .*", sortingComparisonResult: .orderedAscending)]
-        static let objcSet: ImportCategories = [ImportCategory(title: "Frameworks", declarationPattern: "^#import <.*>", sortingComparisonResult: .orderedAscending),
-                                                ImportCategory(title: "Headers", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)]
+        static let objcSet: ImportCategories = [ImportCategory(title: "Module", declarationPattern: "^@import .*", sortingComparisonResult: .orderedAscending),
+                                                ImportCategory(title: "Global", declarationPattern: "^#import <.*>", sortingComparisonResult: .orderedAscending),
+                                                ImportCategory(title: "Local", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)]
     }
     
     // MARK: - Initializers
