@@ -19,11 +19,13 @@ open class ImportBlockDetector {
     private struct Constant { // TODO: Init these values from JSON on detector init.
         static let availableImportCategories: [ImportCategories] = [swiftSet, objcSet]
         
-        static let swiftSet: ImportCategories = [ImportCategory(title: "Framework", declarationPattern: "^import .*", sortingComparisonResult: .orderedAscending),
-                                                 ImportCategory(title: "Testable", declarationPattern: "^@testable import .*", sortingComparisonResult: .orderedAscending)]
-        static let objcSet: ImportCategories = [ImportCategory(title: "Module", declarationPattern: "^@import .*", sortingComparisonResult: .orderedAscending),
-                                                ImportCategory(title: "Global", declarationPattern: "^#import <.*>", sortingComparisonResult: .orderedAscending),
-                                                ImportCategory(title: "Local", declarationPattern: "^#import \".*\"", sortingComparisonResult: .orderedAscending)]
+        static let swiftSet: ImportCategories = [ImportCategory(title: "Framework", declarationPattern: "^\\s*(import) +.*.", sortingComparisonResult: .orderedAscending),
+                                                 ImportCategory(title: "Testable", declarationPattern: "^\\s*(@testable \\s*import) +.*.", sortingComparisonResult: .orderedAscending)]
+        static let objcSet: ImportCategories = [ImportCategory(title: "Module", declarationPattern: "^\\s*(@import) +.*.", sortingComparisonResult: .orderedAscending),
+                                                ImportCategory(title: "Global", declarationPattern: "^\\s*(#import) \\s*<.*>.*", sortingComparisonResult: .orderedAscending),
+                                                ImportCategory(title: "Global Include", declarationPattern: "^\\s*(#include) \\s*<.*>.*", sortingComparisonResult: .orderedAscending),
+                                                ImportCategory(title: "Local", declarationPattern: "^\\s*(#import) \\s*\".*\".*", sortingComparisonResult: .orderedAscending),
+                                                ImportCategory(title: "Local Include", declarationPattern: "^\\s*(#include) \\s*\".*\".*", sortingComparisonResult: .orderedAscending)]
     }
     
     // MARK: - Initializers
