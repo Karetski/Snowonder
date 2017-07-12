@@ -18,6 +18,11 @@ class ViewController: NSViewController {
             
             static let openSystemPreferencesExtensions: Script.Info = (Bundle.main, "open_system_preferences_extensions", .scpt)
         }
+        
+        struct URL {
+            
+            static let gitHub = Foundation.URL(string: "https://github.com/Karetski/Snowonder")
+        }
     }
     
     // MARK: - Controller lifecycle
@@ -33,5 +38,12 @@ class ViewController: NSViewController {
     }
     
     @IBAction func setupKeybindingsButtonAction(_ sender: NSButton) {
+        // TODO: Implement in future versions
+    }
+    
+    @IBAction func gitHubButtonAction(_ sender: NSButton) {
+        if let url = Constant.URL.gitHub {
+            NSWorkspace.shared().open(url)
+        }
     }
 }
