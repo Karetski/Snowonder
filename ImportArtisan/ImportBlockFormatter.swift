@@ -15,6 +15,7 @@ open class ImportBlockFormatter {
     public enum Option {
         case sortDeclarations
         case separateCategories
+        
         case removeDuplicates // TODO: Not implemented yet
     }
     
@@ -41,6 +42,7 @@ open class ImportBlockFormatter {
     open func lines(from importBlock: ImportBlock) -> [String] {
         return importBlock.categorizedDeclarations
             .sortedDeclarations(with: options)
+            .separatedCategories(with: options, using: importBlock.categories)
             .flatDeclarations(with: options, using: importBlock.categories)
     }
 }
@@ -57,14 +59,19 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
         }
     }
     
-    func flatDeclarations(with options:ImportBlockFormatter.Options, using categories: ImportCategories) -> ImportDeclarations {
+    func separatedCategories(with options: ImportBlockFormatter.Options, using categories: ImportCategories) -> CategorizedImportDeclarations {
+        guard options.contains(.separateCategories), let lastNotEmpty = categories.filter({ !(self[$0]?.isEmpty ?? true) }).last else {
+            return self
+        }
+        
+        return mapValues { ($0 != lastNotEmpty && !$1.isEmpty) ? $1 + ["\n"] : $1 }
+    }
+    
+    func flatDeclarations(with options: ImportBlockFormatter.Options, using categories: ImportCategories) -> ImportDeclarations {
         var flatDeclarations = ImportDeclarations()
-        categories.enumerated().forEach { (index, category) in
+        categories.forEach { (category) in
             if let categoryDeclarations = self[category], !categoryDeclarations.isEmpty {
                 flatDeclarations.append(contentsOf: categoryDeclarations)
-                if options.contains(.separateCategories) && index < categories.count - 1 {
-                    flatDeclarations.append("\n")
-                }
             }
         }
         
