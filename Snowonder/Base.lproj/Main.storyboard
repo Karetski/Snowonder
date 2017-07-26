@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
@@ -697,9 +697,9 @@
                                     <constraint firstAttribute="width" constant="240" id="6Yz-LQ-Oog"/>
                                     <constraint firstAttribute="width" secondItem="YKU-17-6TL" secondAttribute="height" multiplier="1:1" id="H54-87-Elp"/>
                                 </constraints>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Logo512" id="70h-kq-OvL"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="LogoSnowonder" id="70h-kq-OvL"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wwW-1x-Qv7">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwW-1x-Qv7">
                                 <rect key="frame" x="58" y="84" width="164" height="36"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Snowonder" id="XYw-c8-pcA">
                                     <font key="font" metaFont="systemMedium" size="30"/>
@@ -713,7 +713,7 @@
                                     <constraint firstAttribute="width" constant="16" id="JAW-cY-XgN"/>
                                     <constraint firstAttribute="height" constant="24" id="RNk-hf-Rxo"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="GitHub Logo 24" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PZ9-Jc-f8P">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="LogoGitHub" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PZ9-Jc-f8P">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -758,7 +758,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GitHub Logo 24" width="22" height="22"/>
-        <image name="Logo512" width="512" height="512"/>
+        <image name="LogoGitHub" width="16" height="16"/>
+        <image name="LogoSnowonder" width="294" height="294"/>
     </resources>
 </document>
