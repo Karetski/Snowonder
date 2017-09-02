@@ -1,49 +1,32 @@
-![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/GithubHeaderBig.png)
-Snowonder is a import sorter plugin for Xcode 7.3. It sorts import declarations in a way that you want. For now it only supports Objective-C, but Swift and other languages will be added soon. This plugin is created with latest Swift release and fully open source. 
+![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/ReadmeHeader.png)
+🔮 Snowonder is an import declarations fromatter Xcode Extension. It adds ability to sort and clean import declarations block in a current source file. For now it supports only Swift and Objective-C but support for other languages is coming. This plugin is created with latest Swift release and fully open source. 
+
+If you're looking for Xcode 7.3 version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md).
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
-## Install
+## Installation guide
 
-### Using [Alcatraz](https://github.com/alcatraz/Alcatraz) package manager
-
-The best way of installing is by [Alcatraz](https://github.com/alcatraz/Alcatraz) package manager. Install Alcatraz followed by the instruction, restart your Xcode and press `⇧⌘9` or select `Package Manager` from the `Window` menu. You can find `Snowonder` in the list and click the icon on left to install.
-
-![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/AlcatrazScreen.png)
-
-### Using install script
-
-Snowonder can be installed by running the following command in the terminal:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/Karetski/Snowonder/master/Scripts/install.sh | sh
-```
-
-### Build Project using Xcode
-
-Clone this repository and open Snowonder.xcodeproj.
-
-```bash
-git clone https://github.com/Karetski/Snowonder.git
-cd Snowonder
-open Snowonder.xcodeproj
-```
-
-Then build this project and reboot Xcode.
+1. Close Xcode
+2. Download the [latest release](https://github.com/Karetski/Snowonder/releases)
+3. Move `Snowonder.app` to `Applications` folder
+4. Run `Snowonder.app`
+5. Click `Enable Extension` button
+6. Enable `Snowonder` in opened window
+![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/SnowonderEnabled.jpg)
+7. Launch Xcode and check if `Editor > Snowonder Extension` is available
 
 ## Usage
 
-After installation you will be able to sort imports on any file using `⌃S` shortcut, or by selecting `Snowonder > Sort File Import` from the `Edit` menu.
+After installation you will be able to format import declarations on any file by selecting `Snowonder Extension > Format Import Declarations` from the `Editor` menu or you can just simply setup shoutcut for this command.
 
-![Usage](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/UsageMenu.png)
+## Update
+
+To update Snowonder just replace the old `Snowonder.app` with updated verson.
 
 ## Uninstall
 
-Open up your terminal and paste this:
-
-```bash
-rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Snowonder.xcplugin
-```
+To uninstall just put `Snowonder.app` into `Trash`.
 
 ## License
 
