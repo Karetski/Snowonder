@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8B3C6B21EF7CFB500CD7679"
-               BuildableName = "Snowonder.app"
-               BlueprintName = "Snowonder"
+               BlueprintIdentifier = "E8E698391F0E5B2D00D50213"
+               BuildableName = "ImportArtisan.framework"
+               BlueprintName = "ImportArtisan"
                ReferencedContainer = "container:Snowonder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,15 +26,26 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E840386A1F0FC4EC003DF6C3"
+               BuildableName = "ImportArtisanTests.xctest"
+               BlueprintName = "ImportArtisanTests"
+               ReferencedContainer = "container:Snowonder.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8B3C6B21EF7CFB500CD7679"
-            BuildableName = "Snowonder.app"
-            BlueprintName = "Snowonder"
+            BlueprintIdentifier = "E8E698391F0E5B2D00D50213"
+            BuildableName = "ImportArtisan.framework"
+            BlueprintName = "ImportArtisan"
             ReferencedContainer = "container:Snowonder.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,16 +62,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8B3C6B21EF7CFB500CD7679"
-            BuildableName = "Snowonder.app"
-            BlueprintName = "Snowonder"
+            BlueprintIdentifier = "E8E698391F0E5B2D00D50213"
+            BuildableName = "ImportArtisan.framework"
+            BlueprintName = "ImportArtisan"
             ReferencedContainer = "container:Snowonder.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +80,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8B3C6B21EF7CFB500CD7679"
-            BuildableName = "Snowonder.app"
-            BlueprintName = "Snowonder"
+            BlueprintIdentifier = "E8E698391F0E5B2D00D50213"
+            BuildableName = "ImportArtisan.framework"
+            BlueprintName = "ImportArtisan"
             ReferencedContainer = "container:Snowonder.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
