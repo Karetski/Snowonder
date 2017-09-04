@@ -18,7 +18,7 @@ It supports only Xcode 8+. If you're looking for Xcode 7.3 version please check 
 
 ## Usage
 
-After installation you will be able to format import declarations on any file by selecting <kbd>Snowonder Extension</kbd> > <kbd>Format Import Declarations</kbd> from the <kbd>Editor</kbd> menu or you can just simply setup shoutcut for this command.
+After installation you will be able to format import declarations on any file by selecting <kbd>Editor</kbd> > <kbd>Snowonder Extension</kbd> > <kbd>Format Import Declarations</kbd> or you can just simply setup shoutcut for this command.
 
 ## Update
 
