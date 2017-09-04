@@ -1,25 +1,24 @@
-![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/ReadmeHeader.png)
+![Header](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/ReadmeHeader.png)
 
-🔮 Snowonder is an import declarations fromatter Xcode Extension. It adds ability to sort and clean import declarations block in a current source file. For now it supports only Swift and Objective-C but support for other languages is coming. This plugin is created with latest Swift release and fully open source. 
+🔮 Snowonder is an import declarations fromatter Xcode Extension. It adds ability to sort and clean import declarations block in a current source file. For now it supports only Swift and Objective-C, but support for other languages is coming soon. This extension is created with latest Swift release and fully open source. 
 
-If you're looking for Xcode 7.3 version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md).
+It supports only Xcode 8+. If you're looking for Xcode 7.3 version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md).
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
-## Installation guide
+## Install
 
 1. Close Xcode
-2. Download the [latest release](https://github.com/Karetski/Snowonder/releases)
-3. Move `Snowonder.app` to `Applications` folder
-4. Run `Snowonder.app`
-5. Click `Enable Extension` button
-6. Enable `Snowonder` in opened window
+2. Download the [**latest release**](https://github.com/Karetski/Snowonder/releases)
+3. Put **Snowonder.app** into **Applications** folder and run it
+4. Click **Enable Extension** button
+5. Enable **Snowonder** in opened window. *See screenshot below*
 ![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/SnowonderEnabled.jpg)
-7. Launch Xcode and check if `Editor > Snowonder Extension` is available
+6. Launch Xcode and check if <kbd>Editor</kbd> > <kbd>Snowonder Extension</kbd> is available
 
 ## Usage
 
-After installation you will be able to format import declarations on any file by selecting `Snowonder Extension > Format Import Declarations` from the `Editor` menu or you can just simply setup shoutcut for this command.
+After installation you will be able to format import declarations on any file by selecting <kbd>Snowonder Extension</kbd> > <kbd>Format Import Declarations</kbd> from the <kbd>Editor</kbd> menu or you can just simply setup shoutcut for this command.
 
 ## Update
 
