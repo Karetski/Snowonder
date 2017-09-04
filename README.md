@@ -22,11 +22,11 @@ After installation you will be able to format import declarations on any file by
 
 ## Update
 
-To update Snowonder just replace the old `Snowonder.app` with updated verson.
+To update Snowonder just replace the old **Snowonder.app** with updated verson.
 
 ## Uninstall
 
-To uninstall just put `Snowonder.app` into `Trash`.
+To uninstall just put **Snowonder.app** into **Trash**.
 
 ## License
 
