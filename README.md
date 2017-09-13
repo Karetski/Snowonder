@@ -1,6 +1,6 @@
 ![Header](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/ReadmeHeader.png)
 
-🔮 Snowonder is an import declarations fromatter Xcode Extension. It adds ability to sort and clean import declarations block in a current source file. For now it supports only Swift and Objective-C, but support for other languages is coming soon. This extension is created with latest Swift release and fully open source. 
+🔮 Snowonder is an import declarations formatter Xcode Extension. It adds ability to sort and clean import declarations block in a current source file. For now it supports only Swift and Objective-C, but support for other languages is coming soon. This extension is created with latest Swift release and fully open source. 
 
 It supports only Xcode 8+. If you're looking for Xcode 7.3 version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md).
 
