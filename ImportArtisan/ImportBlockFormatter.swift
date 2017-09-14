@@ -13,10 +13,9 @@ open class ImportBlockFormatter {
     // MARK: - Common properties
     
     public enum Option {
+        case uniqueDeclarations
         case sortDeclarations
         case separateCategories
-        
-        case removeDuplicates // TODO: Not implemented yet
     }
     
     public typealias Options = Set<Option>
@@ -41,6 +40,7 @@ open class ImportBlockFormatter {
     /// - Returns: Constructed lines.
     open func lines(from importBlock: ImportBlock) -> [String] {
         return importBlock.categorizedDeclarations
+            .uniqueDeclarations(with: options)
             .sortedDeclarations(with: options)
             .separatedCategories(with: options, using: importBlock.categories)
             .flatDeclarations(with: options, using: importBlock.categories)
@@ -48,6 +48,16 @@ open class ImportBlockFormatter {
 }
 
 private extension Dictionary where Key == ImportCategory, Value == ImportDeclarations {
+    
+    func uniqueDeclarations(with options: ImportBlockFormatter.Options) -> CategorizedImportDeclarations {
+        guard options.contains(.uniqueDeclarations) else {
+            return self
+        }
+        
+        return mapValues { (category, declarations) -> ImportDeclarations in
+            return declarations.reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
+        }
+    }
     
     func sortedDeclarations(with options: ImportBlockFormatter.Options) -> CategorizedImportDeclarations {
         guard options.contains(.sortDeclarations) else {

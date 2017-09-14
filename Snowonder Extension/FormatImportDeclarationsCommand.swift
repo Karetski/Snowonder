@@ -20,7 +20,7 @@ class FormatImportDeclarationsCommand: NSObject, XCSourceEditorCommand {
                 let detector = ImportBlockDetector()
                 let importBlock = try detector.importBlock(from: lines)
                 
-                let formatter = ImportBlockFormatter(options: [.separateCategories, .sortDeclarations])
+                let formatter = ImportBlockFormatter(options: [.uniqueDeclarations, .separateCategories, .sortDeclarations])
                 let formattedImportLines = formatter.lines(from: importBlock)
                 
                 let bufferEditor = SourceTextBufferEditor(buffer: invocation.buffer)
