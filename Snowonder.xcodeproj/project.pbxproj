@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E81E98951F5D752C00BF0A12 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E81E98941F5D752C00BF0A12 /* README.md */; };
 		E84038641F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E84038631F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt */; };
 		E84038661F0F8821003DF6C3 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038651F0F8821003DF6C3 /* Script.swift */; };
 		E84038701F0FC4EC003DF6C3 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
 		E84038771F0FC701003DF6C3 /* ImportCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038761F0FC701003DF6C3 /* ImportCategoryTests.swift */; };
-		E840387A1F0FD18F003DF6C3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E84038781F0FD18E003DF6C3 /* .gitignore */; };
-		E840387B1F0FD18F003DF6C3 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = E84038791F0FD18E003DF6C3 /* .travis.yml */; };
 		E84038881F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038871F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift */; };
 		E840388A1F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038891F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift */; };
 		E86335731F1611C5000A7053 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
@@ -367,7 +364,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Karetski;
 				TargetAttributes = {
 					E840386A1F0FC4EC003DF6C3 = {
@@ -428,8 +425,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E840387B1F0FD18F003DF6C3 /* .travis.yml in Resources */,
-				E840387A1F0FD18F003DF6C3 /* .gitignore in Resources */,
 				E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */,
 				E84038641F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt in Resources */,
 				E8B3C6BE1EF7CFB500CD7679 /* Main.storyboard in Resources */,
@@ -469,7 +464,6 @@
 			files = (
 				E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */,
 				E84038661F0F8821003DF6C3 /* Script.swift in Sources */,
-				E81E98951F5D752C00BF0A12 /* README.md in Sources */,
 				E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,7 +559,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -573,7 +569,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -615,7 +615,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -623,7 +625,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -662,7 +668,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.Snowonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -682,7 +688,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.Snowonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -701,7 +707,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -720,7 +726,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -730,7 +736,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -747,7 +753,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -759,7 +765,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -775,7 +781,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
