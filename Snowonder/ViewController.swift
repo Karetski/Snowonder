@@ -43,7 +43,7 @@ class ViewController: NSViewController {
     
     @IBAction func gitHubButtonAction(_ sender: NSButton) {
         if let url = Constant.URL.gitHub {
-            NSWorkspace.shared().open(url)
+            NSWorkspace.shared.open(url)
         }
     }
 }

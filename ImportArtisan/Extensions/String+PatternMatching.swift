@@ -15,7 +15,7 @@ extension String {
             return false
         }
 
-        let matchingStrings = regularExpression.matches(in: self, range: NSMakeRange(0, characters.count))
+        let matchingStrings = regularExpression.matches(in: self, range: NSMakeRange(0, count))
         return !matchingStrings.isEmpty
     }
 }
