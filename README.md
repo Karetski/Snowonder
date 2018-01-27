@@ -1,8 +1,10 @@
 ![Header](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/ReadmeHeader.png)
 
-Snowonder is an import declarations formatter Xcode Extension. It adds ability to sort and clean import declarations block in a current source file. For now it supports only Swift and Objective-C, but support for other languages is coming soon. This extension is created with latest Swift release and fully open source. 
+**Snowonder** is an import declarations formatter Xcode Extension. It adds ability to sort and clean import declarations block in a current source file. For now it supports only **Swift** and **Objective-C**, but support for other languages is coming soon. This extension is created with latest Swift release and fully open source.
 
-It supports only Xcode 8+. If you're looking for Xcode 7.3 version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md).
+For now Snowonder supports only **Xcode of version 8 and higher**. If you're looking for **Xcode 7.3** version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md) branch.
+
+If you've found some bug, or having some other troubles feel free to submit an issue. This is the simpliest way to make the project better 🌟
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
@@ -13,7 +15,7 @@ It supports only Xcode 8+. If you're looking for Xcode 7.3 version please check 
 3. Put **Snowonder.app** into **Applications** folder and run it
 4. Click **Enable Extension** button
 5. Enable **Snowonder** in opened window. *See screenshot below*
-![Alcatraz](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/SnowonderEnabled.png)
+![Enables](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/SnowonderEnabled.png)
 6. Launch Xcode and check if <kbd>Editor</kbd> > <kbd>Snowonder Extension</kbd> is available
 
 ## Usage
