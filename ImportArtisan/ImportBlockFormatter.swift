@@ -60,7 +60,7 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
         case .sortDeclarations:
             return sortedDeclarations()
         case .separateCategories:
-            return separatedCategories(accordingTo: importCategories)
+            return separatingCategories(accordingTo: importCategories)
         }
     }
     
@@ -78,7 +78,7 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
         }
     }
     
-    func separatedCategories(accordingTo categories: ImportCategories) -> CategorizedImportDeclarations {
+    func separatingCategories(accordingTo categories: ImportCategories) -> CategorizedImportDeclarations {
         guard let lastNotEmpty = categories.filter({ !(self[$0]?.isEmpty ?? true) }).last else {
             return self
         }
