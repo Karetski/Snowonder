@@ -1,27 +1,21 @@
 ![Header](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/ReadmeHeader.png)
 
-**Snowonder** is an import declarations formatter Xcode Extension. It adds ability to sort and clean import declarations block in a current source file. For now it supports only **Swift** and **Objective-C**, but support for other languages is coming soon. This extension is created with latest Swift release and fully open source.
+**Snowonder** is Xcode Extension that adds some convenient formatting operations for Import Declarations. This extension is created with latest stable Swift release and fully open source. Snowonder is based on official Apple's **XcodeKit** which supports only **Xcode** of versions **8 and higher**. If you're looking for a Snowonder that is compatible with **Xcode 7.3** version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md) branch.
 
-For now Snowonder supports only **Xcode** of version **8 and higher**. If you're looking for **Xcode 7.3** version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md) branch.
-
-If you've found some bug, or having some other troubles feel free to submit an issue. This is the simpliest way to make the project better 🌟
+#### Important 🌟
+If you've experienced some trouble using Snowonder, please submit an issue with a description. This is the simpliest way to make the project better.
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
-## Features [ 🐴 — current stable, 🦄 — pre-release ]
+## Features (🦄 — pre-release only)
 
-#### 2.1
-- [ ] Load config from JSON
-#### 2.0 🦄
-- [ ] Setup key binding from Snowonder wrapper application
-- [x] Adding Import Declarations from anywhere in code
-#### 1.1 🐴
-- [x] Duplicated Import Declarations filtering
-#### 1.0
+- [x] **Swift** and **Objective-C** programming languages support
 - [x] Import Declarations categorization
 - [x] Alphabetical sorting of Import Declarations in scope of category
-- [x] Swift and Objective-C programming languages support
-- [x] Extension enabling from Snowonder wrapper application
+- [x] Duplicated Import Declarations filtering
+- [x] Adding Import Declarations from anywhere in code 🦄
+- [ ] Setup key binding from Snowonder wrapper application
+- [ ] Load config from JSON
 
 ## Installation
 
