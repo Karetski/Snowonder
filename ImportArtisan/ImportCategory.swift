@@ -8,7 +8,8 @@
 
 import Foundation
 
-public typealias ImportCategories = [ImportCategory]
+/// Import categories that are grouped by some rule.
+public typealias ImportCategoriesGroup = [ImportCategory]
 
 public struct ImportCategory : Hashable {
     

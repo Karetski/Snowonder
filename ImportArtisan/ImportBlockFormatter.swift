@@ -38,8 +38,8 @@ open class ImportBlockFormatter {
     /// - Returns: Constructed lines.
     open func lines(for importBlock: ImportBlock, using operations: Operations) -> [String] {
         return importBlock.categorizedDeclarations
-            .applyingOperations(operations, accordingTo: importBlock.categories)
-            .flatDeclarations(accordingTo: importBlock.categories)
+            .applyingOperations(operations, accordingTo: importBlock.group)
+            .flatDeclarations(accordingTo: importBlock.group)
     }
 }
 
@@ -47,11 +47,11 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
 
     // MARK: - Operations
 
-    func applyingOperations(_ operations: ImportBlockFormatter.Operations, accordingTo importCategories: ImportCategories) -> CategorizedImportDeclarations {
-        return operations.reduce(self) { $0.applyingOperation($1, accordingTo: importCategories) }
+    func applyingOperations(_ operations: ImportBlockFormatter.Operations, accordingTo group: ImportCategoriesGroup) -> CategorizedImportDeclarations {
+        return operations.reduce(self) { $0.applyingOperation($1, accordingTo: group) }
     }
 
-    func applyingOperation(_ operation: ImportBlockFormatter.Operation, accordingTo importCategories: ImportCategories) -> CategorizedImportDeclarations {
+    func applyingOperation(_ operation: ImportBlockFormatter.Operation, accordingTo group: ImportCategoriesGroup) -> CategorizedImportDeclarations {
         switch operation {
         case .trimWhitespaces:
             return trimmingWhitespaces()
@@ -60,7 +60,7 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
         case .sortDeclarations:
             return sortedDeclarations()
         case .separateCategories:
-            return separatingCategories(accordingTo: importCategories)
+            return separatingCategories(accordingTo: group)
         }
     }
     
@@ -78,8 +78,8 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
         }
     }
     
-    func separatingCategories(accordingTo categories: ImportCategories) -> CategorizedImportDeclarations {
-        guard let lastNotEmpty = categories.filter({ !(self[$0]?.isEmpty ?? true) }).last else {
+    func separatingCategories(accordingTo group: ImportCategoriesGroup) -> CategorizedImportDeclarations {
+        guard let lastNotEmpty = group.filter({ !(self[$0]?.isEmpty ?? true) }).last else {
             return self
         }
         
@@ -88,9 +88,9 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
 
     // MARK: - Flattening
     
-    func flatDeclarations(accordingTo categories: ImportCategories) -> ImportDeclarations {
+    func flatDeclarations(accordingTo group: ImportCategoriesGroup) -> ImportDeclarations {
         var flatDeclarations = ImportDeclarations()
-        categories.forEach { (category) in
+        group.forEach { (category) in
             if let categoryDeclarations = self[category], !categoryDeclarations.isEmpty {
                 flatDeclarations.append(contentsOf: categoryDeclarations)
             }
