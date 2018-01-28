@@ -8,7 +8,7 @@ If you've found some bug, or having some other troubles feel free to submit an i
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
-## Features [ 🐴 — Current stable, 🦄 — Pre-release ]
+## Features [ 🐴 — current stable, 🦄 — pre-release ]
 
 #### 2.1
 - [ ] Load config from JSON
