@@ -6,8 +6,8 @@
 //  Copyright © 2017 Karetski. All rights reserved.
 //
 
-import Foundation
 import XcodeKit
+import Foundation
 
 class SourceEditorExtension: NSObject, XCSourceEditorExtension {
     

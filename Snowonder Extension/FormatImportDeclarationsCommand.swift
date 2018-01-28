@@ -19,9 +19,8 @@ class FormatImportDeclarationsCommand: NSObject, XCSourceEditorCommand {
             do {
                 let detector = ImportBlockDetector()
                 let importBlock = try detector.importBlock(from: lines)
-                
-                let formatter = ImportBlockFormatter(options: [.uniqueDeclarations, .separateCategories, .sortDeclarations])
-                let formattedImportLines = formatter.lines(from: importBlock)
+                let formatter = ImportBlockFormatter()
+                let formattedImportLines = formatter.lines(for: importBlock, using: ImportBlockFormatter.Operation.all)
                 
                 let bufferEditor = SourceTextBufferEditor(buffer: invocation.buffer)
                 bufferEditor.replace(lines: importBlock.declarations, with: formattedImportLines, using: .top)

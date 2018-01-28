@@ -42,7 +42,7 @@ open class ImportBlockDetector {
     open func importBlock(from lines: [String]) throws -> ImportBlock {
         let categories = self.categories(from: lines)
         let declarations = self.declarations(from: lines, using: categories)
-        let categorizedDeclarations = self.categorizedDeclarations(from: lines, using: categories)
+        let categorizedDeclarations = self.categorizedDeclarations(from: lines, using: categories) // TODO: Think if we can use already found declaration lines here
         
         guard !categories.isEmpty && !declarations.isEmpty && !categorizedDeclarations.isEmpty else {
             throw ImportBlockDetectorError.notFound
