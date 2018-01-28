@@ -8,9 +8,25 @@ If you've found some bug, or having some other troubles feel free to submit an i
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
-## Install
+## Features
 
-1. Close Xcode
+### 2.1
+- [ ] Load config from JSON
+### 2.0 Release
+- [ ] Setup key binding from Snowonder wrapper application
+### 2.0 Beta
+- [x] Adding Import Declarations from anywhere in code
+### 1.1
+- [x] Duplicated Import Declarations filtering
+### 1.0
+- [x] Import Declarations categorization
+- [x] Alphabetical sorting of Import Declarations in scope of category
+- [x] Swift and Objective-C programming languages support
+- [x] Extension enabling from Snowonder wrapper application
+
+## Installation
+
+1. Close Xcode if it's currently running
 2. Download the [**latest release**](https://github.com/Karetski/Snowonder/releases)
 3. Put **Snowonder.app** into **Applications** folder and run it
 4. Click **Enable Extension** button
@@ -22,11 +38,11 @@ If you've found some bug, or having some other troubles feel free to submit an i
 
 After installation you will be able to format import declarations on any file by selecting <kbd>Editor</kbd> > <kbd>Snowonder Extension</kbd> > <kbd>Format Import Declarations</kbd> or you can just simply setup shoutcut for this command.
 
-## Update
+## Updating
 
 To update Snowonder just replace the old **Snowonder.app** with updated verson.
 
-## Uninstall
+## Uninstallation
 
 To uninstall just put **Snowonder.app** into **Trash**.
 
