@@ -47,8 +47,8 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
 
     // MARK: - Operations
 
-    func applyingOperations(_ operations: ImportBlockFormatter.Operations, accordingTo importCategories: ImportCategoriesGroup) -> CategorizedImportDeclarations {
-        return operations.reduce(self) { $0.applyingOperation($1, accordingTo: importCategories) }
+    func applyingOperations(_ operations: ImportBlockFormatter.Operations, accordingTo group: ImportCategoriesGroup) -> CategorizedImportDeclarations {
+        return operations.reduce(self) { $0.applyingOperation($1, accordingTo: group) }
     }
 
     func applyingOperation(_ operation: ImportBlockFormatter.Operation, accordingTo group: ImportCategoriesGroup) -> CategorizedImportDeclarations {

@@ -24,20 +24,20 @@ class SourceTextBufferEditor {
     }
     
     func replace(lines: [String], with newLines: [String], using option: ReplacementOption) {
-        let replacementStartIndex: Int
-        
-        switch option {
-        case .top:
-            replacementStartIndex = buffer.lines.index(of: lines.first ?? "")
-        case .bottom:
-            replacementStartIndex = buffer.lines.index(of: lines.last ?? "")
-        }
+        let replacementStartIndex: Int = {
+            switch option {
+            case .top:
+                return buffer.lines.index(of: lines.first ?? "")
+            case .bottom:
+                return buffer.lines.index(of: lines.last ?? "")
+            }
+        }()
         
         guard replacementStartIndex != NSNotFound else {
             return
         }
         
-        let newLinesIndexSet = IndexSet(integersIn:replacementStartIndex ..< replacementStartIndex + newLines.count)
+        let newLinesIndexSet = IndexSet(integersIn: replacementStartIndex ..< replacementStartIndex + newLines.count)
         buffer.lines.removeObjects(in: lines)
         buffer.lines.insert(newLines, at: newLinesIndexSet)
     }

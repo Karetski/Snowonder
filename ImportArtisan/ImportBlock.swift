@@ -28,7 +28,7 @@ public struct ImportBlock {
     /// Initializes import declarations block based on parameters.
     ///
     /// - Parameters:
-    ///   - categories: Import categories that are acceptable for import block.
+    ///   - group: Import categories group that is acceptable for import block.
     ///   - declarations: Import declarations that import block includes.
     ///   - categorizedDeclarations: Import declarations that import block includes grouped by a category.
     public init(group: ImportCategoriesGroup, declarations: ImportDeclarations, categorizedDeclarations: CategorizedImportDeclarations) {
