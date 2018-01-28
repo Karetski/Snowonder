@@ -2,8 +2,7 @@
 
 **Snowonder** is Xcode Extension that adds some convenient formatting operations for Import Declarations. This extension is created with latest stable Swift release and fully open source. Snowonder is based on official Apple's **XcodeKit** which supports only **Xcode** of versions **8 and higher**. If you're looking for a Snowonder that is compatible with **Xcode 7.3** version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md) branch.
 
-### Important 🌟
-If you've experienced some trouble using Snowonder, please submit an issue with a description. This is the simpliest way to make the project better.
+**Important!** If you've experienced some trouble using Snowonder, please submit an issue with a description. This is the simpliest way to make the project better 🌟
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
