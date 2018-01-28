@@ -10,8 +10,7 @@ If you've found some bug, or having some other troubles feel free to submit an i
 
 ## Features
 
-🦄 — Pre-release
-🐴 — Current stable
+🐴 – Current stable; 🦄 – Pre-release.
 
 #### 2.1
 - [ ] Load config from JSON
