@@ -10,13 +10,15 @@ If you've found some bug, or having some other troubles feel free to submit an i
 
 ## Features
 
+🦄 — Pre-release
+🐴 — Current stable
+
 #### 2.1
 - [ ] Load config from JSON
-#### 2.0 Release
+#### 2.0 🦄
 - [ ] Setup key binding from Snowonder wrapper application
-#### 2.0 Beta
 - [x] Adding Import Declarations from anywhere in code
-#### 1.1
+#### 1.1 🐴
 - [x] Duplicated Import Declarations filtering
 #### 1.0
 - [x] Import Declarations categorization
