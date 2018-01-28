@@ -17,11 +17,11 @@ open class ImportBlockDetector {
     // MARK: - Constant values
     
     private struct Constant { // TODO: Init these values from JSON on detector init.
-        static let availableImportCategories: [ImportCategories] = [swiftSet, objcSet]
+        static let availableImportCategories: [ImportCategoriesGroup] = [swiftSet, objcSet]
         
-        static let swiftSet: ImportCategories = [ImportCategory(title: "Framework", declarationPattern: "^\\s*(import) +.*.", sortingComparisonResult: .orderedAscending),
+        static let swiftSet: ImportCategoriesGroup = [ImportCategory(title: "Framework", declarationPattern: "^\\s*(import) +.*.", sortingComparisonResult: .orderedAscending),
                                                  ImportCategory(title: "Testable", declarationPattern: "^\\s*(@testable \\s*import) +.*.", sortingComparisonResult: .orderedAscending)]
-        static let objcSet: ImportCategories = [ImportCategory(title: "Module", declarationPattern: "^\\s*(@import) +.*.", sortingComparisonResult: .orderedAscending),
+        static let objcSet: ImportCategoriesGroup = [ImportCategory(title: "Module", declarationPattern: "^\\s*(@import) +.*.", sortingComparisonResult: .orderedAscending),
                                                 ImportCategory(title: "Global", declarationPattern: "^\\s*(#import) \\s*<.*>.*", sortingComparisonResult: .orderedAscending),
                                                 ImportCategory(title: "Global Include", declarationPattern: "^\\s*(#include) \\s*<.*>.*", sortingComparisonResult: .orderedAscending),
                                                 ImportCategory(title: "Local", declarationPattern: "^\\s*(#import) \\s*\".*\".*", sortingComparisonResult: .orderedAscending),
@@ -48,14 +48,14 @@ open class ImportBlockDetector {
             throw ImportBlockDetectorError.notFound
         }
         
-        return .init(categories: categories, declarations: declarations, categorizedDeclarations: categorizedDeclarations)
+        return .init(group: categories, declarations: declarations, categorizedDeclarations: categorizedDeclarations)
     }
     
     /// Constructs import categories based on `lines` parameter.
     ///
     /// - Parameter lines: Lines used to construct import categories.
     /// - Returns: Constructed import declarations based on `lines` parameter.
-    open func categories(from lines: [String]) -> ImportCategories {
+    open func categories(from lines: [String]) -> ImportCategoriesGroup {
         for line in lines {
             for importCategories in Constant.availableImportCategories {
                 for importCategory in importCategories {
@@ -75,7 +75,7 @@ open class ImportBlockDetector {
     ///   - lines: Lines used to detect import declarations.
     ///   - categories: Import categories used to detect import declarations.
     /// - Returns: Detected import declarations.
-    open func declarations(from lines: [String], using categories: ImportCategories) -> ImportDeclarations {
+    open func declarations(from lines: [String], using categories: ImportCategoriesGroup) -> ImportDeclarations {
         return lines.filter { (line) -> Bool in
             var matches = false
             
@@ -96,7 +96,7 @@ open class ImportBlockDetector {
     ///   - lines: Lines used to detect import declarations.
     ///   - importCategories: Import categories used to detect import declarations.
     /// - Returns: Detected and grouped import declarations.
-    open func categorizedDeclarations(from lines: [String], using categories: ImportCategories) -> CategorizedImportDeclarations {
+    open func categorizedDeclarations(from lines: [String], using categories: ImportCategoriesGroup) -> CategorizedImportDeclarations {
         var categorizedDeclarations = CategorizedImportDeclarations()
         
         for line in lines {

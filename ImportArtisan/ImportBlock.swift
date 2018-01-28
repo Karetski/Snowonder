@@ -15,8 +15,8 @@ public struct ImportBlock {
     
     // MARK: - Common properties
     
-    /// Import categories that are acceptable for import block.
-    public var categories: ImportCategories
+    /// Import categories group that is acceptable to this import block.
+    public var group: ImportCategoriesGroup
     
     /// Import declarations that import block includes.
     public var declarations: ImportDeclarations
@@ -31,8 +31,8 @@ public struct ImportBlock {
     ///   - categories: Import categories that are acceptable for import block.
     ///   - declarations: Import declarations that import block includes.
     ///   - categorizedDeclarations: Import declarations that import block includes grouped by a category.
-    public init(categories: ImportCategories, declarations: ImportDeclarations, categorizedDeclarations: CategorizedImportDeclarations) {
-        self.categories = categories
+    public init(group: ImportCategoriesGroup, declarations: ImportDeclarations, categorizedDeclarations: CategorizedImportDeclarations) {
+        self.group = group
         self.declarations = declarations
         self.categorizedDeclarations = categorizedDeclarations
     }
