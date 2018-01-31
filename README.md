@@ -13,7 +13,7 @@
 - [x] Alphabetical sorting of Import Declarations in scope of category
 - [x] Duplicated Import Declarations filtering
 - [x] Adding Import Declarations from anywhere in code 🦄
-- [ ] Setup key binding from Snowonder wrapper application
+- [ ] Command Line Interface (CLI)
 - [ ] Load config from JSON
 
 ## Installation
