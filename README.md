@@ -12,7 +12,7 @@
 - [x] Import Declarations categorization
 - [x] Alphabetical sorting of Import Declarations in scope of category
 - [x] Duplicated Import Declarations filtering
-- [x] Adding Import Declarations from anywhere in code 🦄
+- [x] Adding Import Declarations from anywhere in code
 - [ ] Command Line Interface (CLI)
 - [ ] Load config from JSON
 
