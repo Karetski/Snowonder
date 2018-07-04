@@ -6,13 +6,13 @@
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
-## Features (🦄 — pre-release only)
+## Features
 
-- [x] Both **Swift** and **Objective-C** programming languages support
+- [x] Adding Import Declarations from anywhere in code
 - [x] Import Declarations categorization
 - [x] Alphabetical sorting of Import Declarations in scope of category
 - [x] Duplicated Import Declarations filtering
-- [x] Adding Import Declarations from anywhere in code
+- [x] Both **Swift** and **Objective-C** programming languages support
 - [ ] Command Line Interface (CLI)
 - [ ] Load config from JSON
 
