@@ -20,7 +20,16 @@ public struct ImportCategory : Hashable {
     
     /// Pattern used to match import declaration to category.
     public var declarationPattern: String
-    
+
+//    public enum SortingRule: String, Codable {
+//        case alphabeticallyAscending
+//        case alphabeticallyDescending
+//        case lengthAscending
+//        case lengthDescending
+//    }
+//
+//    public var sortingRules: [SortingRule]
+
     /// ComparisonResult used to sort import declarations in scope of category.
     public var sortingComparisonResult: ComparisonResult
     

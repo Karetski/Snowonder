@@ -16,6 +16,7 @@
 		E86335731F1611C5000A7053 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
 		E86335741F1611C5000A7053 /* ImportArtisan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E86335781F1611CD000A7053 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
+		E8A7961320EF5EFB00E57383 /* Comparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7961220EF5EFB00E57383 /* Comparator.swift */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		E84038791F0FD18E003DF6C3 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		E84038871F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockDetectorTests.swift; sourceTree = "<group>"; };
 		E84038891F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockFormatterTests.swift; sourceTree = "<group>"; };
+		E8A7961220EF5EFB00E57383 /* Comparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparator.swift; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		E8E6983B1F0E5B2D00D50213 /* ImportArtisan */ = {
 			isa = PBXGroup;
 			children = (
+				E8A7961220EF5EFB00E57383 /* Comparator.swift */,
 				E8E6984F1F0E5C4500D50213 /* ImportCategory.swift */,
 				E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */,
 				E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */,
@@ -369,24 +372,24 @@
 				TargetAttributes = {
 					E840386A1F0FC4EC003DF6C3 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = CDZGT67CB7;
+						DevelopmentTeam = PCM6ZSDKE5;
 						ProvisioningStyle = Automatic;
 					};
 					E8B3C6B21EF7CFB500CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = CDZGT67CB7;
+						DevelopmentTeam = PCM6ZSDKE5;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					E8B3C6C81EF7CFD300CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = CDZGT67CB7;
+						DevelopmentTeam = PCM6ZSDKE5;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					E8E698391F0E5B2D00D50213 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = CDZGT67CB7;
+						DevelopmentTeam = PCM6ZSDKE5;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -484,6 +487,7 @@
 			files = (
 				E8E6986B1F0E5F2B00D50213 /* String+PatternMatching.swift in Sources */,
 				E8E698541F0E5C4500D50213 /* ImportBlockDetector.swift in Sources */,
+				E8A7961320EF5EFB00E57383 /* Comparator.swift in Sources */,
 				E8E6986A1F0E5F2B00D50213 /* Dictionary+MapValues.swift in Sources */,
 				E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */,
 				E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */,
@@ -527,7 +531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = PCM6ZSDKE5;
 				INFOPLIST_FILE = ImportArtisanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisanTests;
@@ -540,7 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = PCM6ZSDKE5;
 				INFOPLIST_FILE = ImportArtisanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisanTests;
@@ -665,7 +669,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = PCM6ZSDKE5;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -685,7 +689,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = PCM6ZSDKE5;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -703,7 +707,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Snowonder Extension/Snowonder_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = PCM6ZSDKE5;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -722,7 +726,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Snowonder Extension/Snowonder_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = PCM6ZSDKE5;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -744,7 +748,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = PCM6ZSDKE5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -773,7 +777,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = PCM6ZSDKE5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
