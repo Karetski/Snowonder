@@ -14,7 +14,7 @@ class FormatImportDeclarationsCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         var error: Error? = nil
-        
+
         if let lines = invocation.buffer.lines as? [String] {
             do {
                 let detector = ImportBlockDetector()
