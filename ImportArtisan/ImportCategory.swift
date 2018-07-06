@@ -70,16 +70,4 @@ public struct ImportCategory : Hashable {
             }
         }
     }
-    
-    // MARK: - Hashable
-    
-    public var hashValue: Int {
-        return title.hashValue ^ declarationPattern.hashValue ^ sortingComparisonResult.hashValue
-    }
-}
-
-// MARK: - Equitable
-
-public func ==(lhs: ImportCategory, rhs: ImportCategory) -> Bool {
-    return lhs.title == rhs.title && lhs.declarationPattern == rhs.declarationPattern && lhs.sortingComparisonResult == rhs.sortingComparisonResult
 }
