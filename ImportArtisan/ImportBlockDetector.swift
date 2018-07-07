@@ -28,7 +28,7 @@ open class ImportBlockDetector {
         ]
     }
 
-    public enum Error: Swift.Error {
+    public enum Error : Swift.Error {
         case notFound
     }
     
@@ -42,7 +42,7 @@ open class ImportBlockDetector {
     ///
     /// - Parameters:
     ///   - lines: Lines used to detect import declarations.
-    /// - Throws: Error if import declarations can't be found.
+    /// - Throws: `ImportBlockDetector.Error` if import declarations can't be found.
     open func importBlock(from lines: [String]) throws -> ImportBlock {
         let group = self.group(for: lines, using: Constant.allGroups)
 

@@ -26,6 +26,7 @@ public struct ImportCategory : Hashable {
 
     // MARK: - Sorting
 
+    /// Array of `SortingRule`'s that will be used in chain forming for sorting import declarations. Rules are chaining by *left to right* principle.
     public var sortingRulesChain: [SortingRule]
 
     public enum SortingRule : Codable, Hashable {
