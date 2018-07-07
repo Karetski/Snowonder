@@ -17,7 +17,8 @@ open class ImportBlockFormatter {
         case uniqueDeclarations
         case sortDeclarations
         case separateCategories
-        
+
+        // TODO: Remove in Swift 4.2 and replace with https://github.com/apple/swift-evolution/blob/master/proposals/0194-derived-collection-of-enum-cases.md
         public static var all: Operations {
             return [.trimWhitespaces, .uniqueDeclarations, .sortDeclarations, .separateCategories]
         }
@@ -74,7 +75,11 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
     
     func sortedDeclarations() -> CategorizedImportDeclarations {
         return mapValues { (category, declarations) -> ImportDeclarations in
-            return declarations.sorted { $0.localizedCaseInsensitiveCompare($1) == category.sortingComparisonResult }
+            return declarations.sorted(
+                by: Comparator(
+                    chain: category.sortingRulesChain.map { $0.comparator }
+                )
+            )
         }
     }
     
