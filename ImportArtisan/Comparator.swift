@@ -69,8 +69,6 @@ public extension Comparator {
 
 public extension Sequence {
     public func sorted(by comparator: Comparator<Iterator.Element>) -> [Iterator.Element] {
-        return self.sorted { left, right in
-            return (try? comparator.areInIncreasingOrder(left, right)) ?? false
-        }
+        return sorted { (try? comparator.areInIncreasingOrder($0, $1)) ?? false }
     }
 }

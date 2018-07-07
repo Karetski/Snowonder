@@ -18,15 +18,15 @@ public struct ImportCategory : Hashable {
     /// Title of import category.
     public var title: String
     
-    /// Pattern used to match import declaration to category.
+    /// Regular expression pattern used to match import declaration to category.
     public var declarationPattern: String
 
     /// ComparisonResult used to sort import declarations in scope of category.
-    public var sortingComparisonResult: ComparisonResult
+//    public var sortingComparisonResult: ComparisonResult
 
     // MARK: - Sorting
 
-//    public var sortingRulesChain: [SortingRule]
+    public var sortingRulesChain: [SortingRule]
 
     public enum SortingRule : Codable, Hashable {
         case alphabetically(isAscending: Bool)
@@ -56,7 +56,12 @@ public struct ImportCategory : Hashable {
             } else if let isAscending = try? container.decode(Bool.self, forKey: .lengthIsAscending) {
                 self = .length(isAscending: isAscending)
             } else {
-                throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Cannot initialize"))
+                throw DecodingError.dataCorrupted(
+                    DecodingError.Context(
+                        codingPath: decoder.codingPath,
+                        debugDescription: "Cannot initialize"
+                    )
+                )
             }
         }
 

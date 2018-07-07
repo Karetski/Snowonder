@@ -8,10 +8,6 @@
 
 import Foundation
 
-public enum ImportBlockDetectorError: Error {
-    case notFound
-}
-
 open class ImportBlockDetector {
     
     // MARK: - Constant values
@@ -20,16 +16,20 @@ open class ImportBlockDetector {
         static let allGroups: [ImportCategoriesGroup] = [swiftGroup, objcGroup]
         
         static let swiftGroup: ImportCategoriesGroup = [
-            ImportCategory(title: "Framework", declarationPattern: "^\\s*(import) +.*.", sortingComparisonResult: .orderedAscending),
-            ImportCategory(title: "Testable", declarationPattern: "^\\s*(@testable \\s*import) +.*.", sortingComparisonResult: .orderedAscending)
+            ImportCategory(title: "Framework", declarationPattern: "^\\s*(import) +.*.", sortingRulesChain: [.alphabetically(isAscending: true)]),
+            ImportCategory(title: "Testable", declarationPattern: "^\\s*(@testable \\s*import) +.*.", sortingRulesChain: [.alphabetically(isAscending: true)])
         ]
         static let objcGroup: ImportCategoriesGroup = [
-            ImportCategory(title: "Module", declarationPattern: "^\\s*(@import) +.*.", sortingComparisonResult: .orderedAscending),
-            ImportCategory(title: "Global", declarationPattern: "^\\s*(#import) \\s*<.*>.*", sortingComparisonResult: .orderedAscending),
-            ImportCategory(title: "Global Include", declarationPattern: "^\\s*(#include) \\s*<.*>.*", sortingComparisonResult: .orderedAscending),
-            ImportCategory(title: "Local", declarationPattern: "^\\s*(#import) \\s*\".*\".*", sortingComparisonResult: .orderedAscending),
-            ImportCategory(title: "Local Include", declarationPattern: "^\\s*(#include) \\s*\".*\".*", sortingComparisonResult: .orderedAscending)
+            ImportCategory(title: "Module", declarationPattern: "^\\s*(@import) +.*.", sortingRulesChain: [.alphabetically(isAscending: true)]),
+            ImportCategory(title: "Global", declarationPattern: "^\\s*(#import) \\s*<.*>.*", sortingRulesChain: [.alphabetically(isAscending: true)]),
+            ImportCategory(title: "Global Include", declarationPattern: "^\\s*(#include) \\s*<.*>.*", sortingRulesChain: [.alphabetically(isAscending: true)]),
+            ImportCategory(title: "Local", declarationPattern: "^\\s*(#import) \\s*\".*\".*", sortingRulesChain: [.alphabetically(isAscending: true)]),
+            ImportCategory(title: "Local Include", declarationPattern: "^\\s*(#include) \\s*\".*\".*", sortingRulesChain: [.alphabetically(isAscending: true)])
         ]
+    }
+
+    public enum Error: Swift.Error {
+        case notFound
     }
     
     // MARK: - Initializers
@@ -47,7 +47,7 @@ open class ImportBlockDetector {
         let group = self.group(for: lines, using: Constant.allGroups)
 
         guard !group.isEmpty else {
-            throw ImportBlockDetectorError.notFound
+            throw Error.notFound
         }
 
         let declarations = self.declarations(from: lines, using: group)
