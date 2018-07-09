@@ -11,7 +11,7 @@ import Foundation
 /// Import categories that are grouped by some rule.
 public typealias ImportCategoriesGroup = [ImportCategory]
 
-public struct ImportCategory : Hashable {
+public struct ImportCategory : Codable, Hashable {
     
     // MARK: - Common properties
     
@@ -20,9 +20,6 @@ public struct ImportCategory : Hashable {
     
     /// Regular expression pattern used to match import declaration to category.
     public var declarationPattern: String
-
-    /// ComparisonResult used to sort import declarations in scope of category.
-//    public var sortingComparisonResult: ComparisonResult
 
     // MARK: - Sorting
 
@@ -75,5 +72,13 @@ public struct ImportCategory : Hashable {
                 try container.encode(isAscending, forKey: .lengthIsAscending)
             }
         }
+    }
+
+    // MARK: - Initializers
+
+    public init(title: String, declarationPattern: String, sortingRulesChain: [SortingRule]) {
+        self.title = title
+        self.declarationPattern = declarationPattern
+        self.sortingRulesChain = sortingRulesChain
     }
 }

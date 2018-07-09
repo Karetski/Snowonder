@@ -9,24 +9,6 @@
 import Foundation
 
 open class ImportBlockDetector {
-    
-    // MARK: - Constant values
-    
-    private struct Constant { // TODO: Init these values from JSON on detector init. #13
-        static let allGroups: [ImportCategoriesGroup] = [swiftGroup, objcGroup]
-        
-        static let swiftGroup: ImportCategoriesGroup = [
-            ImportCategory(title: "Framework", declarationPattern: "^\\s*(import) +.*.", sortingRulesChain: [.alphabetically(isAscending: true)]),
-            ImportCategory(title: "Testable", declarationPattern: "^\\s*(@testable \\s*import) +.*.", sortingRulesChain: [.alphabetically(isAscending: true)])
-        ]
-        static let objcGroup: ImportCategoriesGroup = [
-            ImportCategory(title: "Module", declarationPattern: "^\\s*(@import) +.*.", sortingRulesChain: [.alphabetically(isAscending: true)]),
-            ImportCategory(title: "Global", declarationPattern: "^\\s*(#import) \\s*<.*>.*", sortingRulesChain: [.alphabetically(isAscending: true)]),
-            ImportCategory(title: "Global Include", declarationPattern: "^\\s*(#include) \\s*<.*>.*", sortingRulesChain: [.alphabetically(isAscending: true)]),
-            ImportCategory(title: "Local", declarationPattern: "^\\s*(#import) \\s*\".*\".*", sortingRulesChain: [.alphabetically(isAscending: true)]),
-            ImportCategory(title: "Local Include", declarationPattern: "^\\s*(#include) \\s*\".*\".*", sortingRulesChain: [.alphabetically(isAscending: true)])
-        ]
-    }
 
     public enum Error : Swift.Error {
         case notFound
@@ -42,9 +24,9 @@ open class ImportBlockDetector {
     ///
     /// - Parameters:
     ///   - lines: Lines used to detect import declarations.
-    /// - Throws: `ImportBlockDetector.Error` if import declarations can't be found.
-    open func importBlock(from lines: [String]) throws -> ImportBlock {
-        let group = self.group(for: lines, using: Constant.allGroups)
+    /// - Throws: `ImportBlockDetector.Error.notFound` if import declarations can't be found.
+    open func importBlock(from lines: [String], using availableGroups: [ImportCategoriesGroup]) throws -> ImportBlock {
+        let group = self.group(for: lines, using: availableGroups)
 
         guard !group.isEmpty else {
             throw Error.notFound
