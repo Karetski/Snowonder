@@ -6,8 +6,6 @@
 //  Copyright © 2017 Karetski. All rights reserved.
 //
 
-import Foundation
-
 open class ImportBlockDetector {
 
     public enum Error : Swift.Error {

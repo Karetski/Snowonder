@@ -6,8 +6,6 @@
 //  Copyright © 2018 Karetski. All rights reserved.
 //
 
-import Foundation
-
 /// Structure that describes compariton between items of type `Item` and contains various useful composing instruments.
 public struct Comparator<Item> {
     public enum Error : Swift.Error {

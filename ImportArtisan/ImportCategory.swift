@@ -6,8 +6,6 @@
 //  Copyright © 2017 Karetski. All rights reserved.
 //
 
-import Foundation
-
 /// Import categories that are grouped by some rule.
 public typealias ImportCategoriesGroup = [ImportCategory]
 
