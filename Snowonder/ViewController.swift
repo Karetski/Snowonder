@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Snowonder_Configuration
 
 class ViewController: NSViewController {
 
@@ -28,7 +29,7 @@ class ViewController: NSViewController {
     
     // MARK: - Common properties
 
-    var configurationManager = ConfigurationManager()
+    let configurationManager = ConfigurationManager()!
     
     // MARK: - Controller lifecycle
 

@@ -30,14 +30,10 @@ private enum Constant {
         ]
     }
 
-    enum Manager {
-        static let suiteName = "group.com.Karetski.Snowonder"
-
         enum Key {
             static let linkedConfigurationTitle = "linkedConfigurationTitle"
             static let linkedConfiguration = "linkedConfiguration"
         }
-    }
 }
 
 public struct Configuration : Codable {
@@ -53,37 +49,32 @@ public struct Configuration : Codable {
 }
 
 public class ConfigurationManager {
-    enum Error : Swift.Error {
+    public enum Error : Swift.Error {
         case incorrectURL
         case decoderFailure
     }
 
-    private let storage = UserDefaults(suiteName: Constant.Manager.suiteName)!
-
-    private let encoder = JSONEncoder()
-    private let decoder = JSONDecoder()
-
-    var linkedConfigurationTitle: String  {
+    public var linkedConfigurationTitle: String  {
         get {
-            guard let linkedConfigurationTitle = storage.string(forKey: Constant.Manager.Key.linkedConfigurationTitle) else {
+            guard let linkedConfigurationTitle = storage.string(forKey: Constant.Key.linkedConfigurationTitle) else {
                 return Constant.Configuration.Default.title
             }
             return linkedConfigurationTitle
         }
         set {
-            storage.set(newValue, forKey: Constant.Manager.Key.linkedConfigurationTitle)
+            storage.set(newValue, forKey: Constant.Key.linkedConfigurationTitle)
         }
     }
 
     public private(set) var linkedConfiguration: Configuration {
         get {
-            guard let configurationWrapper = storage.decode(Configuration.self, forKey: Constant.Manager.Key.linkedConfiguration, using: decoder) else {
+            guard let configurationWrapper = storage.decode(Configuration.self, forKey: Constant.Key.linkedConfiguration, using: decoder) else {
                 return .default
             }
             return configurationWrapper
         }
         set {
-            try? storage.encode(newValue, forKey: Constant.Manager.Key.linkedConfiguration, using: encoder)
+            try? storage.encode(newValue, forKey: Constant.Key.linkedConfiguration, using: encoder)
         }
     }
 
@@ -102,6 +93,18 @@ public class ConfigurationManager {
         return configurationJSON
     }
 
+    private let encoder = JSONEncoder()
+    private let decoder = JSONDecoder()
+
+    private let storage: UserDefaults
+
+    public init?(suiteName: String = "group.com.Karetski.Snowonder") {
+        guard let storage = UserDefaults(suiteName: suiteName) else {
+            return nil
+        }
+        self.storage = storage
+    }
+
     public func linkConfiguration(withTitle title: String, at url: URL) throws {
         guard let data = FileManager.default.contents(atPath: url.path) else {
             throw Error.incorrectURL
@@ -116,7 +119,7 @@ public class ConfigurationManager {
     }
 
     public func resetLinkedConfiguration() {
-        storage.set(nil, forKey: Constant.Manager.Key.linkedConfiguration)
+        storage.set(nil, forKey: Constant.Key.linkedConfiguration)
     }
 }
 
