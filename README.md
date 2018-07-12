@@ -12,9 +12,8 @@
 - [x] Import Declarations categorization
 - [x] Alphabetical sorting of Import Declarations in scope of category
 - [x] Duplicated Import Declarations filtering
-- [x] Both **Swift** and **Objective-C** programming languages support
+- [x] Configurations loading from JSON. Configurations for both **Swift** and **Objective-C** programming languages included out of the box.
 - [ ] Command Line Interface (CLI)
-- [ ] Load config from JSON
 
 ## Installation
 
