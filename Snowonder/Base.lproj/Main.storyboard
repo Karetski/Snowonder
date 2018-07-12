@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -666,7 +664,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Snowonder" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Snowonder" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="280" height="390"/>
@@ -693,67 +691,78 @@
                         <subviews>
                             <visualEffectView blendingMode="behindWindow" material="mediumLight" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="QPE-VY-5tO">
                                 <rect key="frame" x="0.0" y="0.0" width="272" height="390"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9EO-JX-vd5">
+                                        <rect key="frame" x="34" y="342" width="204" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Enable Extension" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u3w-VF-QSS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="enableExtensionButtonAction:" target="XfG-lQ-9wD" id="gMW-MK-LL7"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j8N-EC-IeK">
+                                        <rect key="frame" x="166" y="309" width="72" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Xd8-d1-g8F"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Pick..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wh3-dZ-Bs6">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="selectConfigButtonAction:" target="XfG-lQ-9wD" id="rth-Pf-AU9"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-33-lyy" userLabel="GitHub Button">
+                                        <rect key="frame" x="126" y="20" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="JAW-cY-XgN"/>
+                                            <constraint firstAttribute="height" constant="20" id="RNk-hf-Rxo"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="LogoGitHub" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PZ9-Jc-f8P">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="gitHubButtonAction:" target="XfG-lQ-9wD" id="Vq2-Y8-wgg"/>
+                                        </connections>
+                                    </button>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CzE-jo-xjV">
+                                        <rect key="frame" x="40" y="315" width="124" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="09Y-mW-ra7">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9EO-JX-vd5" firstAttribute="top" secondItem="QPE-VY-5tO" secondAttribute="top" constant="20" id="3Kh-ua-z7H"/>
+                                    <constraint firstItem="j8N-EC-IeK" firstAttribute="leading" secondItem="CzE-jo-xjV" secondAttribute="trailing" constant="8" id="3at-P8-C2e"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Eo-33-lyy" secondAttribute="bottom" constant="20" id="528-8E-iXu"/>
+                                    <constraint firstItem="CzE-jo-xjV" firstAttribute="leading" secondItem="9EO-JX-vd5" secondAttribute="leading" id="CpV-xz-JhH"/>
+                                    <constraint firstItem="j8N-EC-IeK" firstAttribute="top" secondItem="9EO-JX-vd5" secondAttribute="bottom" constant="12" id="TY1-ly-b49"/>
+                                    <constraint firstItem="9EO-JX-vd5" firstAttribute="leading" secondItem="QPE-VY-5tO" secondAttribute="leading" constant="40" id="bBc-i3-7Mf"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Eo-33-lyy" secondAttribute="trailing" constant="126" id="c2t-J5-onB"/>
+                                    <constraint firstItem="CzE-jo-xjV" firstAttribute="top" secondItem="9EO-JX-vd5" secondAttribute="bottom" constant="12" id="cWv-8I-BGW"/>
+                                    <constraint firstItem="1Eo-33-lyy" firstAttribute="leading" secondItem="QPE-VY-5tO" secondAttribute="leading" constant="126" id="kc1-ag-z28"/>
+                                    <constraint firstAttribute="trailing" secondItem="9EO-JX-vd5" secondAttribute="trailing" constant="40" id="o2Z-1I-UIV"/>
+                                    <constraint firstItem="j8N-EC-IeK" firstAttribute="trailing" secondItem="9EO-JX-vd5" secondAttribute="trailing" id="rXC-z1-5sP"/>
+                                </constraints>
                             </visualEffectView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YKU-17-6TL">
-                                <rect key="frame" x="8" y="126" width="256" height="256"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="6Yz-LQ-Oog"/>
-                                    <constraint firstAttribute="width" secondItem="YKU-17-6TL" secondAttribute="height" multiplier="1:1" id="H54-87-Elp"/>
-                                </constraints>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="LogoSnowonder" id="70h-kq-OvL"/>
-                            </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wwW-1x-Qv7">
-                                <rect key="frame" x="49" y="79" width="174" height="39"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Snowonder" id="XYw-c8-pcA">
-                                    <font key="font" metaFont="systemMedium" size="32"/>
-                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-33-lyy" userLabel="GitHub Button">
-                                <rect key="frame" x="233" y="86" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="JAW-cY-XgN"/>
-                                    <constraint firstAttribute="height" constant="20" id="RNk-hf-Rxo"/>
-                                </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="LogoGitHub" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PZ9-Jc-f8P">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="gitHubButtonAction:" target="XfG-lQ-9wD" id="Vq2-Y8-wgg"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9EO-JX-vd5">
-                                <rect key="frame" x="34" y="13" width="204" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="Bkl-IR-RK5"/>
-                                    <constraint firstAttribute="height" constant="24" id="fEv-S7-i2P"/>
-                                </constraints>
-                                <buttonCell key="cell" type="push" title="Enable Extension" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u3w-VF-QSS">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="enableExtensionButtonAction:" target="XfG-lQ-9wD" id="gMW-MK-LL7"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="QPE-VY-5tO" secondAttribute="trailing" id="5z3-Cu-cEq"/>
                             <constraint firstItem="QPE-VY-5tO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="8J1-56-8rU"/>
-                            <constraint firstItem="wwW-1x-Qv7" firstAttribute="top" secondItem="YKU-17-6TL" secondAttribute="bottom" constant="8" id="FVE-Q3-w6m"/>
-                            <constraint firstItem="1Eo-33-lyy" firstAttribute="centerY" secondItem="wwW-1x-Qv7" secondAttribute="centerY" constant="3" id="HdY-DS-q0A"/>
-                            <constraint firstItem="YKU-17-6TL" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="8" id="Key-z4-PSK"/>
-                            <constraint firstItem="9EO-JX-vd5" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Nzv-bp-xHH"/>
                             <constraint firstItem="QPE-VY-5tO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="OXx-RA-Spb"/>
-                            <constraint firstAttribute="bottom" secondItem="9EO-JX-vd5" secondAttribute="bottom" constant="20" id="U9X-Dg-D6t"/>
-                            <constraint firstItem="wwW-1x-Qv7" firstAttribute="centerX" secondItem="YKU-17-6TL" secondAttribute="centerX" id="Xcg-vm-g9A"/>
                             <constraint firstAttribute="bottom" secondItem="QPE-VY-5tO" secondAttribute="bottom" id="atW-CF-KQk"/>
-                            <constraint firstItem="YKU-17-6TL" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="kbN-ZG-PgK"/>
-                            <constraint firstItem="1Eo-33-lyy" firstAttribute="leading" secondItem="wwW-1x-Qv7" secondAttribute="trailing" constant="12" id="zWa-fR-WgM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectedConfigField" destination="CzE-jo-xjV" id="pW9-lC-c4i"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -762,6 +771,5 @@
     </scenes>
     <resources>
         <image name="LogoGitHub" width="16" height="16"/>
-        <image name="LogoSnowonder" width="1024" height="1024"/>
     </resources>
 </document>

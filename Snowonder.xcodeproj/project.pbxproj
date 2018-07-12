@@ -25,7 +25,7 @@
 		E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */; };
 		E8B3C6D31EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D21EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift */; };
 		E8B3C6D71EF7CFD300CD7679 /* Snowonder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E8D7BBB020F4AB6000B79F4F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7BBAF20F4AB6000B79F4F /* Config.swift */; };
+		E8D7BBB320F4DE0000B79F4F /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */; };
 		E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */; };
 		E8E698541F0E5C4500D50213 /* ImportBlockDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */; };
 		E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984E1F0E5C4500D50213 /* ImportBlockFormatter.swift */; };
@@ -109,7 +109,8 @@
 		E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		E8B3C6D21EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatImportDeclarationsCommand.swift; sourceTree = "<group>"; };
 		E8B3C6D41EF7CFD300CD7679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8D7BBAF20F4AB6000B79F4F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E8D7BBB120F4B41A00B79F4F /* Snowonder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snowonder.entitlements; sourceTree = "<group>"; };
+		E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImportArtisan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlock.swift; sourceTree = "<group>"; };
 		E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockDetector.swift; sourceTree = "<group>"; };
@@ -212,11 +213,13 @@
 		E8B3C6B51EF7CFB500CD7679 /* Snowonder */ = {
 			isa = PBXGroup;
 			children = (
+				E8D7BBB120F4B41A00B79F4F /* Snowonder.entitlements */,
 				E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */,
 				E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */,
 				E84038651F0F8821003DF6C3 /* Script.swift */,
-				E8B3C6BC1EF7CFB500CD7679 /* Main.storyboard */,
 				E8B3C6BF1EF7CFB500CD7679 /* Info.plist */,
+				E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */,
+				E8B3C6BC1EF7CFB500CD7679 /* Main.storyboard */,
 				E84038611F0F74BA003DF6C3 /* Resources */,
 			);
 			path = Snowonder;
@@ -255,7 +258,6 @@
 		E8E6983B1F0E5B2D00D50213 /* ImportArtisan */ = {
 			isa = PBXGroup;
 			children = (
-				E8D7BBAF20F4AB6000B79F4F /* Config.swift */,
 				E8A7961220EF5EFB00E57383 /* Comparator.swift */,
 				E8E6984F1F0E5C4500D50213 /* ImportCategory.swift */,
 				E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */,
@@ -382,12 +384,22 @@
 						DevelopmentTeam = PCM6ZSDKE5;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					E8B3C6C81EF7CFD300CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = PCM6ZSDKE5;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					E8E698391F0E5B2D00D50213 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -468,6 +480,7 @@
 			files = (
 				E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */,
 				E84038661F0F8821003DF6C3 /* Script.swift in Sources */,
+				E8D7BBB320F4DE0000B79F4F /* ConfigurationManager.swift in Sources */,
 				E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,7 +504,6 @@
 				E8A7961320EF5EFB00E57383 /* Comparator.swift in Sources */,
 				E8E6986A1F0E5F2B00D50213 /* Dictionary+MapValues.swift in Sources */,
 				E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */,
-				E8D7BBB020F4AB6000B79F4F /* Config.swift in Sources */,
 				E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */,
 				E8E698561F0E5C4500D50213 /* ImportCategory.swift in Sources */,
 			);
@@ -669,6 +681,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Snowonder/Snowonder.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -690,6 +703,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Snowonder/Snowonder.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
