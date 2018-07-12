@@ -27,6 +27,7 @@
 		E8B3C6D71EF7CFD300CD7679 /* Snowonder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8C8D39320F794C800425E25 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */; };
 		E8C8D39520F7954900425E25 /* Snowonder_Configuration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */; };
+		E8C8D39820F7985900425E25 /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C8D39720F7985900425E25 /* UserDefaults+Codable.swift */; };
 		E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */; };
 		E8E698541F0E5C4500D50213 /* ImportBlockDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */; };
 		E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984E1F0E5C4500D50213 /* ImportBlockFormatter.swift */; };
@@ -112,6 +113,7 @@
 		E8B3C6D41EF7CFD300CD7679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snowonder_Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C8D38E20F794AC00425E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8C8D39720F7985900425E25 /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
 		E8D7BBB120F4B41A00B79F4F /* Snowonder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snowonder.entitlements; sourceTree = "<group>"; };
 		E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImportArtisan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */,
+				E8C8D39620F7983A00425E25 /* Extensions */,
 				E8C8D38E20F794AC00425E25 /* Info.plist */,
 			);
 			path = "Snowonder Configuration";
@@ -290,6 +293,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8C8D39620F7983A00425E25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8C8D39720F7985900425E25 /* UserDefaults+Codable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E8E6983B1F0E5B2D00D50213 /* ImportArtisan */ = {
@@ -573,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8C8D39320F794C800425E25 /* ConfigurationManager.swift in Sources */,
+				E8C8D39820F7985900425E25 /* UserDefaults+Codable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

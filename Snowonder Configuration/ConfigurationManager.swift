@@ -30,10 +30,10 @@ private enum Constant {
         ]
     }
 
-        enum Key {
-            static let linkedConfigurationTitle = "linkedConfigurationTitle"
-            static let linkedConfiguration = "linkedConfiguration"
-        }
+    enum Key {
+        static let linkedConfigurationTitle = "linkedConfigurationTitle"
+        static let linkedConfiguration = "linkedConfiguration"
+    }
 }
 
 public struct Configuration : Codable {
@@ -120,20 +120,5 @@ public class ConfigurationManager {
 
     public func resetLinkedConfiguration() {
         storage.set(nil, forKey: Constant.Key.linkedConfiguration)
-    }
-}
-
-extension UserDefaults {
-    func encode<Item : Codable>(_ item: Item, forKey key: String, using encoder: JSONEncoder) throws {
-        let data = try encoder.encode(item)
-        set(data, forKey: key)
-    }
-
-    func decode<Item : Codable>(_ type: Item.Type, forKey key: String, using decoder: JSONDecoder) -> Item? {
-        guard let data = data(forKey: key) else {
-            return nil
-        }
-
-        return try? decoder.decode(type, from: data)
     }
 }
