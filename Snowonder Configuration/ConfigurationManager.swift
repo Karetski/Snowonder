@@ -12,7 +12,7 @@ import ImportArtisan
 private enum Constant {
     enum Configuration {
         enum Default {
-            static let title = "Default"
+            static let title = "Default.json"
             static let groups: [ImportCategoriesGroup] = [swiftGroup, objcGroup]
             static let operations = ImportBlockFormatter.Operation.allCases
         }
@@ -54,7 +54,7 @@ public class ConfigurationManager {
         case decoderFailure
     }
 
-    public var linkedConfigurationTitle: String  {
+    public var linkedConfigurationTitle: String {
         get {
             guard let linkedConfigurationTitle = storage.string(forKey: Constant.Key.linkedConfigurationTitle) else {
                 return Constant.Configuration.Default.title
@@ -119,6 +119,7 @@ public class ConfigurationManager {
     }
 
     public func resetLinkedConfiguration() {
+        storage.set(nil, forKey: Constant.Key.linkedConfigurationTitle)
         storage.set(nil, forKey: Constant.Key.linkedConfiguration)
     }
 }

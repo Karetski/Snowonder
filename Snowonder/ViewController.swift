@@ -13,17 +13,24 @@ class ViewController: NSViewController {
 
     // MARK: - Constant values
     
-    private struct Constant {
-        struct ScriptInfo {
+    private enum Constant {
+        enum Font {
+            static let linkedConfigurationPreviewText = NSFont(name: "Menlo", size: 12)
+        }
+
+        enum ScriptInfo {
             static let openSystemPreferencesExtensions: Script.Info = (Bundle.main, "open_system_preferences_extensions", .scpt)
         }
         
-        struct URL {
+        enum URL {
             static let gitHub = Foundation.URL(string: "https://github.com/Karetski/Snowonder")
         }
     }
 
     // MARK: - Outlet properties
+    
+    @IBOutlet weak var linkedConfigurationTitleLabel: NSTextField!
+    @IBOutlet var linkedConfigurationPreviewText: NSTextView!
     
     // MARK: - Common properties
 
@@ -34,13 +41,26 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func viewWillAppear() {
+        super.viewWillAppear()
+
+        updateAppearance()
+        updateData()
+    }
     
     // MARK: - Action handlers
-    
+
+    @IBAction func gitHubButtonAction(_ sender: NSButton) {
+        if let url = Constant.URL.gitHub {
+            NSWorkspace.shared.open(url)
+        }
+    }
+
     @IBAction func enableExtensionButtonAction(_ sender: NSButton) {
         Script(info: Constant.ScriptInfo.openSystemPreferencesExtensions).execute()
     }
-
+    
     @IBAction func selectConfigButtonAction(_ sender: NSButton) {
         let openPanel = NSOpenPanel()
         openPanel.canChooseFiles = true
@@ -57,6 +77,7 @@ class ViewController: NSViewController {
 
             do {
                 try strongSelf.configurationManager.linkConfiguration(withTitle: url.lastPathComponent, at: url)
+                strongSelf.updateData()
             } catch let error as ConfigurationManager.Error {
                 switch error {
                 case .decoderFailure:
@@ -70,10 +91,20 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBAction func gitHubButtonAction(_ sender: NSButton) {
-        if let url = Constant.URL.gitHub {
-            NSWorkspace.shared.open(url)
-        }
+    @IBAction func resetConfigButtonAction(_ sender: NSButton) {
+        configurationManager.resetLinkedConfiguration()
+        updateData()
+    }
+
+    // MARK: - Updates
+
+    func updateAppearance() {
+        linkedConfigurationPreviewText.font = Constant.Font.linkedConfigurationPreviewText
+    }
+
+    func updateData() {
+        linkedConfigurationTitleLabel.stringValue = configurationManager.linkedConfigurationTitle
+        linkedConfigurationPreviewText.string = configurationManager.linkedConfigurationJSON
     }
 }
 
