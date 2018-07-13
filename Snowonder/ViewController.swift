@@ -24,8 +24,6 @@ class ViewController: NSViewController {
     }
 
     // MARK: - Outlet properties
-
-    @IBOutlet weak var selectedConfigField: NSTextField!
     
     // MARK: - Common properties
 
