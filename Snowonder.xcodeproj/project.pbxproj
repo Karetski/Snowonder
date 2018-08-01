@@ -98,6 +98,7 @@
 		E84038791F0FD18E003DF6C3 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		E84038871F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockDetectorTests.swift; sourceTree = "<group>"; };
 		E84038891F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockFormatterTests.swift; sourceTree = "<group>"; };
+		E87988752111E93200B9CCD3 /* Configuration.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Configuration.md; sourceTree = "<group>"; };
 		E8A7961220EF5EFB00E57383 /* Comparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparator.swift; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -198,12 +199,21 @@
 			path = ImportArtisanTests;
 			sourceTree = "<group>";
 		};
+		E87988742111E90400B9CCD3 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				E87988752111E93200B9CCD3 /* Configuration.md */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
 		E8B3C6AA1EF7CFB500CD7679 = {
 			isa = PBXGroup;
 			children = (
-				E81E98941F5D752C00BF0A12 /* README.md */,
 				E84038781F0FD18E003DF6C3 /* .gitignore */,
 				E84038791F0FD18E003DF6C3 /* .travis.yml */,
+				E81E98941F5D752C00BF0A12 /* README.md */,
+				E87988742111E90400B9CCD3 /* Documentation */,
 				E8B3C6B51EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6CD1EF7CFD300CD7679 /* Snowonder Extension */,
 				E8C8D38C20F794AC00425E25 /* Snowonder Configuration */,
