@@ -13,8 +13,8 @@
 - [x] Alphabetical sorting of Import Declarations in scope of category
 - [x] Duplicated Import Declarations filtering
 - [x] Both **Swift** and **Objective-C** programming languages support
+- [ ] Load config from JSON *Implemented with Swift 4.2. Check **config** branch. Will be released after Xcode 10 release in September 2018!* 🎉
 - [ ] Command Line Interface (CLI)
-- [ ] Load config from JSON
 
 ## Installation
 
