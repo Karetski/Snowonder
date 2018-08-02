@@ -1,8 +1,9 @@
 ![Header](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/ReadmeHeader.png)
 
+<!--**Snowonder** is a tool which adds some convenient operators to format your source code.-->
 **Snowonder** is Xcode Extension that adds some convenient formatting operations for Import Declarations. This extension is created with latest stable Swift release and fully open source. Snowonder is based on official Apple's **XcodeKit** which supports only **Xcode** of versions **8 and higher**. If you're looking for a Snowonder that is compatible with **Xcode 7.3** version please check [legacy](https://github.com/Karetski/Snowonder/blob/legacy/README.md) branch.
 
-**Important!** 🌟 If you've experienced some trouble using Snowonder, please submit an issue with a description. This is the simpliest way to make the project better.
+**Important!** 🌟 If you've experienced some trouble using Snowonder, please submit an issue with a description. This is the simpliest way to make the project better. Feel free to submit feature request and pull request.
 
 [![Build Status](https://travis-ci.org/Karetski/Snowonder.svg)](https://travis-ci.org/Karetski/Snowonder)
 
@@ -12,8 +13,9 @@
 - [x] Import Declarations categorization
 - [x] Alphabetical sorting of Import Declarations in scope of category
 - [x] Duplicated Import Declarations filtering
-- [x] Configurations loading from JSON
-- [x] Configurations for both **Swift** and **Objective-C** programming languages included out of the box.
+- [x] Configurations loading from JSON. *Unreleased feature, but you can build it by yourself using Xcode 10 beta.*
+- [x] Configurations for both **Swift** and **Objective-C** programming languages included out of the box
+- [ ] Format selection
 - [ ] Command Line Interface (CLI)
 
 ## Installation
@@ -23,7 +25,7 @@
 3. Put **Snowonder.app** into **Applications** folder and run it
 4. Click **Enable Extension** button
 5. Enable **Snowonder** in opened window. *See screenshot below*
-![Enables](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/SnowonderEnabled.png)
+![Enabled](https://raw.githubusercontent.com/Karetski/Snowonder/master/Resources/SnowonderEnabled.png)
 6. Launch Xcode and check if <kbd>Editor</kbd> > <kbd>Snowonder Extension</kbd> is available
 
 ## Usage

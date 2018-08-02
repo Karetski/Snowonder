@@ -1,6 +1,6 @@
 #  Configuration
 
-Snowonder allows you to provide your custom configuration. For example, you can change sorting rules, formatting operations, or even extend default configuration to define detection for some other programming languages that are not supported out of the box such as C or C++. Remember that you can always submit Pull Request to update default configuration.
+Snowonder allows you to provide your custom configuration. For example, you can change sorting rules, formatting operations, or even define detection for some other programming languages that are not supported out of the box. Remember that you can always submit pull request to update default configuration.
 
 Configuration document is represented as JSON. Default configuration:
 
@@ -90,13 +90,13 @@ This document consists of two main sections:
 
 ## Groups
 
-`groups` is an array of import groups. Each import group is represented as an array of import categories. You may usually want to think that import group is a set of rules, that describes possible import categories. Snowonder will try to match formatting file to one of these groups and that use it's rules. The ordering of both groups and import categories in the array is important for further formatting:
+First of all, let's review `groups`, an array of import groups. Each import group is represented as an array of import categories. You may usually want to think that import group is a set of rules, that describes possible import categories. Snowonder will try to match formatting file to one of these groups and that use it's rules. The ordering of both groups and import categories in the array is important for further formatting:
 * The groups ordering defines which group will be matched. Groups at the top of the list are more important. *There are plans to make this behavior configurable! Drafted detection rules: "First Matched, Count Important". Check newer versions of Snowonder* 😁
 * The import categories ordering defines the ordering of categories after separation.
 
 ### Import Category
 
-Import category is an object with the following fields:
+As mentioned before import category is a part of import group, and is an object which has the following fields:
 
 `title`
 Name of import category. Name **must** be unique in scope of one group.
