@@ -31,16 +31,8 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var linkedConfigurationTitleLabel: NSTextField!
     @IBOutlet var linkedConfigurationPreviewText: NSTextView!
-    
-    // MARK: - Common properties
 
-    let configurationManager = ConfigurationManager()!
-    
     // MARK: - Controller lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -76,7 +68,7 @@ class ViewController: NSViewController {
             }
 
             do {
-                try strongSelf.configurationManager.linkConfiguration(withTitle: url.lastPathComponent, at: url)
+                try ConfigurationManager.default.linkConfiguration(withTitle: url.lastPathComponent, at: url)
                 strongSelf.updateData()
             } catch let error as ConfigurationManager.Error {
                 switch error {
@@ -92,7 +84,7 @@ class ViewController: NSViewController {
     }
 
     @IBAction func resetConfigButtonAction(_ sender: NSButton) {
-        configurationManager.resetLinkedConfiguration()
+        ConfigurationManager.default.resetLinkedConfiguration()
         updateData()
     }
 
@@ -103,8 +95,8 @@ class ViewController: NSViewController {
     }
 
     func updateData() {
-        linkedConfigurationTitleLabel.stringValue = configurationManager.linkedConfigurationTitle
-        linkedConfigurationPreviewText.string = configurationManager.linkedConfigurationJSON
+        linkedConfigurationTitleLabel.stringValue = ConfigurationManager.default.linkedConfigurationTitle
+        linkedConfigurationPreviewText.string = ConfigurationManager.default.linkedConfigurationJSON
     }
 }
 

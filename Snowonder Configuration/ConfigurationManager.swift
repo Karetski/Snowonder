@@ -48,7 +48,7 @@ public struct Configuration : Codable {
     }
 }
 
-public class ConfigurationManager {
+public final class ConfigurationManager {
     public enum Error : Swift.Error {
         case incorrectURL
         case decoderFailure
@@ -98,7 +98,9 @@ public class ConfigurationManager {
 
     private let storage: UserDefaults
 
-    public init?(suiteName: String = "group.com.Karetski.Snowonder") {
+    public static var `default`: ConfigurationManager = ConfigurationManager(suiteName: "group.com.Karetski.Snowonder")!
+
+    public init?(suiteName: String) {
         guard let storage = UserDefaults(suiteName: suiteName) else {
             return nil
         }
