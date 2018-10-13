@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BE7F871217246A0003389CD /* Snowonder_Configuration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */; };
+		9BE7F872217246AC003389CD /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
+		9BE7F874217246C6003389CD /* Snowonder_Configuration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E84038641F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E84038631F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt */; };
 		E84038661F0F8821003DF6C3 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038651F0F8821003DF6C3 /* Script.swift */; };
 		E84038701F0FC4EC003DF6C3 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
@@ -38,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9BE7F875217246C6003389CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8C8D38A20F794AC00425E25;
+			remoteInfo = "Snowonder Configuration";
+		};
 		E84038711F0FC4EC003DF6C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
@@ -69,6 +79,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E86335741F1611C5000A7053 /* ImportArtisan.framework in Embed Frameworks */,
+				9BE7F874217246C6003389CD /* Snowonder_Configuration.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE7F871217246A0003389CD /* Snowonder_Configuration.framework in Frameworks */,
 				E86335781F1611CD000A7053 /* ImportArtisan.framework in Frameworks */,
 				E8B3C6CC1EF7CFD300CD7679 /* Cocoa.framework in Frameworks */,
 			);
@@ -158,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE7F872217246AC003389CD /* ImportArtisan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +402,7 @@
 			dependencies = (
 				E8B3C6D61EF7CFD300CD7679 /* PBXTargetDependency */,
 				E86335761F1611C5000A7053 /* PBXTargetDependency */,
+				9BE7F876217246C6003389CD /* PBXTargetDependency */,
 			);
 			name = Snowonder;
 			productName = Snowonder;
@@ -464,7 +478,7 @@
 					};
 					E8B3C6B21EF7CFB500CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = PCM6ZSDKE5;
+						DevelopmentTeam = CDZGT67CB7;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -475,7 +489,7 @@
 					};
 					E8B3C6C81EF7CFD300CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = PCM6ZSDKE5;
+						DevelopmentTeam = CDZGT67CB7;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -486,10 +500,12 @@
 					};
 					E8C8D38A20F794AC00425E25 = {
 						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = CDZGT67CB7;
 						ProvisioningStyle = Automatic;
 					};
 					E8E698391F0E5B2D00D50213 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CDZGT67CB7;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -615,6 +631,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9BE7F876217246C6003389CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8C8D38A20F794AC00425E25 /* Snowonder Configuration */;
+			targetProxy = 9BE7F875217246C6003389CD /* PBXContainerItemProxy */;
+		};
 		E84038721F0FC4EC003DF6C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
@@ -788,7 +809,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = PCM6ZSDKE5;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -810,7 +831,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = PCM6ZSDKE5;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -829,7 +850,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = PCM6ZSDKE5;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -849,7 +870,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = PCM6ZSDKE5;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -868,11 +889,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -899,11 +921,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -928,11 +951,11 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -961,7 +984,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CDZGT67CB7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

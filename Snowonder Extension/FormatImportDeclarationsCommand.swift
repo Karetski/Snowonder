@@ -13,22 +13,21 @@ import XcodeKit
 
 class FormatImportDeclarationsCommand: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
-        var error: Error? = nil
-
-        if let lines = invocation.buffer.lines as? [String] {
-            do {
-                let detector = ImportBlockDetector()
-                let importBlock = try detector.importBlock(from: lines, using: ConfigurationManager.default.linkedConfiguration.groups)
-                let formatter = ImportBlockFormatter()
-                let formattedImportLines = formatter.lines(for: importBlock, using: ConfigurationManager.default.linkedConfiguration.operations)
-                
-                let bufferEditor = SourceTextBufferEditor(buffer: invocation.buffer)
-                bufferEditor.replace(lines: importBlock.declarations, with: formattedImportLines, using: .top)
-            } catch let catchedError {
-                error = catchedError
+        do {
+            guard let lines = invocation.buffer.lines as? [String] else {
+                completionHandler(nil)
+                return
             }
+
+            let detector = ImportBlockDetector()
+            let importBlock = try detector.importBlock(from: lines, using: ConfigurationManager.default.linkedConfiguration.groups)
+            let formatter = ImportBlockFormatter()
+            let formattedImportLines = formatter.lines(for: importBlock, using: ConfigurationManager.default.linkedConfiguration.operations)
+
+            let bufferEditor = SourceTextBufferEditor(buffer: invocation.buffer)
+            bufferEditor.replace(lines: importBlock.declarations, with: formattedImportLines, using: .top)
+        } catch let error {
+            completionHandler(error)
         }
-        
-        completionHandler(error)
     }
 }
