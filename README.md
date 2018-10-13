@@ -13,7 +13,7 @@
 - [x] Alphabetical sorting of Import Declarations in scope of category
 - [x] Duplicated Import Declarations filtering
 - [x] Both **Swift** and **Objective-C** programming languages support
-- [ ] Load config from JSON *Feature is implemented in **config** branch, but stopped working after Xcode 10 release. Check [#27](https://github.com/Karetski/Snowonder/issues/27)*
+- [ ] Load config from JSON. *Implemented in **config** branch, but stopped working after Xcode 10 release. Check [#27](https://github.com/Karetski/Snowonder/issues/27)*
 - [ ] Command Line Interface (CLI)
 
 ## Installation
