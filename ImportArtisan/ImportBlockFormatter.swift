@@ -6,24 +6,16 @@
 //  Copyright © 2017 Karetski. All rights reserved.
 //
 
-import Foundation
-
 open class ImportBlockFormatter {
     
     // MARK: - Common properties
     
-    public enum Operation {
+    public enum Operation : String, Codable, CaseIterable {
         case trimWhitespaces
         case uniqueDeclarations
         case sortDeclarations
         case separateCategories
-        
-        public static var all: Operations {
-            return [.trimWhitespaces, .uniqueDeclarations, .sortDeclarations, .separateCategories]
-        }
     }
-    
-    public typealias Operations = [Operation]
     
     // MARK: - Initializers
 
@@ -36,7 +28,7 @@ open class ImportBlockFormatter {
     /// - Parameter importBlock: Source import declarations block.
     /// - Parameter operations: Formatting operations.
     /// - Returns: Constructed lines.
-    open func lines(for importBlock: ImportBlock, using operations: Operations) -> [String] {
+    open func lines(for importBlock: ImportBlock, using operations: [Operation]) -> [String] {
         return importBlock.categorizedDeclarations
             .applyingOperations(operations, accordingTo: importBlock.group)
             .flatDeclarations(accordingTo: importBlock.group)
@@ -47,7 +39,7 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
 
     // MARK: - Operations
 
-    func applyingOperations(_ operations: ImportBlockFormatter.Operations, accordingTo group: ImportCategoriesGroup) -> CategorizedImportDeclarations {
+    func applyingOperations(_ operations: [ImportBlockFormatter.Operation], accordingTo group: ImportCategoriesGroup) -> CategorizedImportDeclarations {
         return operations.reduce(self) { $0.applyingOperation($1, accordingTo: group) }
     }
 
@@ -74,7 +66,11 @@ private extension Dictionary where Key == ImportCategory, Value == ImportDeclara
     
     func sortedDeclarations() -> CategorizedImportDeclarations {
         return mapValues { (category, declarations) -> ImportDeclarations in
-            return declarations.sorted { $0.localizedCaseInsensitiveCompare($1) == category.sortingComparisonResult }
+            return declarations.sorted(
+                by: Comparator(
+                    chain: category.sortingRulesChain.map { $0.comparator }
+                )
+            )
         }
     }
     

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BE7F871217246A0003389CD /* Snowonder_Configuration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */; };
+		9BE7F872217246AC003389CD /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
+		9BE7F874217246C6003389CD /* Snowonder_Configuration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E84038641F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E84038631F0F78B2003DF6C3 /* open_system_preferences_extensions.scpt */; };
 		E84038661F0F8821003DF6C3 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84038651F0F8821003DF6C3 /* Script.swift */; };
 		E84038701F0FC4EC003DF6C3 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
@@ -16,6 +19,7 @@
 		E86335731F1611C5000A7053 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
 		E86335741F1611C5000A7053 /* ImportArtisan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E86335781F1611CD000A7053 /* ImportArtisan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */; };
+		E8A7961320EF5EFB00E57383 /* Comparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7961220EF5EFB00E57383 /* Comparator.swift */; };
 		E8B3C6B71EF7CFB500CD7679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */; };
 		E8B3C6B91EF7CFB500CD7679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */; };
 		E8B3C6BB1EF7CFB500CD7679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B3C6BA1EF7CFB500CD7679 /* Assets.xcassets */; };
@@ -24,6 +28,9 @@
 		E8B3C6D11EF7CFD300CD7679 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */; };
 		E8B3C6D31EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3C6D21EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift */; };
 		E8B3C6D71EF7CFD300CD7679 /* Snowonder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E8C8D39320F794C800425E25 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */; };
+		E8C8D39520F7954900425E25 /* Snowonder_Configuration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */; };
+		E8C8D39820F7985900425E25 /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C8D39720F7985900425E25 /* UserDefaults+Codable.swift */; };
 		E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */; };
 		E8E698541F0E5C4500D50213 /* ImportBlockDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */; };
 		E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E6984E1F0E5C4500D50213 /* ImportBlockFormatter.swift */; };
@@ -34,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9BE7F875217246C6003389CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8C8D38A20F794AC00425E25;
+			remoteInfo = "Snowonder Configuration";
+		};
 		E84038711F0FC4EC003DF6C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
@@ -65,6 +79,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E86335741F1611C5000A7053 /* ImportArtisan.framework in Embed Frameworks */,
+				9BE7F874217246C6003389CD /* Snowonder_Configuration.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +109,8 @@
 		E84038791F0FD18E003DF6C3 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		E84038871F13A5C3003DF6C3 /* ImportBlockDetectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockDetectorTests.swift; sourceTree = "<group>"; };
 		E84038891F13A5E8003DF6C3 /* ImportBlockFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockFormatterTests.swift; sourceTree = "<group>"; };
+		E87988752111E93200B9CCD3 /* Configuration.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Configuration.md; sourceTree = "<group>"; };
+		E8A7961220EF5EFB00E57383 /* Comparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparator.swift; sourceTree = "<group>"; };
 		E8B3C6B31EF7CFB500CD7679 /* Snowonder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowonder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +123,11 @@
 		E8B3C6D01EF7CFD300CD7679 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		E8B3C6D21EF7CFD300CD7679 /* FormatImportDeclarationsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatImportDeclarationsCommand.swift; sourceTree = "<group>"; };
 		E8B3C6D41EF7CFD300CD7679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snowonder_Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8C8D38E20F794AC00425E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8C8D39720F7985900425E25 /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
+		E8D7BBB120F4B41A00B79F4F /* Snowonder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snowonder.entitlements; sourceTree = "<group>"; };
+		E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImportArtisan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlock.swift; sourceTree = "<group>"; };
 		E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportBlockDetector.swift; sourceTree = "<group>"; };
@@ -129,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C8D39520F7954900425E25 /* Snowonder_Configuration.framework in Frameworks */,
 				E86335731F1611C5000A7053 /* ImportArtisan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +160,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE7F871217246A0003389CD /* Snowonder_Configuration.framework in Frameworks */,
 				E86335781F1611CD000A7053 /* ImportArtisan.framework in Frameworks */,
 				E8B3C6CC1EF7CFD300CD7679 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C8D38820F794AC00425E25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE7F872217246AC003389CD /* ImportArtisan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,17 +212,28 @@
 			path = ImportArtisanTests;
 			sourceTree = "<group>";
 		};
+		E87988742111E90400B9CCD3 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				E87988752111E93200B9CCD3 /* Configuration.md */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
 		E8B3C6AA1EF7CFB500CD7679 = {
 			isa = PBXGroup;
 			children = (
-				E81E98941F5D752C00BF0A12 /* README.md */,
 				E84038781F0FD18E003DF6C3 /* .gitignore */,
 				E84038791F0FD18E003DF6C3 /* .travis.yml */,
+				E81E98941F5D752C00BF0A12 /* README.md */,
+				E87988742111E90400B9CCD3 /* Documentation */,
 				E8B3C6B51EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6CD1EF7CFD300CD7679 /* Snowonder Extension */,
+				E8C8D38C20F794AC00425E25 /* Snowonder Configuration */,
 				E8E6983B1F0E5B2D00D50213 /* ImportArtisan */,
 				E840386C1F0FC4EC003DF6C3 /* ImportArtisanTests */,
 				E8B3C6B41EF7CFB500CD7679 /* Products */,
+				E8C8D39420F7954900425E25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +244,7 @@
 				E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */,
 				E8E6983A1F0E5B2D00D50213 /* ImportArtisan.framework */,
 				E840386B1F0FC4EC003DF6C3 /* ImportArtisanTests.xctest */,
+				E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,9 +255,10 @@
 				E8B3C6B61EF7CFB500CD7679 /* AppDelegate.swift */,
 				E8B3C6B81EF7CFB500CD7679 /* ViewController.swift */,
 				E84038651F0F8821003DF6C3 /* Script.swift */,
-				E8B3C6BC1EF7CFB500CD7679 /* Main.storyboard */,
 				E8B3C6BF1EF7CFB500CD7679 /* Info.plist */,
+				E8B3C6BC1EF7CFB500CD7679 /* Main.storyboard */,
 				E84038611F0F74BA003DF6C3 /* Resources */,
+				E8C8D38520F7943800425E25 /* Supporting Files */,
 			);
 			path = Snowonder;
 			sourceTree = "<group>";
@@ -248,9 +293,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E8C8D38520F7943800425E25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8D7BBB120F4B41A00B79F4F /* Snowonder.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8C8D38C20F794AC00425E25 /* Snowonder Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E8D7BBB220F4DE0000B79F4F /* ConfigurationManager.swift */,
+				E8C8D39620F7983A00425E25 /* Extensions */,
+				E8C8D38E20F794AC00425E25 /* Info.plist */,
+			);
+			path = "Snowonder Configuration";
+			sourceTree = "<group>";
+		};
+		E8C8D39420F7954900425E25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8C8D39620F7983A00425E25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8C8D39720F7985900425E25 /* UserDefaults+Codable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E8E6983B1F0E5B2D00D50213 /* ImportArtisan */ = {
 			isa = PBXGroup;
 			children = (
+				E8A7961220EF5EFB00E57383 /* Comparator.swift */,
 				E8E6984F1F0E5C4500D50213 /* ImportCategory.swift */,
 				E8E6984C1F0E5C4500D50213 /* ImportBlock.swift */,
 				E8E6984D1F0E5C4500D50213 /* ImportBlockDetector.swift */,
@@ -273,6 +352,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		E8C8D38620F794AC00425E25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8E698371F0E5B2D00D50213 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +402,7 @@
 			dependencies = (
 				E8B3C6D61EF7CFD300CD7679 /* PBXTargetDependency */,
 				E86335761F1611C5000A7053 /* PBXTargetDependency */,
+				9BE7F876217246C6003389CD /* PBXTargetDependency */,
 			);
 			name = Snowonder;
 			productName = Snowonder;
@@ -338,6 +425,24 @@
 			productName = "Snowonder Extension";
 			productReference = E8B3C6C91EF7CFD300CD7679 /* Snowonder Extension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
+		};
+		E8C8D38A20F794AC00425E25 /* Snowonder Configuration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8C8D39020F794AC00425E25 /* Build configuration list for PBXNativeTarget "Snowonder Configuration" */;
+			buildPhases = (
+				E8C8D38620F794AC00425E25 /* Headers */,
+				E8C8D38720F794AC00425E25 /* Sources */,
+				E8C8D38820F794AC00425E25 /* Frameworks */,
+				E8C8D38920F794AC00425E25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Snowonder Configuration";
+			productName = "Snowonder Configuration";
+			productReference = E8C8D38B20F794AC00425E25 /* Snowonder_Configuration.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		E8E698391F0E5B2D00D50213 /* ImportArtisan */ = {
 			isa = PBXNativeTarget;
@@ -369,7 +474,6 @@
 				TargetAttributes = {
 					E840386A1F0FC4EC003DF6C3 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = CDZGT67CB7;
 						ProvisioningStyle = Automatic;
 					};
 					E8B3C6B21EF7CFB500CD7679 = {
@@ -377,11 +481,26 @@
 						DevelopmentTeam = CDZGT67CB7;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					E8B3C6C81EF7CFD300CD7679 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = CDZGT67CB7;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
+					};
+					E8C8D38A20F794AC00425E25 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = CDZGT67CB7;
 						ProvisioningStyle = Automatic;
 					};
 					E8E698391F0E5B2D00D50213 = {
@@ -407,6 +526,7 @@
 			targets = (
 				E8B3C6B21EF7CFB500CD7679 /* Snowonder */,
 				E8B3C6C81EF7CFD300CD7679 /* Snowonder Extension */,
+				E8C8D38A20F794AC00425E25 /* Snowonder Configuration */,
 				E8E698391F0E5B2D00D50213 /* ImportArtisan */,
 				E840386A1F0FC4EC003DF6C3 /* ImportArtisanTests */,
 			);
@@ -432,6 +552,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E8B3C6C71EF7CFD300CD7679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C8D38920F794AC00425E25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -478,12 +605,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8C8D38720F794AC00425E25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8C8D39320F794C800425E25 /* ConfigurationManager.swift in Sources */,
+				E8C8D39820F7985900425E25 /* UserDefaults+Codable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8E698351F0E5B2D00D50213 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E8E6986B1F0E5F2B00D50213 /* String+PatternMatching.swift in Sources */,
 				E8E698541F0E5C4500D50213 /* ImportBlockDetector.swift in Sources */,
+				E8A7961320EF5EFB00E57383 /* Comparator.swift in Sources */,
 				E8E6986A1F0E5F2B00D50213 /* Dictionary+MapValues.swift in Sources */,
 				E8E698531F0E5C4500D50213 /* ImportBlock.swift in Sources */,
 				E8E698551F0E5C4500D50213 /* ImportBlockFormatter.swift in Sources */,
@@ -494,6 +631,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9BE7F876217246C6003389CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8C8D38A20F794AC00425E25 /* Snowonder Configuration */;
+			targetProxy = 9BE7F875217246C6003389CD /* PBXContainerItemProxy */;
+		};
 		E84038721F0FC4EC003DF6C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
@@ -527,12 +669,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImportArtisanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -540,12 +682,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImportArtisanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Karetski.ImportArtisanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -663,7 +805,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Snowonder/Snowonder.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
@@ -673,7 +817,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -683,7 +827,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Snowonder/Snowonder.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = Snowonder/Info.plist;
@@ -693,7 +839,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -702,6 +848,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Snowonder Extension/Snowonder_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
@@ -712,7 +859,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -721,6 +868,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Snowonder Extension/Snowonder_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CDZGT67CB7;
 				INFOPLIST_FILE = "Snowonder Extension/Info.plist";
@@ -731,7 +879,70 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		E8C8D39120F794AC00425E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Snowonder Configuration/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karetski.Snowonder-Configuration";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E8C8D39220F794AC00425E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CDZGT67CB7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Snowonder Configuration/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karetski.Snowonder-Configuration";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -740,7 +951,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -758,7 +969,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -786,7 +997,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -827,6 +1038,15 @@
 			buildConfigurations = (
 				E8B3C6D91EF7CFD300CD7679 /* Debug */,
 				E8B3C6DA1EF7CFD300CD7679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8C8D39020F794AC00425E25 /* Build configuration list for PBXNativeTarget "Snowonder Configuration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8C8D39120F794AC00425E25 /* Debug */,
+				E8C8D39220F794AC00425E25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -20,7 +20,6 @@ class SourceTextBufferEditor {
     enum ReplacementOption {
         case top
         case bottom
-        // TODO: Add `direct` case to replace line by line
     }
     
     func replace(lines: [String], with newLines: [String], using option: ReplacementOption) {
@@ -34,7 +33,7 @@ class SourceTextBufferEditor {
         }()
         
         guard replacementStartIndex != NSNotFound else {
-            return
+            return // TODO: Throw error instead
         }
         
         let newLinesIndexSet = IndexSet(integersIn: replacementStartIndex ..< replacementStartIndex + newLines.count)

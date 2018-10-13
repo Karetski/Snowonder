@@ -6,8 +6,6 @@
 //  Copyright © 2017 Karetski. All rights reserved.
 //
 
-import Foundation
-
 public typealias ImportDeclarations = [String]
 public typealias CategorizedImportDeclarations = [ImportCategory : ImportDeclarations]
 
