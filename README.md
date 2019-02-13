@@ -20,7 +20,6 @@
 
 1. Clone this repo and build **Snowonder** target via Xcode to get the app
 2. Close Xcode if it's currently running
-[//]: <> 2. Download the [**latest release**](https://github.com/Karetski/Snowonder/releases) 
 3. Put **Snowonder.app** into **Applications** folder and run it
 4. Click **Enable Extension** button
 5. Enable **Snowonder** in opened window. *See screenshot below*
