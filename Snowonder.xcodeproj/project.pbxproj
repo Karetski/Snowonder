@@ -34,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		66E7C49422787DAF0009A541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8E698391F0E5B2D00D50213;
+			remoteInfo = ImportArtisan;
+		};
 		E84038711F0FC4EC003DF6C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E8B3C6AB1EF7CFB500CD7679 /* Project object */;
@@ -333,6 +340,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				66E7C49522787DAF0009A541 /* PBXTargetDependency */,
 			);
 			name = "Snowonder Extension";
 			productName = "Snowonder Extension";
@@ -494,6 +502,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		66E7C49522787DAF0009A541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
+			targetProxy = 66E7C49422787DAF0009A541 /* PBXContainerItemProxy */;
+		};
 		E84038721F0FC4EC003DF6C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E8E698391F0E5B2D00D50213 /* ImportArtisan */;
